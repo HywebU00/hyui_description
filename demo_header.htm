@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="logo">
+        <a href="index.htm"><img src="images/logo.png"></a>
+    </div>
+    <div class="update">
+        <a href="https://github.com/hahamimidido/hyui" target="_blank" class="btn btn-lg"><img src="images/github.png" alt="" style="vertical-align: middle;"> GitHub 檔案下載</a>
+        <a href="https://zlnws6.axshare.com/#g=1&p=mp%E9%A6%96%E9%A0%81" target="_blank" class="btn btn-lg"><img src="images/github.png" alt="" style="vertical-align: middle;"> AxureRP規劃範例</a>
+    </div>
+</div>
+<script>
+$(function() {
+    // $('.update').html('UPDATE : 2017.05.03');// 每次更新都要更換日期
+    $('header').prepend('<a href="#" class="menu"><span></span><span></span><span></span></a>');
+    $('a.menu').on('click', function(e) {
+        $('.float_menu').fadeIn();
+        $('.overlay').fadeIn();
+        // $('body').addClass('noscroll');
+        $(".left_nav>ul>li").hide();
+        $(".left_nav>ul>li").each(function(index) {
+            $(this).delay(100 * index).fadeIn({
+                duration: 900,
+                easing: "easeOutQuart"
+            });
+        });
+        // When the modal is shown, we want a fixed body
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${window.scrollY}px`;
+        // When the modal is hidden, we want to remain at the top of the scroll position
+        document.body.style.position = '';
+        document.body.style.top = '';
+        e.preventDefault();
+    });
+});
+</script>

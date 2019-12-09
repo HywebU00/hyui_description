@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>menu 主選單</li>
+                </ul>
+            </div>
+            <h1>Menu 主選單</h1>
+            <div class="path">檔案名稱：<span>sass/_header.scss</span></div>
+            <div class="path">檔案名稱：<span>sass/_menu.scss</span></div>
+           <h2>HTML範本</h2>
+        <p>主選單標籤為<span class="hy">nav.menu</span>目前預設為最多<span class="hy">4</span>層，在使用上請注意，如有多層選單會造成瀏覽器右方空間不足，這部分請自行客製設定。</p>
+        <p>主選單在手機版預設放置於畫面左方<span class="hy">sidebar</span>，手機版會自動產生選單按鈕，用於打開收合左側選單。</p>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;!-- menu Start --&gt;
+&lt;nav class="menu"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.google.com"&gt;第一層有連結&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.google.com"&gt;第一層有連結&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="http://www.google.com"&gt;第二層有連結&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="http://www.google.com"&gt;第二層有連結&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="http://www.google.com"&gt;第三層選單有下層&lt;/a&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;第四層選單&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;第四層選單&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="http://www.google.com"&gt;第三層選單有連結&lt;;
+                        &lt;li&gt;&lt;a href="#"&gt;第三層選單&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;!-- menu End --&gt;
+</code></pre>
+            </div>
+            <!-- demo End -->
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+<div id="modal1" class="modal">
+    <h2>標題</h2>
+    <p>內文</p>
+</div>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>
+<script>
+$(function() {
+    $('#modal1').hide();
+    $('.modal').after('<div class="modal_overlay"></div>');
+    $('.modal').prepend('<button type="button" class="close">關閉</button>')
+    $('.modal_overlay').hide();
+    $('#openModal').click(function(e) {
+        $('#modal1').show();
+        $('.modal_overlay').show();
+        $('body').addClass('noscroll');
+        e.preventDefault();
+    });
+
+    function closeModal() {
+        $('#modal1').hide();
+        $('.modal_overlay').hide();
+    }
+    $('.modal_overlay').click(closeModal);
+    $('.modal .close').click(closeModal);
+});
+</script>

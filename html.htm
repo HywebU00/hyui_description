@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>快速開始</li>
+                    <li>HTML範本</li>
+                </ul>
+            </div>
+            <h1>HTML範本</h1>
+            <div class="sourcecode">
+                <pre class="language-html">
+                    <code class="language-html">
+&lt;!doctype html&gt;
+&lt;html lang="zh-Hant" class="no-js"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no&quot;&gt;
+    &lt;title&gt;網站標題&lt;/title&gt;
+    &lt;!--[if lt IE 9]&gt;
+    &lt;script src="js/html5shiv.js"&gt;&lt;/script&gt;
+    &lt;script src="js/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+    &lt;!-- hyUI --&gt;
+    &lt;link rel="stylesheet" href="css/hyui.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;a href="#" class="scrollToTop" &gt;回頁首&lt;/a&gt;
+    &lt;script src="js/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
+    &lt;script src="vendor/jquery.easing.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/hyui.js"&gt;&lt;/script&gt;
+    &lt;script src="js/customize.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            <div class="divider">html</div>
+            <h2>設定網頁的語系，讓瀏覽器能更正確解析與編碼</h2>
+            <div class="sourcecode">
+                <pre class="language-html">
+                    <code class="language-html">
+&lt;!doctype html&gt;
+&lt;html lang="zh-Hant" class="no-js"&gt;</code></pre>
+            </div>
+            <p>
+                <p>HTML 的<span class="hy">lang</span> 屬性可用於網頁或部分網頁的語言。這對搜索引擎和瀏覽器是有幫助的。 根據W3C 推薦標準，應該通過<code class="language-html">&lt;html&gt;</code>標籤中的<code class="language-html">&lt;lang&gt;</code>屬性對每張頁面中的主要語言進行聲明。相關資料請參考<a href="https://www.w3schools.com/tags/ref_language_codes.asp">W3C Language Codes</a>。</p>
+                <table>
+                    <tr>
+                        <th>常見語系</th>
+                        <th>對應設定</th>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td><span class="hy">lang='en'</span></td>
+                    </tr>
+                    <tr>
+                        <td>繁體中文Chinese (Traditional)</td>
+                        <td><span class="hy">lang='zh-Hant'</span></td>
+                    </tr>
+                    <tr>
+                        <td>簡體中文Chinese (Simplified)</td>
+                        <td><span class="hy">lang='zh-Hans'</span></td>
+                    </tr>
+                </table>
+                <p>為了無障礙於關閉Javascript的檢測，請先預留此<span class="hy">class="no-js"</span>的設定。更多內容請參考<a href="accessibility.htm">無障礙單元</a>。</p>
+                <div class="divider">head</div>
+                <h2><code>&lt;head&gt;</code>內容</h2>
+                <h3><code>&lt;meta&gt;</code>設定</h3>
+                <div class="sourcecode">
+                    <pre class="language-html">
+                    <code class="language-html">
+&lt;meta charset="utf-8"&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no&quot;&gt;
+&lt;title&gt;網站標題&lt;/title&gt;
+&lt;!--[if lt IE 9]&gt;
+&lt;script src="js/html5shiv.js"&gt;&lt;/script&gt;
+&lt;script src="js/respond.min.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+&lt;!-- hyUI --&gt;
+&lt;link rel="stylesheet" href="css/hyui.css"&gt;</code></pre>
+                </div>
+                <p><code class="language-html"> &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</code>預設指定IE瀏覽器按照最高的標準模式解析頁面。<code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no&quot;&gt;</code>預設畫面載入初始縮放比例 100%。</p>
+                <p><span class="hy">shrink-to-fit=no</span>這個屬性為iOS 9 能新辨認的屬性：shrink-to-fit 並設定為 no，這設定可以讓網頁的寬度自動適應手機螢幕的寬度。</p>
+                <p>以下兩種設定都可以防止使用者做畫面縮放，將畫面鎖在縮放比例 100%<code class="language-html">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" &gt;</code>
+                    <br />
+                    <code class="language-html">
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=no&quot;&gt;</code></p>
+                <h3>Internet Explorer 8 部分支援</h3>
+                <div class="sourcecode">
+                    <pre class="language-html">
+                    <code class="language-html">
+&lt;!--[if lt IE 9]&gt;
+&lt;script src="js/html5shiv.js"&gt;&lt;/script&gt;
+&lt;script src="js/respond.min.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</code></pre>
+                </div>
+                <p>hyUI預設不支持IE9以下版本，但某些情況下考慮使用者未更新的瀏覽器版本，預設加入給IE8選擇性讀取<span class="hy">HTML5 tag</span>之<span class="hy">html5shiv.js</span>及<span class="hy">respond.min.js</span>，這2個檔案已經下載於hyUI之js檔案夾裡。</p>
+                <p>參考資料：<a href="https://github.com/aFarkas/html5shiv" target="_blank">Html5shiv</a>、<a href="https://responsivedesign.is/resources/javascript-jquery/respond-js/" target="_blank">respond.js</a></p>
+                <h3>載入CSS</h3>
+                <p>
+                    <code class="language-html">
+&lt;link rel="stylesheet" href="css/hyui.css"&gt;</code></p>
+                <p>範本已先預設匯入<span class="hy">hyui.css</span></p>
+                <div class="divider">body</div>
+                <h2><code>&lt;body&gt;內容</code></h2>
+                <div class="sourcecode">
+                    <pre class="language-html">
+                    <code class="language-html">
+&lt;a href="#" class="scrollToTop"&gt;回頁首&lt;/a&gt;</code></pre>
+                </div>
+                <p><code class="language-html">&lt;body&gt;</code>預設已存在"回頁首"的按鈕，但這只是一個範例。hyUI並無預設任何文本才能執行，只需要針對開發所需，可參考本網站提供之範例自由組合，或是自行開發都是彈性的。</p>
+                <div class="divider">Javascript</div>
+                <h2>Javascript 與 jQuery</h2>
+                <div class="sourcecode">
+                    <pre class="language-html">
+                    <code class="language-html">
+&lt;script src="js/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="vendor/jquery.easing.min.js"&gt;&lt;/script&gt;
+&lt;!-- slick js --&gt;
+&lt;script src="vendor/slick/slick.min.js "&gt;&lt;/script&gt;
+&lt;script src="vendor/slick/slick-lightbox.js "&gt;&lt;/script&gt;
+&lt;!-- hyUI --&gt;
+&lt;script src="js/hyui.js"&gt;&lt;/script&gt;
+&lt;!-- 客製js --&gt;
+&lt;script src="js/customize.js"&gt;&lt;/script&gt;</code></pre>
+                </div>
+                <h3>透過jQuery建構所有的互動效果</h3>
+                <p>hyUI內建提供所有的互動模組，皆由jQuery開發而成，jQuery版本為<span class="hy">jquery-3.3.1</span>的版本。</p>
+                <p>
+                    <code class="language-html">
+&lt;script src="js/jquery-3.3.1.min.js"&gt;&lt;/script&gt;</code></p>
+                <blockquote> 注意： <br />由於JQuery 1x版本無法通過黑白箱檢測作業，因此使用最新版本，但有可能會造成匯入外掛無法執行或是部分瀏覽器無法支援，此情況為不可避免之風險，如果沒有限制，可自行改為JQuery1x或2x版本。 </blockquote>
+                <h3>外掛請放入vendor資料夾</h3>
+                <p>範例：</p>
+                <p>
+                    <code class="language-html">
+&lt;script src="vendor/jquery.easing.min.js"&gt;&lt;/script&gt;
+</code></p>
+                <h3>匯入hyui.js</h3>
+                <p>預設提供常用之互動模組，例如：lightbox、menu等效果，例如：無障礙檢測<span class="hy">tab</span>鍵盤操作瀏覽網頁之設定。如果沒有特殊的版本更新需求，請不任意新增或刪除<span class="hy">hyui.js</span>的預設設定。</p>
+                <p>
+                    <code class="language-html">
+&lt;script src="js/hyui.js"&gt;&lt;/script&gt;</code></p>
+                <h3>自行撰寫之Javascript效果</h3>
+                <p>可自行撰寫所需要的互動程式，可寫在<span class="hy">customize.js</span></p>
+                <p>當禁用JavaScript時，請視情況於網頁顯示<code class="language-html">&lt;noscript&gt;</code>，並標記上相關說明文字。</p>
+                <p>
+                    <code class="language-html">
+&lt;script src="js/customize.js"&gt;&lt;/script&gt;</code></p>
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cheet.js/0.3.3/cheet.min.js"></script>
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>

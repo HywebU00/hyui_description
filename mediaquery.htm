@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>Mediaquery</li>
+                </ul>
+            </div>
+            <h1>Mediaquery</h1>
+            <div class="path">檔案名稱：<span>sass/mixins/_mediaquery.scss</span></div>
+            <h2>選擇優雅降級(Graceful Degradation)的開發流程</h2>
+            <blockquote>目前大部分的網站規格是以IE9+、FireFox、Chrome以及Safari為主流瀏覽器，且UI設計師產出之mockup大部分以PC版本作為風格確認，因此先以主流瀏覽器為測試對象，再往下兼容行動版以及各種不同瀏覽器的呈現。</blockquote>
+            <!-- demo Start -->
+            <div class="breakpoint">
+                <div>
+                    <img src="images/icon_pc.png" alt="" class="img-responsive">
+                    <h3>大螢幕尺寸</h3>
+                    <span>&gt;= 1400px</span></div>
+                <div>
+                    <img src="images/icon_nb.png" alt="" class="img-responsive">
+                    <h3>筆記型電腦</h3>
+                    <span>&lt;= 1399px</span></div>
+                <div>
+                    <img src="images/icon_pad.png" alt="" class="img-responsive">
+                    <h3>平板電腦</h3>
+                    <span>&lt; 992px</span></div>
+                <div>
+                    <img src="images/icon_mobile.png" alt="" class="img-responsive">
+                    <h3>大尺寸手機</h3>
+                    <span>&lt; 768px</span></div>
+                <div>
+                    <img src="images/icon_xs_mobile.png" alt="" class="img-responsive">
+                    <h3>極小尺寸手機</h3>
+                    <span>&lt; 576px</span></div>
+            </div>
+            <h3>如何自訂自己的斷點</h3>
+            <p>可在<span class="hy">_variable.scss</span>自訂斷點，預設是以<span class="hy">1400px</span>、<span class="hy">992px</span>、<span class="hy">768px</span>、<span class="hy">576px</span>為分界</p>
+            <div class="sourcecode">
+                <pre class="language-scss">
+                    <code class="language-scss">
+//mediaquery breakpoint
+$screen-lg:        1400px !default;        //電腦
+$screen-md:        992px  !default;        //平板
+$screen-sm:        768px  !default;        //手機 
+$screen-xs:        576px  !default;        //極小尺寸</code></pre>
+            </div>
+            <h3>SCSS設定</h3>
+            <p>針對不同的瀏覽器寬度斷點設定，HyUI提供快速套用變數的<span class="hy">mixin</span>，供開發者直覺地且輕易地在樣式表分別寫出不同的效果</p>
+            <p style="color:red;">請注意順序，如果是使用HyUI預設斷點mixin是由較寬螢幕至最小寬度依序設定，避免被覆蓋。</p>
+            <div class="sourcecode">
+                <pre class="language-scss">
+                    <code class="language-scss">
+.wrapper {
+  margin: 0 auto;
+  width: 100%; 
+  @include screen('desktop') {
+      width: 90%; }
+  @include screen('notebook') {
+      width: 85%; }
+  @include screen('tablet') {
+      width: 55%; }
+  @include screen('mobile') {
+      width: 85%; }
+  @include screen('xs_mobile') {
+      width: 85%; } 
+}</code></pre>
+            </div>
+            <h2>CSS輸出</h2>
+            <div class="sourcecode">
+                <pre class="language-scss">
+                    <code class="language-scss">
+.wrapper {
+    margin: 0 auto;
+    width: 100%; }
+@media screen and (min-width: 1400px) {
+    .wrapper {width: 90%; } }
+@media screen and (max-width: 1399px) {
+    .wrapper {width: 85%; } }
+@media screen and (max-width: 991px) {
+    .wrapper {width: 55%; } }
+@media screen and (max-width: 767px) {
+    .wrapper {width: 85%; } }
+@media screen and (max-width: 575px) {
+    .wrapper {width: 85%; } }</code></pre>
+            </div>
+            <!-- demo End -->
+          <!--   <h2>什麼叫優雅降級和漸進增強?</h2>
+            <h3>漸進增強 progressive enhancement：</h3>
+            <p>廣義來説，如果要定義一個基準線，在此之上的增強叫做漸進增強，在此之下的兼容叫優雅降級。這個基準線對於常見的專案開發符合瀏覽器版本就是允許使用javascript、cookie和css的IE8瀏覽器。不過狹義而言，漸進增強一般説的是使用CSS3技術，在不影響老瀏覽器的正常顯示與使用情形下來增強體驗，而優雅降級則是體現html標籤的語義，以便在js/css的加載失敗/被禁用時，也不影響用户的相應功能。</p>   
+            <blockquote>針對低版本瀏覽器進行構建頁面，保證最基本的功能，然後再針對高級瀏覽器進行效果、互動等改進和追加功能達到更好的用戶體驗。</blockquote>
+            <h3>優雅降級 graceful degradation：</h3>
+            <blockquote>一開始就構建站點的完整功能，然後針對瀏覽器測試和修復。比如一開始使用 CSS3 的特性構建了一個應用，然後逐步針對各大瀏覽器進行 hack 使其可以在低版本瀏覽器上正常瀏覽。</blockquote> -->
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>

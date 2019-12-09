@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png" />
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>介紹</li>
+                    <li>快速開始</li>
+                </ul>
+            </div>
+            <h1>快速開始</h1>
+            <p>從GitHub網站下載完整的hyUI kit原始程式碼。</p>
+            <p><a href="https://github.com/hahamimidido/hyui" target="_blank" class="btn"><img src="images/github.png" alt="" style="vertical-align: middle;"> GitHub 檔案下載</a></p>
+            <p>下載之後您會得到以下的檔案</p>
+            <ul>
+                <li><strong class="point">html檔案</strong></li>
+                <li><strong class="point">js資料夾</strong></li>
+                <li><strong class="point">SASS資料夾</strong></li>
+                <li><strong class="point">CSS資料夾</strong></li>
+                <li><strong class="point">images資料夾</strong></li>
+                <li><strong class="point">vendor資料夾</strong>
+                <li><strong class="point">config.rb</strong></li>
+            </ul>
+            <blockquote> 本框架需要具有編譯SASS/SCSS能力的開發人員使用，並不提供現成之CSS或Javascript </blockquote>
+            <h2>檔案結構</h2>
+            <div class="sourcecode">
+                <pre class="language-html">
+                    <code class="language-html">
+├── sass/
+│   ├── page/
+│   │   ├── _template.scss              // template
+│   │   ├── _mp.scss                    // mp
+│   │   ├── _cp.scss                    // cp
+│   │   ├── _lp.scss                    // lp
+│   │   ├── _np.scss                    // np
+│   │   ├── _qp.scss                    // qp
+│   │   ├── _fp.scss                    // fp
+│   │   └── _sitemap.scss               // sitemap
+│   ├── sass/
+│   │   ├── mixins/
+│   │   └── ...
+│   ├── _variable.scss                  // 變數
+│   └── hyui.scss
+│
+├── css/
+│   └── hyui.css                        // sass輸出檔案
+│
+├── js/
+│   ├── hyui.js                         // 基本js   *勿更動
+│   ├── customize.js                    // 客製化js
+│   └── jquery.3.3.1.js                 // Jquery
+│
+├── vendor/
+│   ├── jquery.easing.min.js
+│   └── ...                             //自行客製 或 載入plugin(ex:slick)
+│
+└─ images/
+    ├── basic/                          //基本預設圖檔
+    └── ...                             //專案所需圖檔
+</code></pre>
+            </div>
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>

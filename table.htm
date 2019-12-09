@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png" />
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>Table / 表格</li>
+                </ul>
+            </div>
+            <h1>Table / 表格</h1>
+            <div class="path">檔案名稱：<span>sass/_table.scss</span></div>
+            <ul>
+                <li><a href="#01">基本表格樣式</a></li>
+                <li><a href="#02">支援響應式條列式重新排版表格</a></li>
+                <li><a href="#03">固定左邊表頭，資料可水平捲動</a></li>
+                <li><a href="#04">橫向水平捲動的響應式表格</a></li>
+            </ul>
+            <h2><span style="font-size:2em;margin-right:.2em;color:#21BAFF;" id="01">01.</span>基本表格樣式</h2>
+            <div class="demo">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>編號</th>
+                            <th>姓名</th>
+                            <th>性別</th>
+                            <th>年齡</th>
+                            <th>居住地</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>王大明</td>
+                            <td>男</td>
+                            <td>39</td>
+                            <td>台北市</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>李小強</td>
+                            <td>男</td>
+                            <td>25</td>
+                            <td>宜蘭縣</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>林珍珍</td>
+                            <td>女</td>
+                            <td>33</td>
+                            <td>新竹市</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            </div>
+            <h3>td有hover效果</h3>
+            <p>table加上<span class="hy">table_hover</span>的classname</p>
+            <div class="demo">
+                <table class="table_hover">
+                    <thead>
+                        <tr>
+                            <th>編號</th>
+                            <th>姓名</th>
+                            <th>性別</th>
+                            <th>年齡</th>
+                            <th>居住地</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>王大明</td>
+                            <td>男</td>
+                            <td>39</td>
+                            <td>台北市</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>李小強</td>
+                            <td>男</td>
+                            <td>25</td>
+                            <td>宜蘭縣</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>林珍珍</td>
+                            <td>女</td>
+                            <td>33</td>
+                            <td>新竹市</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;table class="table_hover"&gt;</code></pre>
+            </div>
+            <h3>td有間隔不同背景色</h3>
+            <p>table加上<span class="hy">table_sprite</span>的classname</p>
+            <div class="demo">
+                <table class="table_sprite">
+                    <thead>
+                        <tr>
+                            <th>編號</th>
+                            <th>姓名</th>
+                            <th>性別</th>
+                            <th>年齡</th>
+                            <th>居住地</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>王大明</td>
+                            <td>男</td>
+                            <td>39</td>
+                            <td>台北市</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>李小強</td>
+                            <td>男</td>
+                            <td>25</td>
+                            <td>宜蘭縣</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>林珍珍</td>
+                            <td>女</td>
+                            <td>33</td>
+                            <td>新竹市</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>黃志明</td>
+                            <td>男</td>
+                            <td>44</td>
+                            <td>台南市</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>郭春嬌</td>
+                            <td>女</td>
+                            <td>37</td>
+                            <td>台中市</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;table class="table_sprite"&gt;</code></pre>
+            </div>
+            <h3>範例：一般內容式表格</h3>
+            <div class="demo">
+                <table summary="臺中市政府資訊中心" class="table_hover">
+                    <tr>
+                        <td>機關名稱</td>
+                        <td>臺中市政府資訊中心</td>
+                    </tr>
+                    <tr>
+                        <td>業務職掌</td>
+                        <td>一、規劃發展科：市政資訊整體規劃與推動及管考、設置及應用資訊計畫之審議、使用電腦作業績效之輔導查核、推動資訊教育訓練及資訊交流、免書證免謄本平台規劃、開發及維護、市政資料倉儲及相關資料整合、電腦設備採購及地理資訊相關業務等事項。 <br /> 二、應用服務科：網站服務規劃開發及應用推廣、電子化政府便民網路應用服務規劃開發及推廣、市政業務資訊系統應用規劃、開發及維護、電子郵件維護管理、公文系統開發、規劃及維護、線上申辦系統規劃、開發及維護等事項。 <br /> 三、設備網路科：市政網路、本市無線等網路基礎建設管理及應用發展策略規劃、電腦機房、設備及市政網路管理、市府整體資訊安全維護等事項。 </td>
+                    </tr>
+                    <tr>
+                        <td>機關簡稱</td>
+                        <td>資訊中心</td>
+                    </tr>
+                    <tr>
+                        <td>英文名稱</td>
+                        <td>Information Management Center of Taichung City Government</td>
+                    </tr>
+                    <tr>
+                        <td>服務電話</td>
+                        <td>(04)2228-9111#22100、22200、22300</td>
+                    </tr>
+                    <tr>
+                        <td>服務傳真</td>
+                        <td>(04)2259-8658</td>
+                    </tr>
+                    <tr>
+                        <td>機關地址</td>
+                        <td>40701臺中市西屯區臺灣大道三段99號文心樓6樓</td>
+                    </tr>
+                    <tr>
+                        <td>服務時間：</td>
+                        <td>辦公時間：8:00-17:00 <br /> 中午休息時間：12:00-13:00 <br /> 彈性上下班時間：8:00-8:30、13:00-13:30、17:00-17:30 </td>
+                    </tr>
+                    <tr>
+                        <td>機關網址</td>
+                        <td>http://www.im.taichung.gov.tw</td>
+                    </tr>
+                </table>
+            </div>
+            <!--          <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;table summary=&quot;&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;...&lt;/th&gt;
+    &lt;td&gt;...&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;...&lt;/th&gt;
+    &lt;td&gt;...&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;...&lt;/th&gt;
+    &lt;td&gt;...&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            </div> -->
+            <h2><span style="font-size:2em;margin-right:.2em;color:#21BAFF;" id="02">02.</span>支援響應式條列式重新排版表格</h2>
+            <p>使用<span class="hy">before</span>取代<span class="hy">th</span>，在<span class="hy">table</span>上一層使用<code class="language-html">&lt;div class="table_list"&gt;</code>將<span class="hy">table</span>包覆住，即可於手機版重新排版表格樣式。</p>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="table_list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>編號</th>
+                                <th>據點</th>
+                                <th>地址</th>
+                                <th>電話</th>
+                                <th>傳真</th>
+                                <th>信箱</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>總公司</td>
+                                <td>新竹縣竹北市台元一街8號5樓之6</td>
+                                <td>02-12345678</td>
+                                <td>02-12345678</td>
+                                <td><a href="#"><img src="images/icon_mail.png" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>臺北分公司</td>
+                                <td>臺北市重慶南路二段51號5樓</td>
+                                <td>02-12345678</td>
+                                <td>02-12345678</td>
+                                <td><a href="#"><img src="images/icon_mail.png" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>臺中分公司</td>
+                                <td>臺中市西屯區臺灣大道三段658號6樓A1</td>
+                                <td>02-12345678</td>
+                                <td>02-12345678</td>
+                                <td><a href="#"><img src="images/icon_mail.png" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td>高雄分公司</td>
+                                <td>高雄市新興區中正三路55號26樓之5</td>
+                                <td>02-12345678</td>
+                                <td>02-12345678</td>
+                                <td><a href="#"><img src="images/icon_mail.png" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td>曼谷分公司</td>
+                                <td>Room No.2009, 20th F1., Le Concorde Tower, 202 Ratchadapisek Rd., Huaykwang, Bangkok 10310</td>
+                                <td>02-12345678</td>
+                                <td>02-12345678</td>
+                                <td><a href="#"><img src="images/icon_mail.png" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <td>06</td>
+                                <td>北京</td>
+                                <td>北京市海淀区安宁庄西路9号院29号楼金泰富地大厦105室</td>
+                                <td>02-12345678</td>
+                                <td>02-12345678</td>
+                                <td><a href="#"><img src="images/icon_mail.png" alt=""></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;div class="table_list"&gt;
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;編號&lt;/th&gt;
+          &lt;th&gt;據點&lt;/th&gt;
+          &lt;th&gt;地址&lt;/th&gt;
+          &lt;th&gt;電話&lt;/th&gt;
+          &lt;th&gt;傳真&lt;/th&gt;
+          &lt;th&gt;信箱&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;01&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;02&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;03&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+          &lt;td&gt;...&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <h2><span style="font-size:2em;margin-right:.2em;color:#21BAFF;" id="03">03.</span>固定左邊表頭，資料可水平捲動</h2>
+            <p>適用於左側有<span class="hy">th</span>的資料，在手機版可做成固定<span class="hy">th</span>，其餘td可橫向水平捲動，在<span class="hy">table</span>最外層請用<span class="hy">fix_th_table</span>div包覆。</p>
+            <!-- demo -->
+            <div class="demo">
+                <div class="fix_th_table">
+                    <table>
+                        <tr>
+                            <th>th 1</th>
+                            <th>th 2</th>
+                            <th>th 3</th>
+                            <th>th 4</th>
+                            <th>th 5</th>
+                            <th>th 6</th>
+                        </tr>
+                        <tr>
+                            <th>th A</th>
+                            <td>td 資料</td>
+                            <td>td 資料</td>
+                            <td>td 資料</td>
+                            <td>td 資料</td>
+                            <td>td 資料</td>
+                        </tr>
+                        <tr>
+                            <th>th B</th>
+                            <td>td 資料</td>
+                            <td>td 資料</td>
+                            <td>td 資料</td>
+                            <td>td 資料</td>
+                            <td>td 資料</td>
+                        </tr>
+                        <tr>
+                            <th>th C</th>
+                            <td>td 資料</td>
+                            <td>td 資料</td>
+                            <td>td 資料</td>
+                            <td>td 資料</td>
+                            <td>td 資料</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;div class="fix_th_table"&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;th 1&lt;/th&gt;
+            &lt;th&gt;th 2&lt;/th&gt;
+            &lt;th&gt;th 3&lt;/th&gt;
+            &lt;th&gt;th 4&lt;/th&gt;
+            &lt;th&gt;th 5&lt;/th&gt;
+            &lt;th&gt;th 6&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;th A&lt;/th&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;th B&lt;/th&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;th C&lt;/th&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+            &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <h3>JQuery設定<img src="images/icon_check.png" alt=""></h3>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+<code class="language-javascript">
+// RWD表格
+function rwdTable() {
+    $('.table_list').find('table').each(function() {
+        var $row = $(this).find('tr');
+        rowCount = $row.length;
+        for (var n = 1; n &lt;= rowCount; n++) {
+            $(this).find('th').each(function(index) {
+                var thText = $(this).text();
+                $row.eq(n).find('td').eq(index).attr('data-title', thText);
+            });
+         }
+    });
+}
+rwdTable();</code></pre>
+            </div>
+            <h2><span style="font-size:2em;margin-right:.2em;color:#21BAFF;" id="04">04.</span>橫向水平捲動的響應式表格</h2>
+            <p>用此設定，可保留其表格視覺完整性。在<span class="hy">table</span>外，上一層設定<code class="language-html">&lt;div class="table_wrapper"&gt;</code>將<span class="hy">table</span>包覆住，即可於手機版，用scroll滑動顯示隱藏之部分。</p>
+            <!-- demo Start -->
+            <div class="demo">
+                <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        <div class="slash">
+                                            <div class="slash01">時間</div>
+                                            <div class="slash02">場地</div>
+                                        </div>
+                                    </th>
+                                    <th><a href="javascript:;">202教室</a></th>
+                                    <th><a href="javascript:;">203教室</a></th>
+                                    <th><a href="javascript:;">204教室</a></th>
+                                    <th><a href="javascript:;">205教室</a></th>
+                                    <th><a href="javascript:;">403數位科技教室</a></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3" class="date">108/01/14 (一)</td>
+                                    <td>早上</td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                    <td class="booked"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>中午</td>
+                                    <td class="booked"></td>
+                                    <td class="booked"></td>
+                                    <td class="booked"></td>
+                                    <td class="booked"></td>
+                                    <td class="booked"></td>
+                                </tr>
+                                <tr>
+                                    <td>晚上</td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                    <td class="booked"></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3" class="date">108/01/15 (二)</td>
+                                    <td>早上</td>
+                                    <td class="booked"></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                    <td class="booked"></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                </tr>
+                                <tr>
+                                    <td>中午</td>
+                                    <td></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                    <td></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>晚上</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                    <td class="booked"></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3" class="date">108/01/16 (三)</td>
+                                    <td>早上</td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                    <td class="booked"></td>
+                                    <td class="booked"></td>
+                                    <td class="booked"></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                </tr>
+                                <tr>
+                                    <td>中午</td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                </tr>
+                                <tr>
+                                    <td>晚上</td>
+                                    <td></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><a href="javascript:;">可預約</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+            </div>
+            <!-- demo End -->
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;th 1&lt;/th&gt;
+        &lt;th&gt;th 2&lt;/th&gt;
+        &lt;th&gt;th 3&lt;/th&gt;
+        &lt;th&gt;th 4&lt;/th&gt;
+        &lt;th&gt;th 5&lt;/th&gt;
+        &lt;th&gt;th 6&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;th A&lt;/th&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;th B&lt;/th&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;th C&lt;/th&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+        &lt;td&gt;td 資料&lt;/td&gt;
+    &lt;/tr&gt;    
+&lt;/table&gt;</code></pre>
+            </div>
+            <h3>JQuery設定<img src="images/icon_check.png" alt=""></h3>
+            <p>按照專案經驗，在客戶資料上稿常常出現表格會撐出畫面或是破圖的情況，這部分可以使用預設提供之JQuery設定，讓文章內容頁面的表格自動產生響應式橫向捲軸，以防止畫面跑版。</p>
+            <p>目前判斷如果<span class="hy">table</span>父層沒有<span class="hy">.tablie_list</span>或是<span class="hy">.fix_th_table</span>的<span class="hy">table</span>，一律在<span class="hy">寬度小於545px</span>時，<span class="hy">table</span>套用<code class="language-javascript">scroltable();</code>的外掛</p>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+                <code class="language-javascript">
+/*------------------------------------*/
+///////table 加上響應式table wrapper/////
+//*------------------------------------*/
+$('table').each(function(index, el) {
+    //判斷沒有table_list
+    if ($(this).parents('.table_list').length == 0 && $(this).parents('.fix_th_table').length == 0) {
+        $(this).scroltable();
+    }
+});
+// tablearrow arrow，為了設定箭頭
+$('.scroltable-nav-left').append('&lt;div class="tablearrow_left" style="display:none;"&gt;&lt;/div&gt;');
+$('.scroltable-nav-right').append('&lt;div class="tablearrow_right"  style="display:none;"&gt;&lt;/div&gt;');
+// 固定版頭
+function table_Arrow() {
+    if ($('table').parents('.table_list').length == 0 && $('table').parents('.fix_th_table').length == 0) {
+        if ($('.scroltable-wrapper').length > 0) {
+            var stickyArrowTop = Math.floor($('.scroltable-wrapper').offset().top),
+                thisScroll = Math.floor($(this).scrollTop());
+            if (thisScroll > stickyArrowTop - 230) {
+                $('.scroltable-wrapper .tablearrow_left').css('display', 'block');
+                $('.scroltable-wrapper .tablearrow_left').css({ "top": thisScroll - stickyArrowTop + 220 }, 100, 'easeOutQuint');
+                $('.scroltable-wrapper .tablearrow_right').css('display', 'block');
+                $('.scroltable-wrapper .tablearrow_right').css({ "top": thisScroll - stickyArrowTop + 220 }, 100, 'easeOutQuint');
+            } else {
+                $('.scroltable-wrapper .tablearrow_left').css({
+                    top: '10px',
+                    display: 'none'
+                });
+                $('.scroltable-wrapper .tablearrow_right').css({
+                    top: '10px',
+                    display: 'none'
+                });
+            }
+        }
+    }
+}
+$(window).scroll(function(event) {
+    table_Arrow();
+});
+// /*------------------------------------*/
+// //////////table 加上 data-title//////////
+// /*------------------------------------*/
+function rwdTable() {
+    $('.table_list').find('table').each(function() {
+        var $row = $(this).find('tr');
+        rowCount = $row.length;
+        for (var n = 1; n <= rowCount; n++) {
+            $(this).find('th').each(function(index) {
+                var thText = $(this).text();
+                $row.eq(n).find('td').eq(index).attr('data-title', thText);
+            });
+        }
+    });
+}
+rwdTable();</code></pre>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>

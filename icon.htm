@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>icons / 圖示</li>
+                </ul>
+            </div>
+            <h1>Icons / 圖示</h1>
+            <div class="path">檔案名稱：<span>sass/_icons.scss</span></div>
+            <p>hyUI提供一套簡單快速套用的icon圖示，與<span class="hy">@font face</span>差別在於，本圖示乃是用svg圖呈現，並非以網路字型技術呈現。</p>
+<h2>一般樣式</h2>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="icon_demo">
+                    <ul>
+                        <li class="i_apple"><div tooltip="i_apple"></div></li>
+                        <li class="i_arrow_left"><div tooltip="i_arrow_left"></div></li>
+                        <li class="i_arrow_right"><div tooltip="i_arrow_right"></div></li>
+                        <li class="i_bookmark"><div tooltip="i_bookmark"></div></li>
+                        <li class="i_chat"><div tooltip="i_chat"></div></li>
+                        <li class="i_check"><div tooltip="i_check"></div></li>
+                        <li class="i_clock"><div tooltip="i_clock"></div></li>
+                        <li class="i_close"><div tooltip="i_close"></div></li>
+                        <li class="i_edit"><div tooltip="i_edit"></div></li>
+                        <li class="i_facebook"><div tooltip="i_facebook"></div></li>
+                        <li class="i_googleplus"><div tooltip="i_googleplus"></div></li>
+                        <li class="i_grid"><div tooltip="i_grid"></div></li>
+                        <li class="i_heart"><div tooltip="i_heart"></div></li>
+                        <li class="i_home"><div tooltip="i_home"></div></li>
+                        <li class="i_link"><div tooltip="i_link"></div></li>
+                        <li class="i_linkedin"><div tooltip="i_linkedin"></div></li>
+                        <li class="i_lock"><div tooltip="i_lock"></div></li>
+                        <li class="i_mail"><div tooltip="i_mail"></div></li>
+                        <li class="i_rss"><div tooltip="i_rss"></div></li>
+                        <li class="i_setting"><div tooltip="i_setting"></div></li>
+                        <li class="i_star"><div tooltip="i_star"></div></li>
+                        <li class="i_twitter"><div tooltip="i_twitter"></div></li>
+                        <li class="i_video"><div tooltip="i_video"></div></li>
+                        <li class="i_vimeo"><div tooltip="i_vimeo"></div></li>
+                        <li class="i_youtube"><div tooltip="i_youtube"></div></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;ul&gt;
+    &lt;li class="i_apple"&gt;&lt;/li&gt;
+    &lt;li class="i_arrow_left"&gt;&lt;/li&gt;
+    &lt;li class="i_arrow_right"&gt;&lt;/li&gt;
+    &lt;li class="i_bookmark"&gt;&lt;/li&gt;
+    &lt;li class="i_chat"&gt;&lt;/li&gt;
+    &lt;li class="i_check"&gt;&lt;/li&gt;
+    &lt;li class="i_clock"&gt;&lt;/li&gt;
+    &lt;li class="i_close"&gt;&lt;/li&gt;
+    &lt;li class="i_edit"&gt;&lt;/li&gt;
+    &lt;li class="i_facebook"&gt;&lt;/li&gt;
+    &lt;li class="i_googleplus"&gt;&lt;/li&gt;
+    &lt;li class="i_grid"&gt;&lt;/li&gt;
+    &lt;li class="i_heart"&gt;&lt;/li&gt;
+    &lt;li class="i_home"&gt;&lt;/li&gt;
+    &lt;li class="i_info"&gt;&lt;/li&gt;
+    &lt;li class="i_link"&gt;&lt;/li&gt;
+    &lt;li class="i_linkedin"&gt;&lt;/li&gt;
+    &lt;li class="i_lock"&gt;&lt;/li&gt;
+    &lt;li class="i_mail"&gt;&lt;/li&gt;
+    &lt;li class="i_rss"&gt;&lt;/li&gt;
+    &lt;li class="i_setting"&gt;&lt;/li&gt;
+    &lt;li class="i_star"&gt;&lt;/li&gt;
+    &lt;li class="i_twitter"&gt;&lt;/li&gt;
+    &lt;li class="i_video"&gt;&lt;/li&gt;
+    &lt;li class="i_vimeo"&gt;&lt;/li&gt;
+    &lt;li class="i_youtube"&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+            <!-- demo End -->
+            <h2>反白設定</h2>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="icon_demo invert_demo">
+                    <ul>
+                        <li class="i_apple invert"></li>
+                        <li class="i_arrow_left invert"></li>
+                        <li class="i_arrow_right invert"></li>
+                        <li class="i_bookmark invert"></li>
+                        <li class="i_chat invert"></li>
+                        <li class="i_check invert"></li>
+                        <li class="i_clock invert"></li>
+                        <li class="i_close invert"></li>
+                        <li class="i_edit invert"></li>
+                        <li class="i_facebook invert"></li>
+                        <li class="i_googleplus invert"></li>
+                        <li class="i_grid invert"></li>
+                        <li class="i_heart invert"></li>
+                        <li class="i_home invert"></li>
+                        <li class="i_info invert"></li>
+                        <li class="i_link invert"></li>
+                        <li class="i_linkedin invert"></li>
+                        <li class="i_lock invert"></li>
+                        <li class="i_mail invert"></li>
+                        <li class="i_rss invert"></li>
+                        <li class="i_setting invert"></li>
+                        <li class="i_star invert"></li>
+                        <li class="i_twitter invert"></li>
+                        <li class="i_video invert"></li>
+                        <li class="i_vimeo invert"></li>
+                        <li class="i_youtube invert"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;ul&gt;
+    &lt;li class="i_apple invert"&gt;&lt;/li&gt;
+    &lt;li class="i_arrow_left invert"&gt;&lt;/li&gt;
+    &lt;li class="i_arrow_right invert"&gt;&lt;/li&gt;
+    &lt;li class="i_bookmark invert"&gt;&lt;/li&gt;
+    &lt;li class="i_chat invert"&gt;&lt;/li&gt;
+    &lt;li class="i_check invert"&gt;&lt;/li&gt;
+    &lt;li class="i_clock invert"&gt;&lt;/li&gt;
+    &lt;li class="i_close invert"&gt;&lt;/li&gt;
+    &lt;li class="i_edit invert"&gt;&lt;/li&gt;
+    &lt;li class="i_facebook invert"&gt;&lt;/li&gt;
+    &lt;li class="i_googleplus invert"&gt;&lt;/li&gt;
+    &lt;li class="i_grid invert"&gt;&lt;/li&gt;
+    &lt;li class="i_heart invert"&gt;&lt;/li&gt;
+    &lt;li class="i_home invert"&gt;&lt;/li&gt;
+    &lt;li class="i_info invert"&gt;&lt;/li&gt;
+    &lt;li class="i_link invert"&gt;&lt;/li&gt;
+    &lt;li class="i_linkedin invert"&gt;&lt;/li&gt;
+    &lt;li class="i_lock invert"&gt;&lt;/li&gt;
+    &lt;li class="i_mail invert"&gt;&lt;/li&gt;
+    &lt;li class="i_rss invert"&gt;&lt;/li&gt;
+    &lt;li class="i_setting invert"&gt;&lt;/li&gt;
+    &lt;li class="i_star invert"&gt;&lt;/li&gt;
+    &lt;li class="i_twitter invert"&gt;&lt;/li&gt;
+    &lt;li class="i_video invert"&gt;&lt;/li&gt;
+    &lt;li class="i_vimeo invert"&gt;&lt;/li&gt;
+    &lt;li class="i_youtube invert"&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+            <!-- demo End -->
+            <h2>使用範例</h2>
+            <div class="demo">
+                <button class="btn">
+                    <i class="i_mail"></i>寄信給我
+                </button>
+                 <button class="btn btn-blue">
+                    <i class="i_mail i_invert"></i>寄信給我
+                </button>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;button class="btn"&gt;
+    &lt;i class="i_mail"&gt;&lt;/i&gt;寄信給我
+&lt;/button&gt;
+&lt;button class="btn btn-blue"&gt;
+    &lt;i class="i_mail i_invert"&gt;&lt;/i&gt;寄信給我
+&lt;/button&gt;
+                   </code></pre></div> 
+            <p>如果想要改變icon的顏色、透明度、對比、亮度...等設定，可參考<a href="https://www.w3schools.com/cssref/css3_pr_filter.asp">CSS filter圖片濾鏡</a></p>
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>

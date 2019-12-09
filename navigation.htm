@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>navigation 導覽列</li>
+                </ul>
+            </div>
+            <h1>Navigation 導覽列</h1>
+            <div class="path">檔案名稱：<span>sass/_header.scss</span></div>
+            <div class="path">檔案名稱：<span>sass/_menu.scss</span></div>
+            <p>導覽列由<span class="hy">nav.navigaton</span>包覆，預設內含<span class="hy">導覽連結</span>，可設定兩組，如只有一組則預設靠右，如有兩組將會放置於左右兩側；如偵測到有放置<span class="hy">語言選單</span>，導覽列右側會自動產生空間放置選單，以上設定皆已於<span class="hy">hyui.js</span>判斷。</p>
+               <h2>HTML範本</h2>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;!-- navigation Start --&gt;
+&lt;nav class="navigation"&gt;
+    &lt;!-- 一組ul預設靠右 --&gt;
+    &lt;!-- 兩組ul已寫JQ靠左靠右 --&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;回首頁&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;網站導覽&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;English&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;常見問答&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;第二組導覽&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;第二組導覽&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;第二組導覽&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="language"&gt;
+        &lt;a href="#"&gt;語言選擇&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;繁體中文&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;简体中文&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;ENGLISH&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;!-- navigation End --&gt;
+</code></pre>
+            </div>
+            <h2>JQuery設定<img src="images/icon_check.png" alt="" ></h2>
+            <!-- demo End -->
+            <div class="sourcecode">
+                <pre class="language-javascript">
+                <code class="language-javascript">
+/*-----------------------------------*/
+//////////// nav如果有兩個選單///////////
+/*-----------------------------------*/
+var _navLength = $('.navigation ul').length;
+if (_navLength > 1) {
+    $('.navigation ul:nth-child(1)').addClass('left_nav');
+}
+$('.navigation').has('.language').addClass('have_language');
+                    </code></pre>
+            </div>
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+<div id="modal1" class="modal">
+    <h2>標題</h2>
+    <p>內文</p>
+</div>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>
+<script>
+$(function() {
+    $('#modal1').hide();
+    $('.modal').after('<div class="modal_overlay"></div>');
+    $('.modal').prepend('<button type="button" class="close">關閉</button>')
+    $('.modal_overlay').hide();
+    $('#openModal').click(function(e) {
+        $('#modal1').show();
+        $('.modal_overlay').show();
+        $('body').addClass('noscroll');
+        e.preventDefault();
+    });
+
+    function closeModal() {
+        $('#modal1').hide();
+        $('.modal_overlay').hide();
+    }
+    $('.modal_overlay').click(closeModal);
+    $('.modal .close').click(closeModal);
+});
+</script>

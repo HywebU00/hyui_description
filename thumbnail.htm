@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png" />
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>thumbnail / 卡片式縮圖</li>
+                </ul>
+            </div>
+            <h1>Thumbnail / 卡片式縮圖</h1>
+            <div class="path">檔案名稱：<span>sass/_thumbnail.scss</span></div>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="thumbnail">
+                    <a href="#">
+                        <div class="img-container">
+                            <!-- 此範例為4:3比例 -->
+                            <picture>
+                                <source media="(min-width: 1200px)" data-srcset="images/demo/01.jpg">
+                                <source media="(min-width: 992px)" data-srcset="images/demo/01.jpg">
+                                <source media="(min-width: 576px)" data-srcset="images/demo/01.jpg">
+                                <source media="(max-width: 575px)" data-srcset="images/demo/01.jpg">
+                                <img data-src="images/demo/01.jpg" class="lazy">
+                                <noscript><img src="images/demo/01.jpg"></noscript>
+                            </picture>
+                        </div>
+                    </a>
+                    <div class="caption">
+                        <time>2018-01-01</time>
+                        <h3>標題文字</h3>
+                    </div>
+                    <hr>
+                    <div class="btn_grp">
+                        <button class="btn">按鈕</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;div class="thumbnail"&gt;
+    &lt;a href="#"&gt;
+        &lt;div class="img-container"&gt;
+            &lt;picture&gt;
+                &lt;source media="(min-width: 1200px)" data-srcset="images/demo/01.jpg"&gt;
+                &lt;source media="(min-width: 992px)" data-srcset="images/demo/01.jpg"&gt;
+                &lt;source media="(min-width: 576px)" data-srcset="images/demo/01.jpg"&gt;
+                &lt;source media="(max-width: 575px)" data-srcset="images/demo/01.jpg"&gt;
+                &lt;img data-src="images/demo/01.jpg" class="lazy"&gt;
+                &lt;noscript&gt;&lt;img src="images/demo/01.jpg"&gt;&lt;/noscript&gt;
+            &lt;/picture&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;div class="caption"&gt;
+        &lt;time&gt;2018-01-01&lt;/time&gt;
+        &lt;h3&gt;標題文字&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div class="btn_grp"&gt;
+        &lt;button class="btn"&gt;按鈕&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+</pre>
+            </div>
+            <!-- demo End -->
+            <h2>縮圖 SCSS設定</h2>
+            <div class="sourcecode">
+                <pre class="language-scss">
+                                <code class="language-scss">
+.thumbnail {
+    box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.5);
+    padding-bottom: .5em;
+    background: #FFF;
+    a {
+        display: block;
+        @include aSetting(#555);
+    }
+    .img-container {
+        @include aspect-ratio(4, 3);
+        margin-bottom: .5em;
+    }
+    h2, h3, h4 {
+        margin: .2em 0;
+    }
+    .caption {
+        width: 90%;
+        margin: 0 auto 1em;
+    }
+    .btn_grp {
+        padding: .2em 0;
+        @extend %clearfix;
+    }
+    hr {
+        width: 90%;
+        margin: .1em auto 1em;
+    }
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+    &:hover, &:focus {
+        transform: scale(1.05);
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>

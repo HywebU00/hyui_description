@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+               <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>fat-footer / 頁尾選單</li>
+                </ul>
+            </div>
+            <h1>Fat-footer / 頁尾選單</h1>
+            <div class="path">檔案名稱：<span>sass/_fatfooter.scss</span></div>
+            <p>可先於<span class="hy">_variable.scss</span>中，決定fatfooter的一列目錄個數變數。</p>
+               <!-- demo End -->
+            <div class="sourcecode">
+                <pre class="language-scss">
+                <code class="language-scss">
+//-------------------------------------------------------------客製化------//
+$fatfooter-length:          6;                         //fatfooter選單一行個數
+$fatfooterBgColor:          #F1F1F1;                   //fatFooter 底色</code></pre>
+        </div>
+            <!-- demo Start -->
+            <div class="demo">
+                <section class="fatfooter">
+                    <div class="container">
+                        <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+                        <nav>
+                            <ul>
+                                <li><a href="#">第一層選單</a>
+                                    <ul>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">第一層選單</a>
+                                    <ul>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">第一層選單</a>
+                                    <ul>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                       
+                                    </ul>
+                                </li>
+                                <li><a href="#">第一層選單</a>
+                                    <ul>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">第一層選單</a>
+                                    <ul>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">第一層選單</a>
+                                    <ul>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                        <li><a href="#">第二層選單</a></li>
+                                    </ul>
+                                </li>
+                               
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+            </div>
+            <!-- demo End -->
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;!-- fatfooter Start --&gt;
+&lt;section class="fatfooter"&gt;
+    &lt;div class="container"&gt;
+        &lt;button type="button" name="收合" class="btn btn-fatfooter"&gt;收合&lt;/button&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+            </div>
+ <h2>JQuery設定<img src="images/icon_check.png" alt="" ></h2>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+                                <code class="language-javascript">
+/*-----------------------------------*/
+/////////////fatfooter開關/////////////
+/*-----------------------------------*/
+$('.btn-fatfooter').click(function(e) {
+    $(this).parent('.container').find('nav>ul>li>ul').stop(true, true).slideToggle(function() {
+        if ($(this).is(':visible')) {
+            $('.btn-fatfooter').html("收合/CLOSE");
+            $('.btn-fatfooter').attr('name', '收合選單/CLOSE');
+        } else {
+            $('.btn-fatfooter').html("展開/OPEN");
+            $('.btn-fatfooter').attr('name', '展開選單/OPEN');
+        }
+    });
+    $(this).stop(true, true).toggleClass('close');
+});</code></pre>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>
+<!-- <script>
+$(document).ready(function() {
+    $(".btn-fatfooter").click(function() {
+        $('.fatfooter>nav>ul>li>ul').stop(true, true).slideToggle(function() {
+            if ($(this).is(':visible')) {
+                $(".btn-fatfooter").html("收合");
+                $(".btn-fatfooter").attr('name', '收合選單');
+            } else {
+                $(".btn-fatfooter").html("展開");
+                $(".btn-fatfooter").attr('name', '展開選單');
+            }
+        });
+        $(this).stop(true, true).toggleClass('close');
+    });
+});
+</script> -->

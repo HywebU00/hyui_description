@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>share / 社群分享</li>
+                </ul>
+            </div>
+            <h1>Share / 社群分享</h1>
+            <div class="path">檔案名稱：<span>sass/_share.scss</span></div>
+            <p>提供兩種圖檔檔案格式 svg 以及 png，替換img的檔名即可。預設提供 facebook、twitter、line、youtube、google+、instagram、linkedIn...等常用社群媒體分享icon，如需要新增或刪除可自行調整。</p>
+            <h3>範例 - SVG格式</h3>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="share">
+                    <ul>
+                        <li><a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_line.svg" alt="line"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_rss.svg" alt="RSS"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                    <code class="language-html">
+&lt;div class="share"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_facebook.svg" alt="facebook"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_twitter.svg" alt="twitter"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_line.svg" alt="line"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_youtube.svg" alt="youtube"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_googleplus.svg" alt="google plus"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_instagram.svg" alt="instagram"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_linkedin.svg" alt="LinkedIn"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_rss.svg" alt="RSS"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <!-- demo End -->
+            <h3>範例 - PNG格式</h3>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="share">
+                    <ul>
+                        <li><a href="#"><img src="images/basic/icon_facebook.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_line.png" alt="line"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_youtube.png" alt="youtube"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_googleplus.png" alt="google plus"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_instagram.png" alt="instagram"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_linkedin.png" alt="LinkedIn"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_rss.png" alt="RSS"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                    <code class="language-html">
+&lt;div class="share"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_facebook.png" alt="facebook"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_twitter.png" alt="twitter"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_line.png" alt="line"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_youtube.png" alt="youtube"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_googleplus.png" alt="google plus"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_instagram.png" alt="instagram"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_linkedin.png" alt="LinkedIn"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_rss.png" alt="RSS"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <h2>CP Panel模組</h2>
+            <!-- demo Start -->
+            <div class="demo">
+                <!-- cp control panel -->
+                <div class="funtion_panel">
+                    <div class="publish_time">
+                        <span>發布日期：</span><time>2019-01-01</time>
+                    </div>
+                    <!-- 文字大小 -->
+                    <div class="font_size">
+                        <span>字型大小：</span>
+                        <!-- 英文用<span>font-size：</span> -->
+                        <ul>
+                            <li><a href="#" class="small">小</a></li>
+                            <li><a href="#" class="medium">中</a></li>
+                            <li><a href="#" class="large">大</a></li>
+                        </ul>
+                    </div>
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                            <li class="print"><a href="#">友善列印</a></li>
+                            <li class="forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div>
+                    <!-- 社群分享 -->
+                    <div class="share">
+                        <ul>
+                            <li><a href="#"><img src="images/basic/icon_facebook.png" alt="facebook"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_line.png" alt="line"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_youtube.png" alt="youtube"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_googleplus.png" alt="google plus"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_instagram.png" alt="instagram"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_linkedin.png" alt="LinkedIn"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_rss.png" alt="RSS"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- demo End -->
+            <h3>提供已組合好的內容頁文章控制及顯示模組</h3>
+            <p>可自由組合<a href="fontsize.htm">文字大小</a>、<a href="function.htm">回上一頁</a>、<a href="function.htm">友善列印</a>、<a href="function.htm">轉寄友人</a> 、<a href="share.htm">社群分享</a>...等目前以提供之模組，在父層包覆1個<span class="hy">funtion_panel</span>的div，即可呈現以上樣式。模組無需更改結構只需要放進<span class="hy">funtion_panel</span>的div即可。</p>
+            <p>可參考：<a href="cppanel.htm">CP-Panel</a>模組</p>
+                        <h2>JQuery設定<img src="images/icon_check.png" alt=""></h2>
+                        <p>因<span class="hy">share</span>原本裡面沒有預設<img src="images/basic/icon_share.png" alt="" style="width:24px;height:24px;">的按鈕，因此需要用JQUERY另外判斷在<span class="hy">funtion_panel</span>裡的<span class="hy">share</span>加上<span class="hy">shareButton</span>的按鈕樣式。以下也加入了無障礙的tab遊走設定。</p>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+                <code class="language-javascript">
+/*------------------------------------*/
+//////////分享按鈕 share dropdwon////////
+/*------------------------------------*/
+$('.funtion_panel .share').children('ul').hide();
+$('.funtion_panel .share').prepend('&lt;a href="#" class="shareButton"&gt;&lt;img src="images/basic/icon_share.png" alt="share分享按鈕"&gt;&lt;/a&gt;');
+var _shareButton = $('.shareButton');
+_shareButton.off().click(function(e) {
+    $(this).siblings('ul').stop(true, true).slideToggle();
+    e.preventDefault();
+});
+_shareButton.keyup(function(event) {
+    $(this).siblings('ul').stop(true, true).slideDown();
+});
+$('.funtion_panel .share').find('li:last&gt;a').focusout(function(event) {
+    $(this).parent().parent('ul').hide();
+});
+// 點外面關閉share
+$(document).mouseup(function(e) {
+    var container = $(".funtion_panel .share");
+    if (!container.is(e.target) &amp;&amp; container.has(e.target).length === 0) {
+        $('.share ul').hide();
+    }
+});</code></pre>
+            </div>
+        </div>
+    </div>
+   <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>

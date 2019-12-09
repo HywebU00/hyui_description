@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>快速開始</li>
+                    <li>預設變數</li>
+                </ul>
+            </div>
+            <h1>預設變數</h1>
+            <p>hyUI是由SASS語言編譯CSS而成，於<span class="hy">SASS</span>/<span class="hy">_variable.scss</span>，提供基本預設的變數，可供隨時改變色系、文字樣式以及格線系統...等設定。</p>
+            <blockquote>
+                注意：_variable.scss請放置最前面 import。
+            </blockquote> 
+            <div class="sourcecode">
+                <pre class="language-scss">
+                    <code class="language-scss">
+// 此變數為框架之整體變數，控制整體網站之設定，包含 顏色、文字、格線系統
+// 於mixins 資料夾內，各個模組也有其個別使用的變數，請至個別檔案設定，個別使用變數不含在此設定
+
+//-------------------------------------------------------------顏色---------//
+// 定義顏色 此顏色可自由變換
+$primaryColor:              #21BAFF;                //主色 
+$secondaryColor:            #781F79;                //輔色
+$lightColor:                #FCC211;                //點綴
+$linkColor:                 #21BAFF;                //連結
+$importantColor:            #FF3E4D;                //重要
+// 但注意真實顏色與語意的關聯必須易於辨識
+
+$color-blue:                #21BAFF;
+$color-green:               #5CB85C;
+$color-orange:              #F77810;
+$color-red:                 #FF3E4D;
+$color-yellow:              #FCC211;
+$color-purple:              #AA5AC5;
+$color-gray:                #CCC;
+$color-dark:                #333;
+$color-hr:                  #666;                    //hr顏色
+$color-word:                #222;                    //一般字的顏色
+// 連結顏色
+$aColor:                    #21BAFF;
+$aHover:                    lighten($aColor,10);
+
+// 表單focus顏色
+$form-focus:                #21BAFF;                //表單
+//-------------------------------------------------------------字型--------//
+
+// 字型設定
+$font-family:               Lato, "PingFang TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif;
+$font-size:                 1em;
+
+//-------------------------------------------------------------格線系統-----//
+
+// 格線系統
+$grid-columns:              12 !default;               //格線欄位數
+$grid-gutter-width:         30px !default;             //左右padding
+$container-max:             1200px !default;           //container最大寬
+
+//mediaquery
+$screen-lg:                 1400px !default;           //電腦
+$screen-md:                 992px  !default;           //平板
+$screen-sm:                 768px  !default;           //手機
+$screen-xs:                 576px  !default;           //極小尺寸
+
+//-------------------------------------------------------------客製化------//
+
+$rounded-angle:             10px;                      //整站導角
+$fatfooter-length:          6;                         //fatfooter選單一行個數
+</code></pre></div>
+<h2>自由變化的色彩計畫</h2>
+<p>使用有系統的色彩計畫，可以替網站帶來舒適感及整體感。hyUI提供基本的色彩變數，對應色彩計畫，可迅速為網站迅速變換色系。下圖是hyUI預設的色彩計畫。</p>
+<img src="images/color.jpg" alt="" class="img-responsive">
+<h2>以色彩名稱定義色彩</h2>
+<p>因應不同的需求，不以『語意』定義顏色，而是以『色相』定義，這樣可方便延伸色彩的運用，也可後續自訂語意。以下色彩為hyUI定義之預設色彩及色碼。</p>
+<div class="color_demo">
+    <ul>
+        <li class="blue">BLUE<span>#21BAFF</span></li>
+        <li class="green">GREEN<span>#5CB85C</span></li>
+        <li class="orange">ORANGE<span>#F77810</span></li>
+        <li class="red">RED<span>#FF3E4D</span></li>
+        <li class="yellow">YELLOW<span>#FCC211</span></li>
+        <li class="purple">PURPLE<span>#AA5AC5</span></li>
+        <li class="dark">DARK<span>#333333</span></li>
+        <li class="gray">GRAY<span>#CCCCCC</span></li>
+    </ul>
+</div>
+<h2>一體適用的字型</h2>
+            <div class="sourcecode">
+                <pre class="language-scss">
+                    <code class="language-scss">
+$font-family:               Lato, "PingFang TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif;
+$font-size:                 1em;
+</code></pre></div>
+<p>提供網站預設匯入之字型，如需要參考字型設定，可瀏覽<a href="typography.htm">typography單元</a></p>
+<h2>Grid System格線系統</h2>
+            <div class="sourcecode">
+                <pre class="language-scss">
+                    <code class="language-scss">
+// 格線系統
+$grid-columns:              12 !default;               //格線欄位數
+$grid-gutter-width:         30px !default;             //左右padding
+$container-max:             1200px !default;           //container最大寬
+
+//mediaquery
+$screen-lg:                 1400px !default;           //電腦
+$screen-md:                 992px  !default;           //平板
+$screen-sm:                 768px  !default;           //手機
+$screen-xs:                 576px  !default;           //極小尺寸
+</code></pre></div>
+<h3>格線系統</h3>
+<p>因應相容於舊版IE瀏覽器(含IE9以下)，不考慮用<span class="hy">flexbox</span>的CSS技術，目前hyUI格線系統以Bootstrap 3為原型，變數預設提供可變動之<span class="hy">grid-column</span>、<span class="hy">grid-gutter-width</span>之預設設定，皆參照Bootstrap <span class="hy">12欄位</span>數以及左右padding各<span class="hy">15px</span>為預設值，當然只要更改預設值便可以建立自己的格線系統，注意<span class="hy">grid-gutter-width</span>為左右padding加總，數值將平均分配左右兩側。
+<h3>mediaquery</h3>
+<p>mediaquery之預設值，以Bootstrap 4的斷點做為分界，以<span class="hy">1400px</span>、<span class="hy">992px</span>、<span class="hy">768px</span>、<span class="hy">576px</span>分作為5個響應式斷點。</p>
+<p>相關詳細設定可參考<a href="bootstrap.htm">grid system</a>以及<a href="mediaquery.htm">mediaquery</a></p>
+<h2>自訂客製化變數</h2>
+            <div class="sourcecode">
+                <pre class="language-scss">
+                    <code class="language-scss">
+//-------------------------------------------------------------客製化------//
+
+$rounded-angle:             10px;                      //整站導角
+$fatfooter-length:          6;                         //fatfooter選單一行個數
+</code></pre></div>  
+<p>hyUI可自訂自己的SASS變數，可寫在最下方，只要記得勿覆蓋原生的變數名稱即可。</p>                     
+        </div>
+    </div>
+   <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cheet.js/0.3.3/cheet.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>

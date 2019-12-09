@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png" />
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>網頁元素</li>
+                    <li>album + lightbox / 相簿+燈箱</li>
+                </ul>
+            </div>
+            <h1>相簿列表模組</h1>
+            <div class="path">檔案名稱：<span>sass/_lp.scss</span></div>
+            <!-- demo Start -->
+            <div class="demo">
+                <!-- 相簿列表 -->
+                <div class="album">
+                    <ul>
+                        <li>
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <!-- 此範例為4:3比例 -->
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/demo/01.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/demo/01.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/demo/01.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/demo/01.jpg">
+                                            <img data-original="images/demo/01.jpg" class="lazy">
+                                            <noscript><img src="images/demo/01.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="caption">
+                                        <time>2018-01-01</time>
+                                        <h3>相簿標題</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <!-- 此範例為4:3比例 -->
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/demo/02.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/demo/02.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/demo/02.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/demo/02.jpg">
+                                            <img data-original="images/demo/02.jpg" class="lazy">
+                                            <noscript><img src="images/demo/02.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="caption">
+                                        <time>2018-01-01</time>
+                                        <h3>相簿標題</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <!-- 此範例為4:3比例 -->
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/demo/03.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/demo/03.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/demo/03.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/demo/03.jpg">
+                                            <img data-original="images/demo/03.jpg" class="lazy">
+                                            <noscript><img src="images/demo/03.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="caption">
+                                        <time>2018-01-01</time>
+                                        <h3>相簿標題</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <!-- 此範例為4:3比例 -->
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/demo/04.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/demo/04.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/demo/04.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/demo/04.jpg">
+                                            <img data-original="images/demo/04.jpg" class="lazy">
+                                            <noscript><img src="images/demo/04.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="caption">
+                                        <time>2018-01-01</time>
+                                        <h3>相簿標題</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <!-- 此範例為4:3比例 -->
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/demo/05.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/demo/05.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/demo/05.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/demo/05.jpg">
+                                            <img data-original="images/demo/05.jpg" class="lazy">
+                                            <noscript><img src="images/demo/05.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="caption">
+                                        <time>2018-01-01</time>
+                                        <h3>相簿標題</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <!-- 此範例為4:3比例 -->
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/demo/06.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/demo/06.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/demo/06.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/demo/06.jpg">
+                                            <img data-original="images/demo/06.jpg" class="lazy">
+                                            <noscript><img src="images/demo/06.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="caption">
+                                        <time>2018-01-01</time>
+                                        <h3>相簿標題</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <!-- 此範例為4:3比例 -->
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/demo/07.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/demo/07.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/demo/07.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/demo/07.jpg">
+                                            <img data-original="images/demo/07.jpg" class="lazy">
+                                            <noscript><img src="images/demo/07.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="caption">
+                                        <time>2018-01-01</time>
+                                        <h3>相簿標題</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <!-- 此範例為4:3比例 -->
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/demo/08.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/demo/08.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/demo/08.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/demo/08.jpg">
+                                            <img data-original="images/demo/08.jpg" class="lazy">
+                                            <noscript><img src="images/demo/08.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="caption">
+                                        <time>2018-01-01</time>
+                                        <h3>相簿標題</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <!-- 此範例為4:3比例 -->
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/demo/09.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/demo/09.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/demo/09.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/demo/09.jpg">
+                                            <img data-original="images/demo/09.jpg" class="lazy">
+                                            <noscript><img src="images/demo/09.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="caption">
+                                        <time>2018-01-01</time>
+                                        <h3>相簿標題</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <!-- 此範例為4:3比例 -->
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/demo/10.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/demo/10.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/demo/10.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/demo/10.jpg">
+                                            <img data-original="images/demo/10.jpg" class="lazy">
+                                            <noscript><img src="images/demo/10.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="caption">
+                                        <time>2018-01-01</time>
+                                        <h3>相簿標題</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <!-- 此範例為4:3比例 -->
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/demo/11.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/demo/11.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/demo/11.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/demo/11.jpg">
+                                            <img data-original="images/demo/11.jpg" class="lazy">
+                                            <noscript><img src="images/demo/11.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="caption">
+                                        <time>2018-01-01</time>
+                                        <h3>相簿標題</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <!-- 此範例為4:3比例 -->
+                                        <picture>
+                                            <source media="(min-width: 1200px)" data-srcset="images/demo/12.jpg">
+                                            <source media="(min-width: 992px)" data-srcset="images/demo/12.jpg">
+                                            <source media="(min-width: 576px)" data-srcset="images/demo/12.jpg">
+                                            <source media="(max-width: 575px)" data-srcset="images/demo/12.jpg">
+                                            <img data-original="images/demo/12.jpg" class="lazy">
+                                            <noscript><img src="images/demo/12.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="caption">
+                                        <time>2018-01-01</time>
+                                        <h3>相簿標題</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- demo End -->
+            <div class="sourcecode">
+                <pre class="language-html">
+                    <code class="language-html">
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;thumbnail&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;imgOuter&quot;&gt;
+                    &lt;img src=&quot;...&quot; alt=&quot;圖片標題1&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;caption&quot;&gt;
+                    &lt;h3&gt;圖片標題1&lt;/h3&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus...&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;thumbnail&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;imgOuter&quot;&gt;
+                    &lt;img src=&quot;...&quot; alt=&quot;圖片標題1&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;caption&quot;&gt;
+                    &lt;h3&gt;圖片標題1&lt;/h3&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus...&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;thumbnail&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;imgOuter&quot;&gt;
+                    &lt;img src=&quot;...&quot; alt=&quot;圖片標題1&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;caption&quot;&gt;
+                    &lt;h3&gt;圖片標題1&lt;/h3&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus...&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <h2>JQuery設定<img src="images/icon_check.png" alt=""></h2>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+                    <code class="language-javascript">
+
+/*-----------------------------------*/
+//////////////相簿縮圖+燈箱//////////////
+/*-----------------------------------*/
+//縮圖，same as thumbnail模組
+$(window).bind('resize load', function(e) {
+    $('.imgOuter').each(function(index, el) {
+        var _imgContainer = $(this),
+            cWidth = _imgContainer.width(),
+            cHeight = _imgContainer.height(),
+            ratioC = cWidth / cHeight,
+            _img = _imgContainer.find('img');
+
+        var iWidth = $(this).find('img').width(),
+            iHeight = $(this).find('img').height(),
+            ratioImg = iWidth / iHeight,
+            scaleRatio;
+        if (ratioC &gt; ratioImg) {
+            scaleRatio = cWidth / iWidth;
+            _img.width(cWidth).height(iHeight * scaleRatio).css('top', -.5 * (iHeight * scaleRatio - cHeight));
+        } else {
+            scaleRatio = cHeight / iHeight;
+            _img.height(cHeight).width(iWidth * scaleRatio).css('left', -.5 * (iWidth * scaleRatio - cWidth));
+        }
+        $(this).find('img').removeClass('img-responsive');
+    });
+});
+//相簿JQ設定
+var lightbox_Status = false;
+$('.gallery').append('&lt;div class="lightbox"&gt;&lt;a href="#" class="light_close"&gt;關閉&lt;/a&gt;&lt;a href="#" class="light_prev"&gt;上一張&lt;/a&gt;&lt;a href="#" class="light_next"&gt;下一張&lt;/a&gt;&lt;img src="" alt=""&gt;&lt;div class="galler_overlay"&gt;&lt;/div&gt;&lt;/div&gt;')
+$('.gallery .lightbox').hide(); // lightbox先隱藏
+$('.light_close').click(function(event) {
+    $('.gallery .lightbox').hide(); // 如果點到close，lightbox隱藏
+    $('body').removeClass('noscroll');
+    $('.gallery .lightbox .caption').html('');
+    lightbox_Status = false;
+});
+$('.gallery .lightbox .galler_overlay').click(function(event) {
+    $('.gallery .lightbox').hide(); // 如果點到overlay，lightbox隱藏
+    $('body').removeClass('noscroll');
+    $('.gallery .lightbox .caption').html('');
+    lightbox_Status = false;
+});
+var PIC_SRC = $('.gallery .lightbox img').attr('src');
+// var THUMB_PIC = $(this).attr('src');
+    var PIC_INDEX = 0;
+    $('.gallery a').click(function(e) {
+        e.preventDefault();
+        lightbox_Status = true;
+    });
+$('.gallery .thumbnail img').each(function(index) {
+    $(this).click(function(e) {
+        var THUMB_H3 = $(this).attr('alt');
+        $('body').addClass('noscroll');
+        $('.gallery .lightbox').append('&lt;div class="caption"&gt;' + THUMB_H3 + '&lt;div&gt;');
+        THUMB_PIC = $(this).attr('src');
+        $('.gallery .lightbox img').attr('src', THUMB_PIC);
+        $('.gallery .lightbox').fadeIn();
+        $('.gallery .lightbox .galler_overlay').fadeIn();
+        PIC_INDEX = index;
+        e.preventDefault();
+    });
+});
+//計算當頁縮圖數量
+var PIC_NUM = $('.gallery .thumbnail').length;
+// 下一張 function
+function NEXT_MOV() {
+    //pic_index+1 如果小於 圖片數量
+    if ((PIC_INDEX + 1) &lt; PIC_NUM) {
+        //PIC_INDEX = (PIC_INDEX + 1) % PIC_NUM;//取餘數
+        PIC_INDEX++; //pic_index ++
+        //if(PIC_INDEX &gt;= PIC_NUM){PIC_INDEX=0;}
+    } else {
+        PIC_INDEX = 0 //如果等於或大於圖片數量 pic_index =0 ，跳到第一張
+    }
+    THUMB_PIC = $('.gallery .thumbnail img').eq(PIC_INDEX).attr('src');
+    THUMB_H3 = $('.gallery .thumbnail img').eq(PIC_INDEX).attr('alt');
+    $('.gallery .lightbox .caption').html(THUMB_H3);
+    $('.gallery .lightbox img').hide();
+    $('.gallery .lightbox img').fadeIn();
+    $('.gallery .lightbox img').attr('src', THUMB_PIC);
+    //放入燈箱 img src
+}
+$('.gallery .light_next').click(function(e) {
+    NEXT_MOV();
+    e.preventDefault();
+});
+// 上一張 function
+function PREV_MOV() {
+    if ((PIC_INDEX + 1) &gt; 1) { //pic_index+1  如果大於 1
+        //PIC_INDEX = (PIC_INDEX + 1) % PIC_NUM;//取餘數
+        PIC_INDEX--; //pic_index --
+        //if(PIC_INDEX &gt;= PIC_NUM){PIC_INDEX=0;}
+    } else {
+        PIC_INDEX = PIC_NUM - 1; //如果等於或小於圖片數量 pic_index =圖片數量-1 ，跳到最後一張
+    }
+    //取縮圖 img src
+    THUMB_PIC = $('.gallery .thumbnail img').eq(PIC_INDEX).attr('src');
+    THUMB_H3 = $('.gallery .thumbnail img').eq(PIC_INDEX).attr('alt');
+    $('.gallery .lightbox .caption').html(THUMB_H3);
+    $('.gallery .lightbox img').hide();
+    $('.gallery .lightbox img').fadeIn();
+    $('.gallery .lightbox img').attr('src', THUMB_PIC);
+    //放入燈箱 img src
+}
+$('.gallery .light_prev').click(function(e) {
+    PREV_MOV();
+    e.preventDefault();
+});
+//左右按鍵移動
+if (lightbox_Status = true) {
+    $('body').keydown(function(e) {
+        if (e.keyCode == 37) {
+            PREV_MOV();
+        } else if (e.keyCode == 39) {
+             NEXT_MOV();
+        } else if (e.keyCode == 27) {
+            $('.gallery .lightbox').hide();
+        }
+    });
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>

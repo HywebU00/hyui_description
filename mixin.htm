@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>快速開始</li>
+                    <li>Mixin</li>
+                </ul>
+            </div>
+            <h1>隨時自由建構自己常用的Mixin</h1>
+            <p>HyUI提供常用之mixin設定，一方面套用預設變數快速改變介面的樣貌，另一方面則是處理css hack的修正，其中最多的是前綴<span class="hy">prefix</span>以修正不同瀏覽器之間的相容性問題。</p>
+            <p>mixin將由<span class="hy">sass</span>/<span class="hy">_mixin.scss</span>匯入資料夾<span class="hy">mixins</span>裡所有的預設mixin檔案。</p>
+            <h3>常用Mixin</h3>
+              <div class="sourcecode">
+                <pre class="language-scss">
+                        <code class="language-scss">
+@include make_col(2, 1);                         
+                            </code></pre></div>
+            <h2>HyUI Mixin</h2>
+
+                        <div class="sourcecode">
+                <pre class="language-scss">
+                        <code class="language-scss">
+//  MIXIN
+@import "mixins/_clearfix";                 //清除浮動
+@import "mixins/_mediaquery";               //mediaquery
+@import "mixins/_img-responsive";           //圖片RWD設定
+@import "mixins/_transition";               //動畫
+@import "mixins/_opacity";                  //透明度
+@import "mixins/_box-sizing";               //box-sizing
+@import "mixins/_border-radius";            //導角
+@import "mixins/_gradient";                 //漸層
+@import "mixins/_center-block";             //置中
+@import "mixins/_text-overflow";            //ellipsis 字多點點
+@import "mixins/_box-shadow";               //陰影
+@import "mixins/_li-reset";                 //清除li格式
+@import "mixins/_bootstrap_grid";           //格線系統
+// 客製化
+@import "mixins/_extend";                   //客製化繼承
+@import "mixins/_fatfooter";                //fatfooter
+@import "mixins/_image";                    //img設定</code></pre></div>
+            <h3>SASS設定範例</h3>
+            <div class="sourcecode">
+                <pre class="language-scss">
+                        <code class="language-scss">
+// mixin設定
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+// scss設定
+@include border-radius(15px);
+</code></pre></div>
+            <h3>css輸出<small>已經預設加入prefix前綴詞</small></h3>
+            <div class="sourcecode">
+                <pre class="language-css">
+<code class="language-css">
+// CSS輸出
+-webkit-border-radius: 15px;
+border-radius: 15px;
+                            </code></pre></div>
+
+            <h2>擴充套件：支持Compass 與 Bourbon</h2>
+            <p><a href="http://compass-style.org/">Compass</a>是一套非常優秀的Sass擴充套件，Compass目前已經停止更新，但以完整度來說是足夠支持hyUI所需要的功能。</p>
+            <img src="images/compass.png" alt="">
+            <p><a href="https://www.bourbon.io/">Bourbon</a>是一套更簡潔、輕量級的SASS函式庫。</p>
+            <img src="images/bourbon-logo-2.jpg" alt="">
+            <h3>hyUI目前預設使用了Compass Vertical Rhythm的設定</h3>
+            <p>在sass的擴充套件裡，垂直的文字韻律可以讓使用者瀏覽網站有更佳的閱讀體驗，因此hyUI在文章設定已經預先做了垂直韻律的排版，參考資料：<a href="https://drewish.com/tools/vertical-rhythm/">https://drewish.com/tools/vertical-rhythm/</a></p><p>詳細設定請參照<a href="typography.htm">typography</a></p>
+                        <div class="sourcecode">
+                <pre class="language-scss">
+                        <code class="language-scss">
+@import "compass";
+$base-font-size: 16px;
+$base-line-height: 16px;
+$rhythm-unit: 'em';
+$base-font-stack:$font-family;
+@include establish-baseline();
+$grid-background-baseline-height:2em;
+$show-baseline-grid-backgrounds: true;
+$grid-background-baseline-color: rgba(187, 187, 187, 0.4);</code></pre></div>
+
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>

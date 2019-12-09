@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png" />
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>Tabs / 頁籤</li>
+                </ul>
+            </div>
+            <h1>Tabs / 頁籤</h1>
+            <div class="path">檔案名稱：<span>sass/_tabs.scss</span></div>
+            <p>提供一組可響應式及通過無障礙tab遊走之tab頁籤模組。</p>
+            <h3>使用特點</h3>
+            <ul>
+                <li>頁籤沒有數量限制，但請注意畫面上的均衡比例。建議勿超過5組為宜。</li>
+                <li>可客製不同樣式，於<span class="hy">tabs</span>後方新增不同的<span class="hy">classname</span>即可。</li>
+                <li>可自訂響應式斷點(breakpoit)，目前是以<span class="hy">wwSmall</span>為預設斷點，如有 特殊需求，可另外替換變數或數值。</li>
+            </ul>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="tabSet">
+                    <section class="tabs example-1">
+                        <h2 class="tabItem active"><a href="#">第一個頁籤</a></h2>
+                        <!--選到的頁籤項目-->
+                        <div class="tabContent">
+                            <ul>
+                                <li><a href="#">1第一則消息消息消息消息消息消息</a><span>107-01-01</span></li>
+                                <li><a href="#">第二則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第三則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第四則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第五則消息</a><time>107-01-01</time></li>
+                            </ul>
+                            <a href="#" class="more">更多</a>
+                        </div>
+                        <h2 class="tabItem"><a href="#">第二個頁籤</a></h2>
+                        <div class="tabContent">
+                            <ul>
+                                <li><a href="#">2第一則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第二則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第三則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第四則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第五則消息</a><time>107-01-01</time></li>
+                            </ul>
+                            <a href="#" class="more">更多</a>
+                        </div>
+                        <h2 class="tabItem"><a href="#">第三個頁籤</a></h2>
+                        <div class="tabContent">
+                            <ul>
+                                <li><a href="#">3第一則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第二則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第三則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第四則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第五則消息</a><time>107-01-01</time></li>
+                            </ul>
+                            <a href="#" class="more">更多</a>
+                        </div>
+                        <h2 class="tabItem"><a href="#">第四個頁籤</a></h2>
+                        <div class="tabContent">
+                            <ul>
+                                <li><a href="#">4第一則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第二則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第三則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第四則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第五則消息</a><time>107-01-01</time></li>
+                            </ul>
+                            <a href="#" class="more">更多</a>
+                        </div>
+                    </section>
+                </div>
+                <div class="tabSet">
+                    <section class="tabs example-2">
+                        <h2 class="tabItem active"><a href="#">第一個頁籤</a></h2>
+                        <!--選到的頁籤項目-->
+                        <div class="tabContent">
+                            <ul>
+                                <li><a href="#">1第一則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第二則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第三則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第四則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第五則消息</a><time>107-01-01</time></li>
+                            </ul>
+                            <a href="#" class="more">更多</a>
+                        </div>
+                        <h2 class="tabItem"><a href="#">第二個頁籤</a></h2>
+                        <div class="tabContent">
+                            <ul>
+                                <li><a href="#">2第一則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第二則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第三則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第四則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第五則消息</a><time>107-01-01</time></li>
+                            </ul>
+                            <a href="#" class="more">更多</a>
+                        </div>
+                        <h2 class="tabItem"><a href="#">第三個頁籤</a></h2>
+                        <div class="tabContent">
+                            <ul>
+                                <li><a href="#">3第一則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第二則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第三則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第四則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第五則消息</a><time>107-01-01</time></li>
+                            </ul>
+                            <a href="#" class="more">更多</a>
+                        </div>
+                        <h2 class="tabItem"><a href="#">第四個頁籤</a></h2>
+                        <div class="tabContent">
+                            <ul>
+                                <li><a href="#">4第一則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第二則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第三則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第四則消息</a><time>107-01-01</time></li>
+                                <li><a href="#">第五則消息</a><time>107-01-01</time></li>
+                            </ul>
+                            <a href="#" class="more">更多</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <h2>HTML範本</h2>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;div class="tabSet"&gt;
+    &lt;section class="tabs example-1"&gt;
+        &lt;h2 class="tabItem active"&gt;&lt;a href="#"&gt;第一個頁籤&lt;/a&gt;&lt;/h2&gt;
+        &lt;!--選到的頁籤項目--&gt;
+        &lt;div class="tabContent"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;1第一則消息消息消息消息消息消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第三則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第四則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第五則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class="more"&gt;&lt;a href="#"&gt;更多&lt;/a&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;h2 class="tabItem"&gt;&lt;a href="#"&gt;第二個頁籤&lt;/a&gt;&lt;/h2&gt;
+        &lt;div class="tabContent"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;2第一則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第三則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第四則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第五則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;div class="more"&gt;&lt;a href="#"&gt;更多&lt;/a&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;h2 class="tabItem"&gt;&lt;a href="#"&gt;第三個頁籤&lt;/a&gt;&lt;/h2&gt;
+        &lt;div class="tabContent"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;3第一則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第三則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第四則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第五則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class="more"&gt;&lt;a href="#"&gt;更多&lt;/a&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;h2 class="tabItem"&gt;&lt;a href="#"&gt;第四個頁籤&lt;/a&gt;&lt;/h2&gt;
+        &lt;div class="tabContent"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;4第一則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第三則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第四則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第五則消息&lt;/a&gt;&lt;time&gt;107-01-01&lt;/time&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class="more"&gt;&lt;a href="#"&gt;更多&lt;/a&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <!-- demo End -->
+            <!-- <h2>SCSS設定</h2> -->
+            <!--  <div class="sourcecode">
+                <pre class="language-scss">
+                <code class="language-scss">
+.tabSet {
+    max-width: 100%;
+    margin: 1em auto;
+    overflow: hidden;
+    @extend %clearfix;
+    @include screen('mobile') {
+        width: auto;
+        height: auto !important;
+    }
+}
+.tabs {
+    position: relative;
+    &>.tabItem {
+        &.active>a {
+            background-color: $primaryColor;
+            color: #FFF;
+        }
+        float: left;
+        font-size: 1em;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        @include screen('mobile') {
+            float: none;
+            &>a {
+                width: 100% !important;
+                border-bottom: 1px solid #888;
+            }
+            &.active>a {
+                border-color: #bbb;
+            }
+        }
+        &>a {
+            display: block;
+            padding: 16px 0 14px;
+            text-align: center;
+            background-color: #aaa;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            @include text-overflow;
+            @include box-sizing;
+            &:hover {
+                background: $primaryColor;
+            }
+        }
+    }
+}
+//多組 可設定差異
+.example-2 {
+    .tabItem>a:hover {
+        background: $secondaryColor;
+    }
+    .tabItem.active>a {
+        background: $secondaryColor;
+    }
+}
+// 顯示content
+.active+.tabContent {
+    display: block;
+}
+.tabContent {
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    clear: both;
+    padding: 30px 20px;
+    display: none;
+    @include screen('mobile') {
+        position: static;
+    }
+    ul {
+        @include li-reset;
+    }
+    li {
+        margin: 0 0 1.3em 0;
+        padding: 0;
+        line-height: 1.6;
+        border-bottom: 1px #CCC dashed;
+        @include screen('mobile') {
+            @include text-overflow();
+        }
+        a {
+            @include aSetting_nocolor;
+        }
+        span {
+            display: inline-block;
+            margin: 0 0 0 1em;
+            font-size: .813em;
+            color: #666;
+        }
+    }
+}</code></pre>
+            </div> -->
+            <!-- JS設定 -->
+            <h2>JQuery設定設定<img src="images/icon_check.png" alt=""></h2>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+        <code class="language-javascript">
+/*-----------------------------------*/
+////////////////多組Tab////////////////
+/*-----------------------------------*/
+var resizeTimer1;
+_window.resize(function() {
+    clearTimeout(resizeTimer1);
+    resizeTimer1 = setTimeout(function() {
+        ww = _window.outerWidth();
+        tabSet();
+    }, 50);
+});
+function tabSet() {
+    $('.tabs').each(function() {
+        var _tab = $(this),
+            _tabItem = _tab.find('.tabItem'),
+            _tabItemA = _tabItem.children('a'),
+            _tabContent = _tab.find('.tabContent'),
+            tabwidth = _tab.width(),
+            tabItemHeight = _tabItem.outerHeight(),
+            tabContentHeight = _tab.find('.active').next().innerHeight(),
+            tiGap = 0,
+            tabItemLength = _tabItem.length,
+            tabItemWidth;
+            _tab.find('.active').next('.tabContent').show();
+    if (ww > wwSmall) {
+        _tabContent.css('top', tabItemHeight);
+        _tab.height(tabContentHeight + tabItemHeight);
+        tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
+        _tabItem.width(tabItemWidth).css('margin-left', tiGap);
+        _tabItem.first().css('margin-left', 0);
+        _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
+    } else {
+        _tab.css('height', 'auto');
+        _tabItem.width(tabwidth);
+        _tabItem.css('margin-left', 0).last().css('position', 'relative');
+    }
+    _tabItemA.focus(tabs);
+    _tabItemA.click(tabs);
+    function tabs(e) {
+        var _tabItemNow = $(this).parent(),
+            tvp = _tab.offset().top,
+            tabIndex = _tabItemNow.index() / 2,
+            scollDistance = tvp + tabItemHeight * tabIndex - hh;
+            _tabItem.removeClass('active');
+            _tabItemNow.addClass('active');
+        if (ww <= wwSmall) {
+            _tabItem.not('.active').next().slideUp();
+            _tabItemNow.next().slideDown();
+            $("html,body").stop(true, false).animate({ scrollTop: scollDistance });
+        } else {
+            _tabItem.not('.active').next().hide();
+            _tabItemNow.next().show();
+            tabContentHeight = _tabItemNow.next().innerHeight();
+            _tab.height(tabContentHeight + tabItemHeight);
+        }
+        e.preventDefault();
+        }
+    });
+}
+$('.tabs>.tabItem:first-child>a').trigger('click');
+tabSet();</code></pre>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>
+<script>
+$(function() {
+    $('.tabs').find('.active').next('.tabContent').show();
+    var tw = $('.tabSet').width();
+    var tabItemHeight = $('.tabs>.tabItem').height();
+    $('.tabs').find('.tabContent').css('top', tabItemHeight);
+
+    function tabs() {
+        var WindowW = $(window).width();
+        $('.tabs').find('.active').next('.tabContent').show();
+        var tabItemHeight = $('.tabs>.tabItem').height();
+        $('.tabs').find('.tabContent').css('top', tabItemHeight);
+        $('.tabSet').each(function() {
+            tw = $(this).width();
+            var tabItemHeight = $(this).find('.tabs>.tabItem').height();
+            $(this).children('.tabs').find('.tabContent').css('top', tabItemHeight);
+            var tabContentHeight = $(this).find('.active').next('.tabContent').innerHeight();
+            console.log(tabContentHeight);
+            var tabItemLength = $(this).find('.tabItem').length;
+            $(this).height(tabContentHeight + tabItemHeight);
+            var tabWidth = Math.ceil(tw / tabItemLength);
+            $(this).find('.tabItem>a').width(tabWidth);
+            if (WindowW >= 768) {
+                $(this).find('.tabItem:last').css({
+                    position: 'absolute',
+                    right: '0',
+                });
+            } else {
+                $(this).find('.tabItem:last').css({
+                    position: 'relative',
+                    right: '0',
+                });
+            }
+            tabContentHeight = $(this).parent('.tabItem').next('.tabContent').innerHeight();
+            console.log(tabContentHeight);
+            $(this).parents('.tabSet').height(tabContentHeight + tabItemHeight);
+        });
+        $(this).parent('.tabItem').siblings().removeClass('active');
+        $(this).parent('.tabItem').addClass('active');
+        return false;
+    }
+    $('.tabs>.tabItem>a').focus(tabs);
+    $('.tabs>.tabItem>a').click(tabs);
+    $(window).on("load resize", function(e) {
+        tabs();
+    });
+});
+</script>

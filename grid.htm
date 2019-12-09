@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>排版系統</li>
+                    <li>自訂Grid System</li>
+                </ul>
+            </div>
+            <h1>自訂Grid System</h1>
+            <div class="path">檔案名稱：<span>sass/_grid.scss</span></div>
+            <p>HyUI 格線系統預設為bootstrap的grid 系統，gutter已設定成變數，可於<span class="hy">_valuable.scss</span>更改設定，一樣以12欄作為格線，如需更改預設格線配置可前往：sass/mixins/_bootstrap_grid.scss調整設定</p>
+            <p>格線佈局可參考：<a href="template.htm">template.htm</a></p>
+            <h2>常見佈局範例</h2>
+            <!-- demo Start -->
+            <div class="demo bootstrap_grid1">
+                <div class="container">
+                    <div class="row">
+                        <div class="header_div">header_div</div>
+                        <div class="left_div">left_div</div>
+                        <div class="center_div">center_div</div>
+                        <div class="footer_div">footer_div</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html"><code class="language-html">
+&lt;div class="container"&gt;
+  &lt;div class="header_div"&gt;header_div&lt;/div&gt;
+  &lt;div class="left_div"&gt;left_div&lt;/div&gt;
+  &lt;div class="center_div"&gt;center_div&lt;/div&gt;
+  &lt;div class="footer_div"&gt;footer_div&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <p>在任何SCSS檔案裡面，只需要對應好<span class="hy">class</span>輕鬆設定以下就可以製作類似bootstrap的格線系統</p>
+            <div class="sourcecode">
+                <pre class="language-scss">
+                    <code class="language-scss">
+.header_div{
+  @include make-xs-column(12);  //576px  width:100%
+  @include make-sm-column(12);  //768px  width:100%
+  @include make-md-column(12);  //992px  width:100%
+  @include make-lg-column(12);  //1400px width:100%
+  @include gutter();
+}
+.left_div{
+  @include make-xs-column(12);  //576px  width:100%
+  @include make-sm-column(6);   //768px  width:50%
+  @include make-md-column(4);   //992px  width:33.3%
+  @include make-lg-column(4);   //1400px width:33.3%
+  @include gutter();
+}
+.center_div{
+  @include make-xs-column(12);  //576px  width:100%
+  @include make-sm-column(6);   //768px  width:50%
+  @include make-md-column(8);   //992px  width:66.6%
+  @include make-lg-column(8);   //1400px width:66.6%
+  @include gutter();
+}
+.footer_div{
+  @include make-xs-column(12);  //576px  width:100%
+  @include make-sm-column(12);  //768px  width:100%
+  @include make-md-column(12);  //992px  width:100%
+  @include make-lg-column(12);  //1400px width:100%
+  @include gutter();
+}</code></pre>
+            </div>
+            <!-- demo End -->
+            <hr>
+            <!-- demo-Start -->
+            <h2>三欄式範例</h2>
+            <div class="demo bootstrap_grid2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-left">col-md-4</div>
+                        <div class="col-center">col-md-4</div>
+                        <div class="col-right">col-md-4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html"><code class="language-html">
+&lt;div class="container"&gt;
+  &lt;div class="col-left"&gt;col-md-4&lt;/div&gt;
+  &lt;div class="col-center"&gt;col-md-4&lt;/div&gt;
+  &lt;div class="col-right"&gt;col-md-4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <br />
+            <div class="sourcecode">
+                <pre class="language-scss">
+                    <code class="language-scss">
+// 3欄
+.col-left{
+  @include make-xs-column(12);
+  @include make-sm-column(4);
+  @include make-md-column(4);
+  @include make-lg-column(4);
+  @include gutter();
+}
+.col-center{
+  @include make-xs-column(12);
+  @include make-sm-column(4);
+  @include make-md-column(4);
+  @include make-lg-column(4);
+  @include gutter();
+}
+.col-right{
+  @include make-xs-column(12);
+  @include make-sm-column(4);
+  @include make-md-column(4);
+  @include make-lg-column(4);
+  @include gutter();
+}</code> </pre>
+            </div>
+            <!-- demo End -->
+            <hr>
+            <!-- demo-Start -->
+            <h2>offest、push、pull</h2>
+            <div class="demo bootstrap_grid3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-left">col-md-4 col-md-offset-2</div>
+                        <div class="col-right">col-md-6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html"><code class="language-html">
+&lt;div class="container"&gt;
+  &lt;div class="col-left"&gt;col-md-4 col-md-offset-2&lt;/div&gt;
+  &lt;div class="col-right"&gt;col-md-6&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <br />
+            <div class="sourcecode">
+                <pre class="language-scss">
+                    <code class="language-scss">
+.col-left{
+    @include make-md-column(4);
+    @include make-md-column-offset(2);
+    @include gutter();
+}
+.col-right{
+    @include make-md-column(6);
+    @include gutter();
+}</code></pre>
+            </div>
+            <!-- demo End -->
+            <h2>預設提供常用格線設定</h2>
+            <p>提供常用格線<span class="hy">col-12</span>、單欄滿版<span class="hy">full</span>、均等雙欄<span class="hy">col-6-6</span>、8-4雙欄<span class="hy">col-8-4</span>、4-8雙欄<span class="hy">col-4-8</span>、三欄<span class="hy">col-4-4-4</span>、四欄<span class="hy">col-3-3-3-3</span>、六欄<span class="hy">col-2-2-2-2-2-2</span></p>
+            <div class="demo">
+                <section class="demosection col-12 full">
+                    <div class="container">
+                        <div class="col"> 1欄滿版 </div>
+                    </div>
+                </section>
+                <section class="demosection col-12">
+                    <div class="container">
+                        <div class="col"> 1欄 </div>
+                    </div>
+                </section>
+                <!--  兩欄樣式 -->
+                <section class="demosection col-6-6">
+                    <div class="container">
+                        <div class="col"> 2欄 </div>
+                        <div class="col"> 2欄 </div>
+                    </div>
+                </section>
+                <!--  兩欄樣式 8-4 -->
+                <section class="demosection col-8-4">
+                    <div class="container">
+                        <div class="col"> 2欄 </div>
+                        <div class="col"> 2欄 </div>
+                    </div>
+                </section>
+                <!--  兩欄樣式 4-8 -->
+                <section class="demosection col-4-8">
+                    <div class="container">
+                        <div class="col"> 2欄 </div>
+                        <div class="col"> 2欄 </div>
+                    </div>
+                </section>
+                <!--  三欄樣式 -->
+                <section class="demosection col-4-4-4">
+                    <div class="container">
+                        <div class="col">3欄</div>
+                        <div class="col">3欄</div>
+                        <div class="col">3欄</div>
+                    </div>
+                </section>
+                <!--  四欄樣式 -->
+                <section class="demosection col-3-3-3-3">
+                    <div class="container">
+                        <div class="col">4欄</div>
+                        <div class="col">4欄</div>
+                        <div class="col">4欄</div>
+                        <div class="col">4欄</div>
+                    </div>
+                </section>
+                <!--  六欄樣式 -->
+                <section class="demosection col-2-2-2-2-2-2">
+                    <div class="container">
+                        <div class="col">6欄</div>
+                        <div class="col">6欄</div>
+                        <div class="col">6欄</div>
+                        <div class="col">6欄</div>
+                        <div class="col">6欄</div>
+                        <div class="col">6欄</div>
+                    </div>
+                </section>
+                <!--  四欄樣式 有底色 -->
+                <section class="demosection col-3-3-3-3 bg">
+                    <h2>有底色</h2>
+                    <div class="container">
+                        <div class="col">4欄</div>
+                        <div class="col">4欄</div>
+                        <div class="col">4欄</div>
+                        <div class="col">4欄</div>
+                    </div>
+                </section>
+                <!-- 可用有意義名稱命名 -->
+                <section class="demosection cssname">
+                    <h2>可用有意義語意classname</h2>
+                    <div class="container">
+                        <div class="col news">News區塊- 8</div>
+                        <div class="col video">Video區塊 -4</div>
+                    </div>
+                </section>
+                <!-- 進階設定，class名稱一樣可用nth-child 控制個別寬度 -->
+                <section class="demosection col-3-6-3">
+                    <h2>可自由編輯大小順序</h2>
+                    <div class="container">
+                        <div class="col">小欄-3</div>
+                        <div class="col">大欄-6</div>
+                        <div class="col">小欄-3</div>
+                    </div>
+                </section>
+                <!-- 進階設定，class名稱一樣可用nth-child 控制個別寬度 -->
+                <section class="demosection col-5">
+                    <h2>可利用offset，製作單數欄格線</h2>
+                    <div class="container">
+                        <div class="col">5欄</div>
+                        <div class="col">5欄</div>
+                        <div class="col">5欄</div>
+                        <div class="col">5欄</div>
+                        <div class="col">5欄</div>
+                    </div>
+                </section>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-scss">
+                    <code class="language-scss">
+// 可用class個別命名
+// 單欄滿版
+.full {
+    .container {
+        max-width: 100% !important;
+    }
+}
+// 單欄
+.col-12 {}
+// 兩欄 6-6
+.col-6-6 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(6);
+        @include make-md-column(6);
+        @include make-lg-column(6);
+    }
+}
+// 三欄 4-4-4
+.col-4-4-4 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4);
+        @include make-lg-column(4);
+    }
+}
+// 四欄 3-3-3
+.col-3-3-3-3 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(6);
+        @include make-md-column(3);
+        @include make-lg-column(3);
+    }
+}
+// 雙欄 8-4
+.col-8-4 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(8);
+        @include make-md-column(8);
+        @include make-lg-column(8);
+    }
+    .col:nth-child(2n) {
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4);
+        @include make-lg-column(4);
+    }
+}
+// 雙欄 4-8
+.col-4-8 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4);
+        @include make-lg-column(4);
+    }
+    .col:nth-child(2n) {
+        @include make-xs-column(12);
+        @include make-sm-column(8);
+        @include make-md-column(8);
+        @include make-lg-column(8);
+    }
+}
+// 六欄 2-2-2-2-2-2
+.col-2-2-2-2-2-2 {
+    .col {
+        @include make-xs-column(6);
+        @include make-sm-column(2);
+        @include make-md-column(2);
+        @include make-lg-column(2);
+    }
+}
+.cssname {
+    .news {
+        @include make-xs-column(12);
+        @include make-sm-column(8);
+        @include make-md-column(8);
+        @include make-lg-column(8);
+    }
+    .video {
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4);
+        @include make-lg-column(4);
+    }
+}
+// 進階設定：非均等欄位
+.col-3-6-3 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(3);
+        @include make-md-column(3);
+        @include make-lg-column(3);
+        &:nth-child(2) {
+            @include make-xs-column(12);
+            @include make-sm-column(6);
+            @include make-md-column(6);
+            @include make-lg-column(6);
+        }
+    }
+}
+// 進階設定：五欄
+.col-5 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(2);
+        @include make-md-column(2);
+        @include make-lg-column(2);
+        &:first-child {
+            @include make-xs-column-offset(0);
+            @include make-sm-column-offset(1);
+            @include make-md-column-offset(1);
+            @include make-lg-column-offset(1);
+        }
+    }
+}</code></pre>
+            </div>
+            <h3>可自由設定不均等或單數欄客製化設定</h3>
+            <div class="demo">
+                <!--  四欄樣式 有底色 -->
+                <section class="demosection col-3-3-3-3 bg">
+                    <h2>有底色</h2>
+                    <div class="container">
+                        <div class="col">4欄</div>
+                        <div class="col">4欄</div>
+                        <div class="col">4欄</div>
+                        <div class="col">4欄</div>
+                    </div>
+                </section>
+                <!-- 可用有意義名稱命名 -->
+                <section class="demosection cssname">
+                    <h2>可用有意義語意classname</h2>
+                    <div class="container">
+                        <div class="col news">News區塊- 8</div>
+                        <div class="col video">Video區塊 -4</div>
+                    </div>
+                </section>
+                <!-- 進階設定，class名稱一樣可用nth-child 控制個別寬度 -->
+                <section class="demosection col-3-6-3">
+                    <h2>可自由編輯大小順序</h2>
+                    <div class="container">
+                        <div class="col">小欄-3</div>
+                        <div class="col">大欄-6</div>
+                        <div class="col">小欄-3</div>
+                    </div>
+                </section>
+                <!-- 進階設定，class名稱一樣可用nth-child 控制個別寬度 -->
+                <section class="demosection col-5">
+                    <h2>可利用offset，製作單數欄格線</h2>
+                    <div class="container">
+                        <div class="col">5欄</div>
+                        <div class="col">5欄</div>
+                        <div class="col">5欄</div>
+                        <div class="col">5欄</div>
+                        <div class="col">5欄</div>
+                    </div>
+                </section>
+            </div>
+                        <div class="sourcecode">
+                <pre class="language-scss">
+                    <code class="language-scss">
+// 進階設定：自行命名
+.cssname {
+    .news {
+        @include make-xs-column(12);
+        @include make-sm-column(8);
+        @include make-md-column(8);
+        @include make-lg-column(8);
+    }
+    .video {
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4);
+        @include make-lg-column(4);
+    }
+}
+// 進階設定：非均等欄位
+.col-3-6-3 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(3);
+        @include make-md-column(3);
+        @include make-lg-column(3);
+        &:nth-child(2) {
+            @include make-xs-column(12);
+            @include make-sm-column(6);
+            @include make-md-column(6);
+            @include make-lg-column(6);
+        }
+    }
+}
+// 進階設定：五欄
+.col-5 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(2);
+        @include make-md-column(2);
+        @include make-lg-column(2);
+        &:first-child {
+            @include make-xs-column-offset(0);
+            @include make-sm-column-offset(1);
+            @include make-md-column-offset(1);
+            @include make-lg-column-offset(1);
+        }
+    }
+}</code></pre>
+                </div>
+        </div>
+    </div>
+   <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>

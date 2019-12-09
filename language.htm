@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>language 選擇語系選單</li>
+                </ul>
+            </div>
+            <h1>Language 選擇語系選單</h1>
+            <div class="path">檔案名稱：<span>sass/_language.scss</span></div>
+            <h2>HTML範本</h2>
+            <!-- demo Start -->
+            <p>此模組可單獨使用，語系數量不限，目前已預設用於<span class="hy">header</span>之<span class="hy">.navigation</span>區塊中，並已經自動設定偵測<span class="hy">html</span>裡面是否有<span class="hy">language</span>模組，讓<span class="hy">navigation</span>自動排版，讓模組放置於適當位置，如需要調整請參考以下設定。</p>
+            <div class="demo">
+                <div class="language">
+                    <a href="#">語言選擇</a>
+                    <ul>
+                        <li><a href="#">繁體中文</a></li>
+                        <li><a href="#">简体中文</a></li>
+                        <li><a href="#">ENGLISH</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;div class="language"&gt;
+    &lt;a href="#"&gt;語言選擇&lt;/a&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;繁體中文&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;简体中文&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;ENGLISH&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <!-- demo End -->
+            <h2>JQuery設定<img src="images/icon_check.png" alt="" ></h2>
+            <h3>自動偵測模組存在設定</h3>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+                    <code class="language-javascript">
+$('.navigation').has('.language').addClass('have_language');</code></pre>
+            </div>
+            <h3>語言模組 無障礙遊走設定</h3>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+                    <code class="language-javascript">
+/*-----------------------------------*/
+//////// 語言模組 無障礙遊走設定  ////////
+/*-----------------------------------*/
+$('.language').find('ul').hide();
+var openLang = $('.language').children('a');
+openLang.off().click(function(e) {
+    $(this).next('ul').stop(true, true).slideToggle();
+});
+openLang.keyup(function() {
+    $(this).next('ul').stop(true, true).slideDown();
+});
+$('.language').find('ul li:last>a').focusout(function() {
+    $('.language').find('ul').hide();
+});
+$(document).on('touchend click', function(e) {
+    var target = e.target;
+    if (!$(target).is('.language a')) {
+        $('.language').find('ul').hide();
+    }
+});</code></pre>
+            </div>
+        </div>
+    </div>
+   <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>

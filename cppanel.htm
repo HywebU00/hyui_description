@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>function panel / 內容頁文章控制及顯示模組</li>
+                </ul>
+            </div>
+            <h1>Function Panel / 內容頁控制及顯示模組</h1>
+            <div class="path">檔案名稱：<span>sass/page/_function.scss</span></div>
+            <h2>提供一組已組合好的內容頁文章控制及顯示模組</h2>
+            <p>可自由組合<a href="fontsize.htm">文字大小</a>、<a href="function.htm">回上一頁</a>、<a href="function.htm">友善列印</a>、<a href="function.htm">轉寄友人</a> 、<a href="share.htm">社群分享</a>...等目前以提供之模組，在父層包覆1個<span class="hy">function_panel</span>的div，即可呈現以下樣式。 ，模組無需更改結構只需要放進<span class="hy">function_panel</span>的div即可。</p>
+            <p>預設包含：</p>
+            <ul>
+                <li>發布時間</li>
+                <li><a href="fontsize.htm">字型大小</a></li>
+                <li><a href="function.htm">回上一頁</a></li>
+                <li><a href="function.htm">友善列印</a></li>
+                <li><a href="function.htm">轉寄友人</a></li>
+                <li><a href="share.htm">社群分享</a></li>
+            </ul>
+            <blockquote>
+                一般情況來說，文字控制模組大小用於文章Content Page，因此在其他內容頁為避免文字大小造成頁面排版錯誤疑慮，預設為不顯示文字控制模組
+            </blockquote>
+            <h3>範例</h3>
+            <!-- demo Start -->
+            <div class="demo">
+                <!-- cp control panel -->
+                <div class="function_panel">
+                    <div class="publish_time">
+                        <span>發布日期：</span><time>2019-01-01</time>
+                    </div>
+                    <!-- 文字大小 -->
+                    <div class="font_size">
+                        <span>字型大小：</span>
+                        <!-- 英文用<span>font-size：</span> -->
+                        <ul>
+                            <li><a href="#" class="small">小</a></li>
+                            <li><a href="#" class="medium">中</a></li>
+                            <li><a href="#" class="large">大</a></li>
+                        </ul>
+                    </div>
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                            <li class="print"><a href="#">友善列印</a></li>
+                            <li class="forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div>
+                    <!-- 社群分享 -->
+                    <div class="share">
+                        <ul>
+                            <li><a href="#"><img src="images/basic/icon_facebook.png" alt="facebook"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_line.png" alt="line"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_youtube.png" alt="youtube"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_googleplus.png" alt="google plus"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_instagram.png" alt="instagram"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_linkedin.png" alt="LinkedIn"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_rss.png" alt="RSS"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cp">
+                    <h2>標題二</h2>
+                    <p>可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。落然幾檢，牛即弟告者出行飯在教快政有我調個萬，對拿回色無為還成師營各手年天為完種風全，容人友成子選包母何有響好。著是情以裡來不子不覺野行？媽生頭濟那基女的此的下，社麗後難，無升美的力設們就很紙事而不題智香是水學，總切市沒不質熱雜，是視當為青阿少認消大究法成我，都不的友構，的陽式拿八檢腳種合飯市車那張甚活些全萬別他設給步後出領。不機業臉下天研兩南況有上體遊名，我我機叫少種的。</p>
+                </div>
+            </div>
+            <!-- demo End -->
+            <div class="sourcecode">
+                <pre class="language-html">
+                    <code class="language-html">
+&lt;div class="function_panel"&gt;
+    &lt;div class="publish_time"&gt;
+        &lt;span&gt;發布日期：&lt;/span&gt;&lt;time&gt;2019-01-01&lt;/time&gt;
+    &lt;/div&gt;
+    &lt;!-- 文字大小 --&gt;
+    &lt;div class="font_size"&gt;
+        &lt;span&gt;字型大小：&lt;/span&gt;
+        &lt;!-- 英文用&lt;span&gt;font-size：&lt;/span&gt; --&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#" class="small"&gt;小&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#" class="medium"&gt;中&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#" class="large"&gt;大&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- function功能區塊 --&gt;
+    &lt;div class="function"&gt;
+        &lt;ul&gt;
+            &lt;li class="back"&gt;&lt;a href="javascript:history.back()"&gt;回上一頁&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="print"&gt;&lt;a href="#"&gt;友善列印&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="forward"&gt;&lt;a href="#"&gt;轉寄友人&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- 社群分享 --&gt;
+    &lt;div class="share"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_facebook.png" alt="facebook"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_twitter.png" alt="twitter"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_line.png" alt="line"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_youtube.png" alt="youtube"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_googleplus.png" alt="google plus"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_instagram.png" alt="instagram"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_linkedin.png" alt="LinkedIn"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_rss.png" alt="RSS"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>

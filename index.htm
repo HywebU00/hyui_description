@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <meta property="og:url" content="http://design.hyweb.com.tw/hyui/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HyUI kit" />
+    <meta property="og:description" content="針對政府版型規範所設計的前端框架，由HTML5、CSS3與Javascript為核心語言開發而成，以「使用者體驗」(User Experience)出發， 針對介面操作體驗的友善性、流暢的視覺動線、​文字的閱讀舒適性和色彩管理計畫皆有預設SASS變數設定，且適用於所有載具的瀏覽呈現。" />
+    <meta property="og:image" content="http://design.hyweb.com.tw/hyui/images/fb_img.png" />
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png" />
+    <style> .demo>h2:first-child {
+        color: #21BAFF;
+    }
+    .demo>h2:first-child a {
+        background: #DDD;
+        border-radius: 4px;
+        text-align: center;
+        display: inline-block;
+        margin: 0px .5em;
+        color: #666;
+        font-size: 13px;
+        padding: .4em .5em;
+        line-height: 1;
+        font-weight: normal;
+        vertical-align: middle;
+    }
+
+    .demo>h2:first-child a:hover {
+        background: #FF3E4D;
+        color: #FFF;
+    }
+
+    .demo>h2:first-child a:focus {
+        box-shadow: none;
+        outline: none;
+    }
+    </style>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <!--            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                </ul>
+            </div> -->
+            <h1>HyUI Components</h1>
+            <div class="row">
+                <div class="col-md-12 demo">
+                    <h2>大圖輪播樣式<a href="slider.htm">連結</a></h2>
+                    <div class="mpSlider">
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <picture>
+                                    <source media="(min-width: 1200px)" data-srcset="images/demo/01.jpg">
+                                    <source media="(min-width: 992px)" data-srcset="images/demo/02.jpg">
+                                    <source media="(min-width: 576px)" data-srcset="images/demo/03.jpg">
+                                    <source media="(max-width: 575px)" data-srcset="images/demo/04.jpg">
+                                    <img data-src="images/demo/09.jpg" class="cover lazy">
+                                    <noscript><img src="images/demo/09.jpg"></noscript>
+                                </picture>
+                                <span class="caption">圖說1</span>
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <picture>
+                                    <source media="(min-width: 1200px)" data-srcset="images/demo/10.jpg">
+                                    <source media="(min-width: 992px)" data-srcset="images/demo/10.jpg">
+                                    <source media="(min-width: 576px)" data-srcset="images/demo/10.jpg">
+                                    <source media="(max-width: 575px)" data-srcset="images/demo/10.jpg">
+                                    <img data-src="images/demo/10.jpg" class="cover lazy">
+                                    <noscript><img src="images/demo/10.jpg"></noscript>
+                                </picture>
+                                <span class="caption">圖說2</span>
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <picture>
+                                    <source media="(min-width: 1200px)" data-srcset="images/demo/11.jpg">
+                                    <source media="(min-width: 992px)" data-srcset="images/demo/11.jpg">
+                                    <source media="(min-width: 576px)" data-srcset="images/demo/11.jpg">
+                                    <source media="(max-width: 575px)" data-srcset="images/demo/11.jpg">
+                                    <img data-src="images/demo/11.jpg" class="cover lazy">
+                                    <noscript><img src="images/demo/11.jpg"></noscript>
+                                </picture>
+                                <span class="caption">圖說3</span>
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <picture>
+                                    <source media="(min-width: 1200px)" data-srcset="images/demo/12.jpg">
+                                    <source media="(min-width: 992px)" data-srcset="images/demo/12.jpg">
+                                    <source media="(min-width: 576px)" data-srcset="images/demo/12.jpg">
+                                    <source media="(max-width: 575px)" data-srcset="images/demo/12.jpg">
+                                    <img data-src="images/demo/12.jpg" class="cover lazy">
+                                    <noscript><img src="images/demo/12.jpg"></noscript>
+                                </picture>
+                                <span class="caption">圖說4</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>頁籤區塊樣式<a href="tabs.htm">連結</a></h2>
+                    <div class="tabSet">
+                        <section class="tabs example-1">
+                            <h2 class="tabItem active"><a href="#">第一個頁籤</a></h2>
+                            <!--選到的頁籤項目-->
+                            <div class="tabContent">
+                                <ul>
+                                    <li><a href="#">1第一則消息消息消息消息消息消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第二則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第三則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第四則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第五則消息</a><span>107-01-01</span></li>
+                                </ul>
+                                <div class="more"><a href="#">更多</a></div>
+                            </div>
+                            <h2 class="tabItem"><a href="#">第二個頁籤</a></h2>
+                            <div class="tabContent">
+                                <ul>
+                                    <li><a href="#">2第一則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第二則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第三則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第四則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第五則消息</a><span>107-01-01</span></li>
+                                </ul>
+                                <div class="more"><a href="#">更多</a></div>
+                            </div>
+                            <h2 class="tabItem"><a href="#">第三個頁籤</a></h2>
+                            <div class="tabContent">
+                                <ul>
+                                    <li><a href="#">3第一則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第二則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第三則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第四則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第五則消息</a><span>107-01-01</span></li>
+                                </ul>
+                                <div class="more"><a href="#">更多</a></div>
+                            </div>
+                            <h2 class="tabItem"><a href="#">第四個頁籤</a></h2>
+                            <div class="tabContent">
+                                <ul>
+                                    <li><a href="#">4第一則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第二則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第三則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第四則消息</a><span>107-01-01</span></li>
+                                    <li><a href="#">第五則消息</a><span>107-01-01</span></li>
+                                </ul>
+                                <div class="more"><a href="#">更多</a></div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>功能樣式<a href="function.htm">連結</a></h2>
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="back icon_back"><a href="#">回上一頁</a></li>
+                            <li class="print icon_print"><a href="#">友善列印</a></li>
+                            <li class="forward icon_forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>分享按鈕樣式<a href="share.htm">連結</a></h2>
+                    <div class="share">
+                        <ul>
+                            <li><a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_line.svg" alt="line"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_rss.svg" alt="RSS"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>按鈕樣式<a href="buttons.htm">連結</a></h2>
+                    <div class="btn_grp">
+                        <a class="btn" role="button">按鈕</a>
+                        <a class="btn btn-blue" role="button">按鈕</a>
+                        <a class="btn btn-green" role="button">按鈕</a>
+                        <a class="btn btn-orange" role="button">按鈕</a>
+                        <a class="btn btn-yellow" role="button">按鈕</a>
+                        <a class="btn btn-purple" role="button">按鈕</a>
+                        <a class="btn btn-red" role="button">按鈕</a>
+                    </div>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>表單樣式<a href="form.htm">連結</a></h2>
+                    <form action="">
+                        <div class="form_grp">
+                            <label for="username">帳號:</label>
+                            <input name="username" type="text" placeholder="請輸入文字">
+                        </div>
+                        <div class="form_grp">
+                            <label for="password">密碼:</label>
+                            <input name="password" type="password" placeholder="請輸入密碼">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">記住我</label>
+                        </div>
+                        <div class="btn_grp">
+                            <input name="" type="reset" value="清除" />
+                            <input name="" type="submit" value="送出" />
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>checkbox<a href="form.htm">連結</a></h2>
+                    <form action="">
+                        <div class="check_grp form_inline">
+                            <label>
+                                <input type="checkbox" value="">選項一</label>
+                            <label>
+                                <input type="checkbox" value="">選項二</label>
+                            <label>
+                                <input type="checkbox" value="">選項三</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>radio<a href="form.htm">連結</a></h2>
+                    <form action="">
+                        <div class="radio_grp form_inline">
+                            <label>
+                                <input name="radioSample" type="radio" value="">選項一</label>
+                            <label>
+                                <input name="radioSample" type="radio" value="">選項二</label>
+                            <label>
+                                <input name="radioSample" type="radio" value="">選項三</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>提示訊息<a href="notice.htm">連結</a></h2>
+                    <div class="notice">這是一般提醒訊息區塊 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                    </div>
+                    <div class="notice_info">這是一般提醒訊息區塊 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                    </div>
+                    <div class="notice_success">您已經成功登入 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                    </div>
+                    <div class="notice_warning">這似乎不是一個正常的Email格式 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                    </div>
+                    <div class="notice_error">您輸入的帳號密碼有誤！ <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>分頁模組<a href="paginations.htm">連結</a></h2>
+                    <div class="pagination">
+                        <form action="" class="form_inline">
+                            <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                </select> 筆， <input type="button" class="btn" value="確定">
+                            </div>
+                        </form>
+                        <ul class="page">
+                            <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                            <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                            <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>相簿列表模組<a href="album.htm">連結</a></h2>
+                    <!-- 相簿列表 -->
+                    <div class="album">
+                        <ul>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <div class="img-container">
+                                            <!-- 此範例為4:3比例 -->
+                                            <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/demo/01.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/demo/02.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/demo/03.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/demo/04.jpg">
+                                                <img data-src="images/demo/01.jpg" class="lazy">
+                                                <noscript><img src="images/demo/01.jpg"></noscript>
+                                            </picture>
+                                        </div>
+                                        <div class="caption">
+                                            <time>2018-01-01</time>
+                                            <h3>相簿標題</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <div class="img-container">
+                                            <!-- 此範例為4:3比例 -->
+                                            <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/demo/02.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/demo/02.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/demo/02.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/demo/02.jpg">
+                                                <img data-src="images/demo/02.jpg" class="lazy">
+                                                <noscript><img src="images/demo/02.jpg"></noscript>
+                                            </picture>
+                                        </div>
+                                        <div class="caption">
+                                            <time>2018-01-01</time>
+                                            <h3>相簿標題</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <div class="img-container">
+                                            <!-- 此範例為4:3比例 -->
+                                            <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/demo/03.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/demo/03.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/demo/03.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/demo/03.jpg">
+                                                <img data-src="images/demo/03.jpg" class="lazy">
+                                                <noscript><img src="images/demo/03.jpg"></noscript>
+                                            </picture>
+                                        </div>
+                                        <div class="caption">
+                                            <time>2018-01-01</time>
+                                            <h3>相簿標題</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <div class="img-container">
+                                            <!-- 此範例為4:3比例 -->
+                                            <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/demo/04.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/demo/04.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/demo/04.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/demo/04.jpg">
+                                                <img data-src="images/demo/04.jpg" class="lazy">
+                                                <noscript><img src="images/demo/04.jpg"></noscript>
+                                            </picture>
+                                        </div>
+                                        <div class="caption">
+                                            <time>2018-01-01</time>
+                                            <h3>相簿標題</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <div class="img-container">
+                                            <!-- 此範例為4:3比例 -->
+                                            <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/demo/05.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/demo/05.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/demo/05.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/demo/05.jpg">
+                                                <img data-src="images/demo/05.jpg" class="lazy">
+                                                <noscript><img src="images/demo/05.jpg"></noscript>
+                                            </picture>
+                                        </div>
+                                        <div class="caption">
+                                            <time>2018-01-01</time>
+                                            <h3>相簿標題</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <div class="img-container">
+                                            <!-- 此範例為4:3比例 -->
+                                            <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/demo/06.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/demo/06.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/demo/06.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/demo/06.jpg">
+                                                <img data-src="images/demo/06.jpg" class="lazy">
+                                                <noscript><img src="images/demo/06.jpg"></noscript>
+                                            </picture>
+                                        </div>
+                                        <div class="caption">
+                                            <time>2018-01-01</time>
+                                            <h3>相簿標題</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <div class="img-container">
+                                            <!-- 此範例為4:3比例 -->
+                                            <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/demo/07.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/demo/07.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/demo/07.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/demo/07.jpg">
+                                                <img data-src="images/demo/07.jpg" class="lazy">
+                                                <noscript><img src="images/demo/07.jpg"></noscript>
+                                            </picture>
+                                        </div>
+                                        <div class="caption">
+                                            <time>2018-01-01</time>
+                                            <h3>相簿標題</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <div class="img-container">
+                                            <!-- 此範例為4:3比例 -->
+                                            <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/demo/08.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/demo/08.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/demo/08.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/demo/08.jpg">
+                                                <img data-src="images/demo/08.jpg" class="lazy">
+                                                <noscript><img src="images/demo/08.jpg"></noscript>
+                                            </picture>
+                                        </div>
+                                        <div class="caption">
+                                            <time>2018-01-01</time>
+                                            <h3>相簿標題</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <div class="img-container">
+                                            <!-- 此範例為4:3比例 -->
+                                            <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/demo/09.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/demo/09.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/demo/09.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/demo/09.jpg">
+                                                <img data-src="images/demo/09.jpg" class="lazy">
+                                                <noscript><img src="images/demo/09.jpg"></noscript>
+                                            </picture>
+                                        </div>
+                                        <div class="caption">
+                                            <time>2018-01-01</time>
+                                            <h3>相簿標題</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <div class="img-container">
+                                            <!-- 此範例為4:3比例 -->
+                                            <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/demo/10.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/demo/10.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/demo/10.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/demo/10.jpg">
+                                                <img data-src="images/demo/10.jpg" class="lazy">
+                                                <noscript><img src="images/demo/10.jpg"></noscript>
+                                            </picture>
+                                        </div>
+                                        <div class="caption">
+                                            <time>2018-01-01</time>
+                                            <h3>相簿標題</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <div class="img-container">
+                                            <!-- 此範例為4:3比例 -->
+                                            <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/demo/11.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/demo/11.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/demo/11.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/demo/11.jpg">
+                                                <img data-src="images/demo/11.jpg" class="lazy">
+                                                <noscript><img src="images/demo/11.jpg"></noscript>
+                                            </picture>
+                                        </div>
+                                        <div class="caption">
+                                            <time>2018-01-01</time>
+                                            <h3>相簿標題</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <div class="img-container">
+                                            <!-- 此範例為4:3比例 -->
+                                            <picture>
+                                                <source media="(min-width: 1200px)" data-srcset="images/demo/12.jpg">
+                                                <source media="(min-width: 992px)" data-srcset="images/demo/12.jpg">
+                                                <source media="(min-width: 576px)" data-srcset="images/demo/12.jpg">
+                                                <source media="(max-width: 575px)" data-srcset="images/demo/12.jpg">
+                                                <img data-src="images/demo/12.jpg" class="lazy">
+                                                <noscript><img src="images/demo/12.jpg"></noscript>
+                                            </picture>
+                                        </div>
+                                        <div class="caption">
+                                            <time>2018-01-01</time>
+                                            <h3>相簿標題</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>廣告輪播樣式<a href="slider.htm">連結</a></h2>
+                    <div class="adSlider">
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_01.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_02.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_03.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_04.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_05.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_06.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_07.jpg" class="cover">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>Fat-footer<a href="fatfooter.htm">連結</a></h2>
+                    <section class="fatfooter">
+                        <div class="container">
+                            <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+                            <nav>
+                                <ul>
+                                    <li><a href="#">關於本局</a>
+                                        <ul>
+                                            <li><a href="#">本局沿革</a></li>
+                                            <li><a href="#">本局願景</a></li>
+                                            <li><a href="#">組織介紹</a></li>
+                                            <li><a href="#">本局願景</a></li>
+                                            <li><a href="#">局處執掌</a></li>
+                                            <li><a href="#">重大政策</a></li>
+                                            <li><a href="#">施政重點</a></li>
+                                            <li><a href="#">本局位置</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">訊息公告</a>
+                                        <ul>
+                                            <li><a href="#">本局公告</a></li>
+                                            <li><a href="#">環保署公告</a></li>
+                                            <li><a href="#">環境用藥公告</a></li>
+                                            <li><a href="#">環保專案成果報告</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">業務專區</a>
+                                        <ul>
+                                            <li><a href="#">化學物質</a></li>
+                                            <li><a href="#">毒性化學物質</a></li>
+                                            <li><a href="#">危害性化學物質災害防救</a></li>
+                                            <li><a href="#">環境用藥</a></li>
+                                            <li><a href="#">石綿危害資訊</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">便民服務</a>
+                                        <ul>
+                                            <li><a href="#">線上服務</a></li>
+                                            <li><a href="#">教育宣導</a></li>
+                                            <li><a href="#">影音專區</a></li>
+                                            <li><a href="#">下載專區</a></li>
+                                            <li><a href="#">常見問答</a></li>
+                                            <li><a href="#">相關連結</a></li>
+                                            <li><a href="#">訂閱電子報</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">政府資訊公開</a>
+                                        <ul>
+                                            <li><a href="#">行政院環境保護署資訊公開要點</a></li>
+                                            <li><a href="#">預算及會計月報</a></li>
+                                            <li><a href="#">性別平等專區</a></li>
+                                            <li><a href="#">人權專區</a></li>
+                                            <li><a href="#">環境統計資料庫</a></li>
+                                            <li><a href="#">業務標準作業流程</a></li>
+                                            <li><a href="#">行政院環保署Open Data資料集</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">法規專區</a>
+                                        <ul>
+                                            <li><a href="#">主管法規查詢系統</a></li>
+                                            <li><a href="#">全國法規資料庫</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>Footer<a href="footer.htm">連結</a></h2>
+                    <footer>
+                        <div class="container">
+                            <div class="footer_logo">
+                                <img src="images/logo.png" alt="" class="img-responsive">
+                            </div>
+                            <div class="footer_info">
+                                <ul class="footer_link">
+                                    <li><a href="javascript:;">隱私權政策</a></li>
+                                    <li><a href="javascript:;">網站安全政策</a></li>
+                                    <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+                                </ul>
+                                <p class="Copyright"> Hyweb Technology Co., Ltd.© 2015 All Rights Reserved</p>
+                                <p> 總公司：新竹縣竹北市台元一街8號5樓之6TEL：03-5601296 <br /> 台北分公司：台北市重慶南路二段51號5樓 TEL：02-2395-6966 <br /> 台中分公司：台中市西屯區臺灣大道三段658號6樓A1 TEL：04-2706-3968 <br /> 高雄分公司：高雄市新興區中正三路55號26樓之5 TEL：07-2223606 </p>
+                                <span class="update">更新日期:<em>2018/01/01</em></span>
+                                <span class="counter">累計瀏覽人次:<em>46476653</em></span>
+                            </div>
+                            <div class="footer_icon">
+                                <a target="_blank" href="javascript:;" title="另開視窗">
+                                    <img src="images/basic/accessibility.jpg" alt="">
+                                </a>
+                                <a target="_blank" href="javascript:;" title="另開視窗">
+                                    <img src="images/basic/egov.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>ICON樣式<a href="icon.htm">連結</a></h2>
+                    <div class="icon_demo">
+                        <ul>
+                            <li class="i_apple"></li>
+                            <li class="i_arrow_left"></li>
+                            <li class="i_arrow_right"></li>
+                            <li class="i_bookmark"></li>
+                            <li class="i_chat"></li>
+                            <li class="i_check"></li>
+                            <li class="i_clock"></li>
+                            <li class="i_close"></li>
+                            <li class="i_edit"></li>
+                            <li class="i_facebook"></li>
+                            <li class="i_googleplus"></li>
+                            <li class="i_grid"></li>
+                            <li class="i_heart"></li>
+                            <li class="i_home"></li>
+                            <li class="i_info"></li>
+                            <li class="i_link"></li>
+                            <li class="i_linkedin"></li>
+                            <li class="i_lock"></li>
+                            <li class="i_mail"></li>
+                            <li class="i_rss"></li>
+                            <li class="i_setting"></li>
+                            <li class="i_star"></li>
+                            <li class="i_twitter"></li>
+                            <li class="i_video"></li>
+                            <li class="i_vimeo"></li>
+                            <li class="i_youtube"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>Accordion<a href="accordion.htm">連結</a></h2>
+                    <div class="accordion qa">
+                        <ul>
+                            <li><a href="#" title="">總統、副總統選舉，選舉人之資格條件為何？</a>
+                                <div class="accordion-content">
+                                    <p>中華民國自由地區人民，年滿20歲，未受監護宣告。(二)現在中華民國自由地區繼續居住6個月以上者；或曾在中華民國自由地區繼續居住6個月以上，現在國外，持有效中華民國護照，並在規定期間內向其最後遷出國外時之原戶籍地戶政機關辦理選舉人登記者。</p>
+                                </div>
+                            </li>
+                            <li><a href="#" title="">公職人員選舉，選舉人之資格條件為何？</a>
+                                <div class="accordion-content">
+                                    <p>中華民國國民，年滿20歲，未受監護宣告。(二)在各該選舉區繼續居住4個月以上者。</p>
+                                </div>
+                            </li>
+                            <li><a href="#" title="">誰可以收受政治獻金？</a>
+                                <div class="accordion-content">
+                                    <p>可收受政治獻金之對象： 1.政黨。 2.政治團體。 3.有意參選者。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>表格樣式<a href="table.htm">連結</a></h2>
+                    <div class="table_list">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>編號</th>
+                                    <th>據點</th>
+                                    <th>地址</th>
+                                    <th>電話</th>
+                                    <th>傳真</th>
+                                    <th>信箱</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-title="編號">01</td>
+                                    <td data-title="據點">總公司</td>
+                                    <td data-title="地址">新竹縣竹北市台元一街8號5樓之6</td>
+                                    <td data-title="電話">02-12345678</td>
+                                    <td data-title="傳真">02-12345678</td>
+                                    <td data-title="信箱"><a href="#"><img src="images/icon_mail.png" alt=""></a></td>
+                                </tr>
+                                <tr>
+                                    <td data-title="編號">02</td>
+                                    <td data-title="據點">臺北分公司</td>
+                                    <td data-title="地址">臺北市重慶南路二段51號5樓</td>
+                                    <td data-title="電話">02-12345678</td>
+                                    <td data-title="傳真">02-12345678</td>
+                                    <td data-title="信箱"><a href="#"><img src="images/icon_mail.png" alt=""></a></td>
+                                </tr>
+                                <tr>
+                                    <td data-title="編號">03</td>
+                                    <td data-title="據點">臺中分公司</td>
+                                    <td data-title="地址">臺中市西屯區臺灣大道三段658號6樓A1</td>
+                                    <td data-title="電話">02-12345678</td>
+                                    <td data-title="傳真">02-12345678</td>
+                                    <td data-title="信箱"><a href="#"><img src="images/icon_mail.png" alt=""></a></td>
+                                </tr>
+                                <tr>
+                                    <td data-title="編號">04</td>
+                                    <td data-title="據點">高雄分公司</td>
+                                    <td data-title="地址">高雄市新興區中正三路55號26樓之5</td>
+                                    <td data-title="電話">02-12345678</td>
+                                    <td data-title="傳真">02-12345678</td>
+                                    <td data-title="信箱"><a href="#"><img src="images/icon_mail.png" alt=""></a></td>
+                                </tr>
+                                <tr>
+                                    <td data-title="編號">05</td>
+                                    <td data-title="據點">曼谷分公司</td>
+                                    <td data-title="地址">Room No.2009, 20th F1., Le Concorde Tower, 202 Ratchadapisek Rd., Huaykwang, Bangkok 10310</td>
+                                    <td data-title="電話">02-12345678</td>
+                                    <td data-title="傳真">02-12345678</td>
+                                    <td data-title="信箱"><a href="#"><img src="images/icon_mail.png" alt=""></a></td>
+                                </tr>
+                                <tr>
+                                    <td data-title="編號">06</td>
+                                    <td data-title="據點">北京</td>
+                                    <td data-title="地址">北京市海淀区安宁庄西路9号院29号楼金泰富地大厦105室</td>
+                                    <td data-title="電話">02-12345678</td>
+                                    <td data-title="傳真">02-12345678</td>
+                                    <td data-title="信箱"><a href="#"><img src="images/icon_mail.png" alt=""></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-12 demo cp">
+                    <h2>文字樣式<a href="typography.htm">連結</a></h2>
+                    <h1>標題1</h1>
+                    <h2>標題2</h2>
+                    <h3>標題3</h3>
+                    <h4>標題4</h4>
+                    <h5>標題5</h5>
+                    <h6>標題6</h6>
+                    <h2>段落樣式</h2>
+                    <p>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有</p>
+                    <blockquote>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。</blockquote>
+                    <h2>清單樣式</h2>
+                    <ul>
+                        <li>影開兒中不們西動會味理化由子常洲國有標題</li>
+                        <li>首動我行得流事個要使著獨操大</li>
+                        <li>推列黃上道有畫走長市上</li>
+                        <li>證會不就人推陸跑公片重</li>
+                        <li>處來在山工國生即工球一，易心個長什去實用當們公有也候</li>
+                    </ul>
+                    <ol>
+                        <li>影開兒中不們西動會味理化由子常洲國有標題</li>
+                        <li>首動我行得流事個要使著獨操大</li>
+                        <li>推列黃上道有畫走長市上</li>
+                        <li>證會不就人推陸跑公片重</li>
+                        <li>處來在山工國生即工球一，易心個長什去實用當們公有也候</li>
+                    </ol>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>標籤樣式<a href="category.htm">連結</a></h2>
+                    <div class="category">
+                        <ul>
+                            <li><a href="#">標籤1</a></li>
+                            <li><a href="#">標籤2</a></li>
+                            <li><a href="#">標籤3</a></li>
+                            <li><a href="#">標籤4</a></li>
+                            <li><a href="#">標籤5</a></li>
+                            <li><a href="#">標籤6</a></li>
+                            <li><a href="#">標籤7</a></li>
+                            <li><a href="#">標籤8</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+<!-- slick js -->
+<script src="vendor/slick/slick.min.js "></script>
+<script src="vendor/slick/slick-lightbox.js "></script>
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>
+<script src="js/customize.js"></script>

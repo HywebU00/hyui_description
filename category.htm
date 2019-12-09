@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>Category / 分類目錄</li>
+                </ul>
+            </div>
+            <h1>Category / 分類目錄</h1>
+            <div class="path">檔案名稱：<span>sass/_tag.scss</span></div>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="category">
+                    <ul>
+                        <li><a href="#">標籤1</a></li>
+                        <li><a href="#">標籤2</a></li>
+                        <li><a href="#">標籤3</a></li>
+                        <li><a href="#">標籤4</a></li>
+                        <li><a href="#">標籤5</a></li>
+                        <li><a href="#">標籤6</a></li>
+                        <li><a href="#">標籤7</a></li>
+                        <li><a href="#">標籤8</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- demo End -->
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;div class="category"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤6&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤7&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤8&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <h3>範例：可加入數量統計狀態</h3>
+            <p>可於連結內，放置<span class="hy">span</span>標籤，讓程式帶入筆數數值即可。</p>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="category">
+                    <ul>
+                        <li><a href="#">標籤1 <span>10</span></a></li>
+                        <li><a href="#">標籤2 <span>5</span></a></li>
+                        <li><a href="#">標籤3 <span>4</span></a></li>
+                        <li><a href="#">標籤4 <span>6</span></a></li>
+                        <li><a href="#">標籤5 <span>12</span></a></li>
+                        <li><a href="#">標籤6 <span>9</span></a></li>
+                        <li><a href="#">標籤7 <span>5</span></a></li>
+                        <li><a href="#">標籤8 <span>2</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- demo End -->
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;div class="category"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤1 &lt;span&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤2 &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤3 &lt;span&gt;4&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤4 &lt;span&gt;6&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤5 &lt;span&gt;12&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤6 &lt;span&gt;9&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤7 &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;標籤8 &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+ <h2>JQuery設定<img src="images/icon_check.png" alt="" ></h2>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+                <code class="language-javascript">
+/*-----------------------------------*/
+/////////// category active  //////////
+/*-----------------------------------*/
+$('.category').find('a').off().click(function(event) {
+    $(this).parent('li').siblings().find('a').removeClass('active');
+    $(this).addClass('active');
+});</code></pre>
+            </div>
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+<div id="modal1" class="modal">
+    <h2>標題</h2>
+    <p>內文</p>
+</div>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>
+<script>
+$(function() {
+    /*-----------------------------------*/
+    /////////// category active  //////////
+    /*-----------------------------------*/
+    $('.category').find('a').off().click(function(event) {
+        $(this).parent('li').siblings().find('a').removeClass('active');
+        $(this).addClass('active');
+    });
+});
+</script>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <meta property="og:url" content="http://design.hyweb.com.tw/hyui/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HyUI kit" />
+    <meta property="og:description" content="針對政府版型規範所設計的前端框架，由HTML5、CSS3與Javascript為核心語言開發而成，以「使用者體驗」(User Experience)出發， 針對介面操作體驗的友善性、流暢的視覺動線、​文字的閱讀舒適性和色彩管理計畫皆有預設SASS變數設定，且適用於所有載具的瀏覽呈現。" />
+    <meta property="og:image" content="http://design.hyweb.com.tw/hyui/images/fb_img.png" />
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png" />
+    <style>
+    .demo>h2:first-child {
+        color: #21BAFF;
+    }
+    .demo>h2:first-child a {
+        background: #DDD;
+        border-radius: 4px;
+        text-align: center;
+        display: inline-block;
+        margin: 0px .5em;
+        color: #666;
+        font-size: 13px;
+        padding: .4em .5em;
+        line-height: 1;
+        font-weight: normal;
+        vertical-align: middle;
+    }
+    .demo>h2:first-child a:hover {
+        background: #FF3E4D;
+        color: #FFF;
+    }
+    .demo>h2:first-child a:focus {
+        box-shadow: none;
+        outline: none;
+    }
+    </style>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <!--            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                </ul>
+            </div> -->
+            <h1>HyUI Components</h1>
+            <div class="row">
+                <div class="col-md-12 demo">
+                    <h2>大圖輪播樣式<a href="slider.htm">連結</a></h2>
+                    <div class="mpSlider">
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="images/demo/09.jpg">
+                                    <source media="(min-width: 992px)" srcset="images/demo/09.jpg">
+                                    <source media="(min-width: 576px)" srcset="images/demo/09.jpg">
+                                    <source media="(max-width: 575px)" srcset="images/demo/09.jpg">
+                                    <img data-lazy="images/demo/09.jpg" class="cover">
+                                    <noscript><img src="images/demo/09.jpg"></noscript>
+                                </picture>
+                                <span class="caption">圖說1</span>
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <picture>
+                                    <source media="(min-width: 1200px)" data-lazy-srcset="images/demo/10.jpg">
+                                    <source media="(min-width: 992px)" data-lazy-srcset="images/demo/10.jpg">
+                                    <source media="(min-width: 576px)" data-lazy-srcset="images/demo/10.jpg">
+                                    <source media="(max-width: 575px)" data-lazy-srcset="images/demo/10.jpg">
+                                    <img data-lazy="images/demo/10.jpg" class="cover">
+                                    <noscript><img src="images/demo/10.jpg"></noscript>
+                                </picture>
+                                <span class="caption">圖說2</span>
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <picture>
+                                    <source media="(min-width: 1200px)" data-lazy-srcset="images/demo/11.jpg">
+                                    <source media="(min-width: 992px)" data-lazy-srcset="images/demo/11.jpg">
+                                    <source media="(min-width: 576px)" data-lazy-srcset="images/demo/11.jpg">
+                                    <source media="(max-width: 575px)" data-lazy-srcset="images/demo/11.jpg">
+                                    <img data-lazy="images/demo/11.jpg" class="cover">
+                                    <noscript><img src="images/demo/11.jpg"></noscript>
+                                </picture>
+                                <span class="caption">圖說3</span>
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <picture>
+                                    <source media="(min-width: 1200px)" data-lazy-srcset="images/demo/12.jpg">
+                                    <source media="(min-width: 992px)" data-lazy-srcset="images/demo/12.jpg">
+                                    <source media="(min-width: 576px)" data-lazy-srcset="images/demo/12.jpg">
+                                    <source media="(max-width: 575px)" data-lazy-srcset="images/demo/12.jpg">
+                                    <img data-lazy="images/demo/12.jpg" 2 class="cover">
+                                    <noscript><img src="images/demo/12.jpg"></noscript>
+                                </picture>
+                                <span class="caption">圖說4</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 demo">
+                    <h2>廣告輪播樣式<a href="slider.htm">連結</a></h2>
+                    <div class="adSlider">
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_01.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_02.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_03.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_04.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_05.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_06.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="廣告輪播">
+                                <img data-lazy="images/demo/ad_07.jpg" class="cover">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+<!-- slick js -->
+<script src="vendor/slick/slick.min.js "></script>
+<script src="vendor/slick/slick-lightbox.js "></script>
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>
+<script src="js/customize.js"></script>

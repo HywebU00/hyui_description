@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>header 頁首</li>
+                </ul>
+            </div>
+            <h1>Header 頁首</h1>
+            <div class="path">檔案名稱：<span>sass/_header.scss</span></div>
+            <div class="path">檔案名稱：<span>sass/_menu.scss</span></div>
+            <p><span class="hy">頁首</span>由<span class="hy">header</span>標籤包覆，目前已預先設定<span class="hy">h1 (logo圖檔)</span>、<span class="hy">navigation</span>、<span class="hy">search</span>、<span class="hy">menu</span>等元素。</p>
+        <p>內含預設模組可參考</p>
+        <ul>
+            <li><a href="navigation.htm">Navigation 導覽列</a></li>
+            <li><a href="navigation.htm">Search 搜尋</a></li>
+            <li><a href="navigation.htm">Menu 主選單</a></li>
+        </ul>   
+        <p>以下模組依照無障礙<span class="hy">tab</span>遊走順序擺放，如無特殊需求，皆依照由上到下、由左到右之順序呈現。</p>
+        <p>
+            頁首模組皆已設定響應式風格樣式，目前斷點預設為<span class="hy">768px</span>，如需要更改斷點，請至<span class="hy">hyui.js</span>更改斷點變數，以及<span class="hy">_valuable.scss</span>更改斷點變數。
+        </p>
+        <h1>HTML範本</h1>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;!-- header Start --&gt;
+&lt;header class="header"&gt;
+    &lt;div class="container"&gt;
+        &lt;a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2"&gt;:::&l&gt;
+        &lt;!-- navigation Start --&gt;
+        &lt;nav class="navigation"&gt;
+            &lt;!-- 一組ul預設靠右 --&gt;
+            &lt;!-- 兩組ul已寫JQ靠左靠右 --&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;回首頁&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;網站導覽&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;English&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;常見問答&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二組導覽&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二組導覽&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第二組導覽&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class="language"&gt;
+                &lt;a href="#"&gt;語言選擇&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;繁體中文&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;简体中文&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;ENGLISH&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+        &lt;!-- navigation End --&gt;
+        &lt;h1&gt;
+            &lt;a href="#"&gt;&lt;img src="images/logo.png" alt="網站標題"/&gt;&lt;/a&gt;
+        &lt;/h1&gt;
+        &lt;!-- Search Start --&gt;
+        &lt;div class="search"&gt;
+            &lt;form action="" class="form_inline"&gt;
+                &lt;div class="form_grp"&gt;
+                    &lt;label for="mustSameAsId"&gt;帳號:&lt;/label&gt;
+                        &lt;input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S"&gt;
+                    &lt;input name="" type="submit" value="查詢" /&gt;
+                &lt;/div&gt;
+                &lt;div class="btn_grp"&gt;
+                    &lt;input name="" type="submit" value="進階搜尋" /&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+            &lt;div class="keywordHot"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;熱門熱門&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;查詢&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;字詞三&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Search End --&gt;
+        &lt;!-- noscript --&gt;
+                &lt;noscript&gt; 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 &lt;a href="#"&gt;網站導gt;
+        &lt;/noscript&gt;
+        &lt;!-- menu Start --&gt;
+        &lt;nav class="menu"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="http://www.google.com"&gt;第一層有連結&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="http://www.google.com"&gt;第一層有連結&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="http://www.google.com"&gt;第二層有連結&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="http://www.google.com"&gt;第二層有連結&lt;/a&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a href="http://www.google.com"&gt;第三層選單有下層&lt;/a&gt;
+                                    &lt;ul&gt;
+                                        &lt;li&gt;&lt;a href="#"&gt;第四層選單&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="#"&gt;第四層選單&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="http://www.google.com"&gt;第三層選單有連結&lt;/a&li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;第三層選單&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;第一層選單&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;第二層選單&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;!-- menu End --&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+&lt;!-- header End --&gt;
+</code></pre>
+            </div>
+            <!-- demo End -->
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+<div id="modal1" class="modal">
+    <h2>標題</h2>
+    <p>內文</p>
+</div>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>
+<script>
+$(function() {
+    $('#modal1').hide();
+    $('.modal').after('<div class="modal_overlay"></div>');
+    $('.modal').prepend('<button type="button" class="close">關閉</button>')
+    $('.modal_overlay').hide();
+    $('#openModal').click(function(e) {
+        $('#modal1').show();
+        $('.modal_overlay').show();
+        $('body').addClass('noscroll');
+        e.preventDefault();
+    });
+
+    function closeModal() {
+        $('#modal1').hide();
+        $('.modal_overlay').hide();
+    }
+    $('.modal_overlay').click(closeModal);
+    $('.modal .close').click(closeModal);
+});
+</script>

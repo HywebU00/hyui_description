@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png" />
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png" />
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <div class="guide_quicklink">
+            <ul>
+                <li><a href="#01">大圖輪播範例</a></li>
+                <li><a href="#02">廣告輪播範例</a></li>
+            </ul>
+        </div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>slider</li>
+                </ul>
+            </div>
+            <h1>Slider</h1>
+            <div class="path">檔案名稱：<span>sass/_slick.scss</span></div>
+            <p>HyUI使用<a href="">slick</a>的輪播模組，目前hyUI <span class="hy">vendor</span>內含<span class="hy">slick</span>已經有加入客製化設定，如需要最新版，請到<a href="">slick</a>官網下載。</p>
+            <h2>請在網頁中匯入slick 外掛</h2>
+            <p>slick屬於外掛，故放在<span class="hy">vendor</span>資料夾裡，包括所有的圖檔、js、css</p>
+            <h3>匯入外掛CSS</h3>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;link rel="stylesheet" type="text/css" href="vendor/slick/slick.css"/&gt;
+&lt;link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css"/&gt;</code></pre>
+            </div>
+            <h3>匯入JS</h3>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;script type="text/javascript" src="vendor/slick/slick.min.js"&gt;&lt;/script&gt;</code></pre>
+            </div>
+            <h3>Slick的基本設定</h3>
+            <p>使用設定以slick官方文件為準。</p>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+                <code class="language-javascript">
+$(document).ready(function(){
+  $('.your-class').slick({
+    arrows: true,                       //左右箭頭
+    autoplay: false,                    //自動播放
+    autoplaySpeed: 3000,                //自動播放秒數
+    dots: false,                        //顯示圓點
+    dotsClass:  'slick-dots',           //原點css
+    draggable: true,                    //滑鼠可以拖曳
+    infinite: true,                     //無限輪播
+    pauseOnHover: true,                 //滑鼠移過後暫停自動撥放
+    pauseOnDotsHover: false,            //滑鼠移過圓點後暫停自動撥放
+    rtl: false,                         //改變輪播方向
+    slidesToShow: 1,                    //一次顯示幾張
+    slidesToScroll: 1,                  //一次輪播幾張
+    vertical: false                     //改成垂直方向
+  });
+});</code>
+            </pre>
+            </div>
+            <h2><span style="font-size:2em;margin-right:.2em;color:#21BAFF;" id="01">01.</span>大圖輪播範例</h2>
+            <p>本版本輪播圖檔可使用<span class="hy">obect-fit</span>設定，故上稿內容不限尺寸，皆可正常呈現。</p>
+            <!-- demo Start -->
+            <div class="demo">
+                 <div class="mpSlider">
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <picture>
+                                    <source media="(min-width: 1200px)" data-srcset="images/demo/09.jpg">
+                                    <source media="(min-width: 992px)" data-srcset="images/demo/09.jpg">
+                                    <source media="(min-width: 576px)" data-srcset="images/demo/09.jpg">
+                                    <source media="(max-width: 575px)" data-srcset="images/demo/09.jpg">
+                                    <img data-src="images/demo/09.jpg" class="cover lazy">
+                                    <noscript><img src="images/demo/09.jpg"></noscript>
+                                </picture>
+                                <span class="caption">圖說1</span>
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <picture>
+                                    <source media="(min-width: 1200px)" data-srcset="images/demo/10.jpg">
+                                    <source media="(min-width: 992px)" data-srcset="images/demo/10.jpg">
+                                    <source media="(min-width: 576px)" data-srcset="images/demo/10.jpg">
+                                    <source media="(max-width: 575px)" data-srcset="images/demo/10.jpg">
+                                    <img data-src="images/demo/10.jpg" class="cover lazy">
+                                    <noscript><img src="images/demo/10.jpg"></noscript>
+                                </picture>
+                                <span class="caption">圖說2</span>
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <picture>
+                                    <source media="(min-width: 1200px)" data-srcset="images/demo/11.jpg">
+                                    <source media="(min-width: 992px)" data-srcset="images/demo/11.jpg">
+                                    <source media="(min-width: 576px)" data-srcset="images/demo/11.jpg">
+                                    <source media="(max-width: 575px)" data-srcset="images/demo/11.jpg">
+                                    <img data-src="images/demo/11.jpg" class="cover lazy">
+                                    <noscript><img src="images/demo/11.jpg"></noscript>
+                                </picture>
+                                <span class="caption">圖說3</span>
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <picture>
+                                    <source media="(min-width: 1200px)" data-srcset="images/demo/12.jpg">
+                                    <source media="(min-width: 992px)" data-srcset="images/demo/12.jpg">
+                                    <source media="(min-width: 576px)" data-srcset="images/demo/12.jpg">
+                                    <source media="(max-width: 575px)" data-srcset="images/demo/12.jpg">
+                                    <img data-src="images/demo/12.jpg" class="cover lazy">
+                                    <noscript><img src="images/demo/12.jpg"></noscript>
+                                </picture>
+                                <span class="caption">圖說4</span>
+                            </a>
+                        </div>
+                    </div>
+            </div>
+            <!-- demo End -->
+            <h2>HTML</h2>
+            <p>圖檔顯示比例可參考<a href="image.htm">image.htm</a></p>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;div class="mpSlider"&gt;
+    &lt;div class="img-container"&gt;
+        &lt;a href="#" title=""&gt;
+            &lt;picture&gt;
+                &lt;source media="(min-width: 1200px)" data-srcset="大尺寸圖檔"&gt;
+                &lt;source media="(min-width: 992px)" data-srcset="中尺寸圖檔"&gt;
+                &lt;source media="(min-width: 576px)" data-srcset="小尺寸圖檔"&gt;
+                &lt;source media="(max-width: 575px)" data-srcset="最小尺寸圖檔"&gt;
+                &lt;img data-src="大尺寸圖檔" class="cover lazy"&gt;
+                &lt;noscript&gt;&lt;img src="大尺寸圖檔"&gt;&lt;/noscript&gt;
+            &lt;/picture&gt;
+            &lt;span class="caption"&gt;圖說1&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="img-container"&gt;
+        &lt;a href="#" title=""&gt;
+            &lt;picture&gt;
+                &lt;source media="(min-width: 1200px)" data-srcset="大尺寸圖檔"&gt;
+                &lt;source media="(min-width: 992px)" data-srcset="中尺寸圖檔"&gt;
+                &lt;source media="(min-width: 576px)" data-srcset="小尺寸圖檔"&gt;
+                &lt;source media="(max-width: 575px)" data-srcset="最小尺寸圖檔"&gt;
+                &lt;img data-src="大尺寸圖檔" class="cover lazy"&gt;
+                &lt;noscript&gt;&lt;img src="大尺寸圖檔"&gt;&lt;/noscript&gt;
+            &lt;/picture&gt;
+            &lt;span class="caption"&gt;圖說2&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="row">
+                <div class="hy-2">
+                    <h2>SCSS設定</h2>
+                    <div class="sourcecode">
+                        <pre class="language-scss">
+                <code class="language-scss">
+// slick._scss
+// 首頁大圖輪播
+.mpSlider {
+    width: 100%;
+    padding-bottom: 3em;
+    @include gutter(0);
+    .img-container {
+        @include aspect-ratio(5, 2); //PC版比例
+        @include screen('mobile') {
+            @include aspect-ratio(5, 3); //Mobile版比例
+        }
+    }
+    .slick-prev {
+        @include screen('mobile') {
+            top: 35%;
+            left: 2%;
+        }
+    }
+    .slick-next {
+        @include screen('mobile') {
+            top: 35%;
+            right: 2%;
+        }
+    }
+}</code></pre>
+                    </div>
+                </div>
+                <div class="hy-2">
+                    <h2>JQuery設定</h2>
+                    <div class="sourcecode">
+                        <pre class="language-javascript">
+                <code class="language-javascript">
+// 請放置customize.js
+// 首頁輪播
+$('.mpSlider').slick({
+    dots: true,
+    arrow: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    fade: true,
+    lazyLoad: 'ondemand',
+    ease : 'ease'
+});</code></pre>
+                    </div>
+                </div>
+            </div>
+            <h2><span style="font-size:2em;margin-right:.2em;color:#21BAFF;" id="02">02.</span>廣告輪播範例</h2>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="adSlider">
+                    <div class="img-container">
+                        <a href="#" title="">
+                            <img data-lazy="images/demo/ad_01.jpg" class="contain">
+                            <noscript><img src="images/demo/ad_01.jpg" alt=""></noscript>
+                        </a>
+                    </div>
+                    <div class="img-container">
+                        <a href="#" title="">
+                            <img data-lazy="images/demo/ad_02.jpg" class="contain">
+                            <noscript><img src="images/demo/ad_02.jpg" alt=""></noscript>
+                        </a>
+                    </div>
+                    <div class="img-container">
+                        <a href="#" title="">
+                            <img data-lazy="images/demo/ad_03.jpg" class="contain">
+                            <noscript><img src="images/demo/ad_03.jpg" alt=""></noscript>
+                        </a>
+                    </div>
+                    <div class="img-container">
+                        <a href="#" title="">
+                            <img data-lazy="images/demo/ad_04.jpg" class="contain">
+                            <noscript><img src="images/demo/ad_04.jpg" alt=""></noscript>
+                        </a>
+                    </div>
+                    <div class="img-container">
+                        <a href="#" title="">
+                            <img data-lazy="images/demo/ad_05.jpg" class="contain">
+                            <noscript><img src="images/demo/ad_05.jpg" alt=""></noscript>
+                        </a>
+                    </div>
+                    <div class="img-container">
+                        <a href="#" title="">
+                            <img data-lazy="images/demo/ad_06.jpg" class="contain">
+                            <noscript><img src="images/demo/ad_06.jpg" alt=""></noscript>
+                        </a>
+                    </div>
+                    <div class="img-container">
+                        <a href="#" title="">
+                            <img data-lazy="images/demo/ad_07.jpg" class="cover">
+                            <noscript><img src="images/demo/ad_07.jpg" alt=""></noscript>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h2>HTML</h2>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;div class="adSlider"&gt;
+    &lt;div class="img-container"&gt;
+        &lt;a href="#" title=""&gt;
+            &lt;img data-lazy="images/demo/ad_01.jpg" class="contain"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="img-container"&gt;
+        &lt;a href="#" title=""&gt;
+            &lt;img data-lazy="images/demo/ad_02.jpg" class="contain"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="img-container"&gt;
+        &lt;a href="#" title=""&gt;
+            &lt;img data-lazy="images/demo/ad_03.jpg" class="contain"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="img-container"&gt;
+        &lt;a href="#" title=""&gt;
+            &lt;img data-lazy="images/demo/ad_04.jpg" class="contain"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="img-container"&gt;
+        &lt;a href="#" title=""&gt;
+            &lt;img data-lazy="images/demo/ad_05.jpg" class="contain"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="img-container"&gt;
+        &lt;a href="#" title=""&gt;
+            &lt;img data-lazy="images/demo/ad_06.jpg" class="contain"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="img-container"&gt;
+        &lt;a href="#" title=""&gt;
+            &lt;img data-lazy="images/demo/ad_07.jpg" class="cover"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="row">
+                <div class="hy-2">
+                    <h2>SCSS設定</h2>
+                    <div class="sourcecode">
+                        <pre class="language-scss">
+                <code class="language-scss">
+// slick._scss
+// adSlider
+.adSlider {
+    @include gutter(70px);
+    margin-bottom: 20px;
+    @include screen('mobile') {
+        @include gutter();
+    }
+    .slick-prev {
+        left: -15px;
+        top:50%;
+    }
+    .slick-next {
+        right: -15px;
+        top:50%;
+    }
+    .img-container {
+        width: 165px;
+        height: 55px;
+        margin: 0px 15px;
+        a {
+            display: block;
+            img {
+                margin: 0 auto;
+                object-fit: cotain;
+            }
+        }
+    }
+}</code></pre>
+                    </div>
+                </div>
+                <div class="hy-2">
+                    <h2>JQuery設定</h2>
+                    <div class="sourcecode">
+                        <pre class="language-javascript">
+                <code class="language-javascript">
+// 請放置customize.js
+// 廣告輪播
+$('.adSlider').slick({
+    mobileFirst: true,
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrow: true,
+    lazyLoaded: true,
+    lazyLoad: 'ondemand',
+    ease: 'ease',
+    responsive: [{
+        breakpoint: 1200,
+        settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: true
+        }
+    },{
+        breakpoint: 768,
+        settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true
+        }
+    },{
+        breakpoint: 575,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true
+        }
+    }]
+});</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- JS設定 -->
+            <h2>JQuery設定<img src="images/icon_check.png" alt=""></h2>
+            <h3>關於slick按鈕的title語系</h3>
+            <p>因應無障礙需求，在左右箭頭需要有替代文字，但往往因為網站有不同語系需求，因此按鈕需要呈現不同語言的替代文字，例如<br /><code class="language-html"> &lt;html lang="zh-Hant" &gt; </code>中按鈕會呈現</code><code class="language-html"> &lt;button class="slick-prev" ... title="前一則"&gt;Previous&lt;/button&gt; </code>或是<br /><code class="language-html"> &lt;html lang="en" &gt; </code>中按鈕會呈現</code>或是<code class="language-html"> &lt;button class="slick-prev" ... title="previous"&gt;Previous&lt;/button&gt; </code>，<br />此時無法用同一種語言因應各種語系，HyUI提供一組判斷語系之javascript設定，語系參照<a href="https://www.w3schools.com/tags/ref_language_codes.asp">W3C ISO Language Codes</a>，可自行複製到各專案修改語系及對應之替代文字即可。注意：此程式並無預設放入<span class="hy">hyui.js</span>。</p>
+            <p>其中，程式是判斷語系字串中的前面字符作為判斷依據，目的是同一語系可能會有分支語系，但以開頭之語系英文字母做判斷。</p>
+            <h3>範例：</h3>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+                <code class="language-javascript">
+//不同語系
+//無障礙切換slick箭頭語系
+if ($('html')[0].hasAttribute("labg")) {
+    var weblang = $('html').attr('lang');
+    //如果是中文語系
+    if (weblang.substring(0, 2) == 'zh') {
+        $('.slick-prev').attr('title', '上一筆');
+        $('.slick-next').attr('title', '下一筆');
+    //如果是非中文語系
+    } else if (weblang.substring(0, 2) !== 'zh') {
+        $('.slick-prev').attr('title', 'previous');
+        $('.slick-next').attr('title', 'next');
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<!-- slick js -->
+<script src="vendor/slick/slick.min.js "></script>
+<script src="vendor/slick/slick-lightbox.js "></script>
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>
+<script src="js/customize.js"></script>

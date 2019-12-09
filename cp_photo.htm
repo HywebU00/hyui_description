@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <link rel=" stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png" />
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>範例頁面</li>
+                    <li>Content Page - Photo / 內容相片頁</li>
+                </ul>
+            </div>
+            <h1>Content Page - Photo / 內容相片頁</h1>
+            <!-- <div class="path">檔案名稱：<span>sass/_element.scss</span></div> -->
+            <!-- demo Start -->
+            <div class="demo">
+                <!-- breadcrumb路徑 -->
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#">節點</a></li>
+                        <li>節點</li>
+                    </ul>
+                </div>
+                <!-- 這裡需要套h1文章標題 -->
+                <h2 class="title">文章標題</h2>
+                <!-- cp control panel -->
+                <div class="function_panel">
+                    <div class="publish_time">
+                        <span>發布日期：</span><time>2019-01-01</time>
+                    </div>
+                    <!-- 文字大小 -->
+                    <div class="font_size">
+                        <span>字型大小：</span>
+                        <!-- 英文用<span>font-size：</span> -->
+                        <ul>
+                            <li><a href="#" class="small">小</a></li>
+                            <li><a href="#" class="medium">中</a></li>
+                            <li><a href="#" class="large">大</a></li>
+                        </ul>
+                    </div>
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                            <li class="print"><a href="#">友善列印</a></li>
+                            <li class="forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div>
+                    <!-- 社群分享 -->
+                    <div class="share">
+                        <ul>
+                            <li><a href="#"><img src="images/basic/icon_facebook.png" alt="facebook"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_line.png" alt="line"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_youtube.png" alt="youtube"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_googleplus.png" alt="google plus"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_instagram.png" alt="instagram"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_linkedin.png" alt="LinkedIn"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_rss.png" alt="RSS"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 社群分享 -->
+                <div class="share">
+                    <ul>
+                        <li><a href="#"><img src="images/basic/icon_facebook.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_line.png" alt="line"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_youtube.png" alt="youtube"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_googleplus.png" alt="google plus"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_instagram.png" alt="instagram"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_linkedin.png" alt="LinkedIn"></a></li>
+                        <li><a href="#"><img src="images/basic/icon_rss.png" alt="RSS"></a></li>
+                    </ul>
+                </div>
+                <!-- function功能區塊 -->
+                <div class="function">
+                    <ul>
+                        <li class="back"><a href="#">回上一頁</a></li>
+                        <li class="print"><a href="#">友善列印</a></li>
+                        <li class="forward"><a href="#">轉寄友人</a></li>
+                    </ul>
+                </div>
+                <!-- tag 文章標籤 -->
+                <div class="tag">
+                    <ul>
+                        <li><a href="#">文章標籤1</a></li>
+                        <li><a href="#">文章標籤2</a></li>
+                        <li><a href="#">文章標籤3</a></li>
+                        <li><a href="#">文章標籤4</a></li>
+                        <li><a href="#">文章標籤5</a></li>
+                    </ul>
+                </div>
+                <!-- CP Start -->
+                <section class="cp">
+                    <!-- SyncSlider -->
+                    <div class="Syncing_slider">
+                        <h3>相片集錦</h3>
+                        <!--大圖slider-for-->
+                        <div class="Slider-for">
+                            <div>
+                                <div class="img-container">
+                                    <img src="https://assets.imgix.net/examples/kingfisher.jpg?w=500&h=480&fit=crop&auto=format%2Cenhance&usm=20">
+                                </div>
+                                <p>第一張圖說</p>
+                            </div>
+                            <div>
+                                <div class="img-container">
+                                    <img src="https://assets.imgix.net/examples/puffins.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
+                                </div>
+                                <p>第二張圖說</p>
+                            </div>
+                            <div>
+                                <div class="img-container">
+                                    <img src="https://assets.imgix.net/examples/womanlandscape.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
+                                </div>
+                                <p>第三張圖說</p>
+                            </div>
+                            <div>
+                                <div class="img-container">
+                                    <img src="https://assets.imgix.net/unsplash/paperlamp.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
+                                </div>
+                                <p>第四張圖說</p>
+                            </div>
+                        </div>
+                        <!-- slider-for end-->
+                        <div class="controls"></div>
+                        <!--小圖slider-nav-->
+                        <div class="Slider-nav">
+                            <div>
+                                <div class="img-container">
+                                    <img src="https://assets.imgix.net/examples/kingfisher.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
+                                </div>
+                                <p>第一張圖說</p>
+                            </div>
+                            <div>
+                                <div class="img-container">
+                                    <img src="https://assets.imgix.net/examples/puffins.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
+                                </div>
+                                <p>第二張圖說</p>
+                            </div>
+                            <div>
+                                <div class="img-container">
+                                    <img src="https://assets.imgix.net/examples/womanlandscape.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
+                                </div>
+                                <p>第三張圖說</p>
+                            </div>
+                            <div>
+                                <div class="img-container">
+                                    <img src="https://assets.imgix.net/unsplash/paperlamp.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
+                                </div>
+                                <p>第四張圖說</p>
+                            </div>
+                        </div>
+                        <!-- slider-nav end-->
+                    </div>
+                </section>
+                <!-- CP End -->
+                <!-- weblink 外部連結 -->
+                <div class="web_link">
+                    <h3>外部連結</h3>
+                    <ol>
+                        <li><a href="javscript:;">外部連結1</a></li>
+                        <li><a href="javscript:;">外部連結2</a></li>
+                        <li><a href="javscript:;">外部連結3</a></li>
+                        <li><a href="javscript:;">外部連結4</a></li>
+                        <li><a href="javscript:;">外部連結5</a></li>
+                    </ol>
+                </div>
+                <!-- file download 檔案下載 -->
+                <div class="file_download">
+                    <h3>檔案下載</h3>
+                    <ul>
+                        <li> <span>檔案名稱</span>
+                            <a href="xxxx.doc">檔案名稱.doc</a>
+                            <a href="xxxx.docx">檔案名稱.docx</a>
+                            <a href="xxxx.odt">檔案名稱.odt</a>
+                        </li>
+                        <li><span>檔案名稱</span>
+                            <a href="xxxx.xls">檔案名稱.xls</a>
+                            <a href="xxxx.xlsx">檔案名稱.xlsx</a>
+                            <a href="xxxx.csv">檔案名稱.csv</a>
+                            <a href="xxxx.ods">檔案名稱.ods</a>
+                        </li>
+                        <li><span>檔案名稱</span>
+                            <a href="xxxx.ppt">檔案名稱.ppt</a>
+                            <a href="xxxx.pptx">檔案名稱.pptx</a>
+                            <a href="xxxx.odp">檔案名稱.odp</a>
+                            <a href="xxxx.pdf">檔案名稱.odp</a>
+                        </li>
+                        <li><span>檔案名稱</span>
+                            <a href="xxxx.zip">檔案名稱.zip</a>
+                            <a href="xxxx.txt">檔案名稱.txt</a>
+                            <a href="xxxx.mov">檔案名稱.mov</a>
+                            <a href="xxxx.mp3">檔案名稱.mp3</a>
+                            <a href="xxxx.jpg">檔案名稱.jpg</a>
+                            <a href="xxxx.wmv">檔案名稱.wmv</a>
+                            <a href="xxxx.mp4">檔案名稱.mp4</a>
+                            <a href="xxxx.xxxxx">檔案名稱.mp4</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- demo End -->
+            <h2>HTML範本</h2>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;!-- breadcrumb路徑 --&gt;
+&lt;div class="breadcrumb"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;首頁&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;節點&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;節點&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- 這裡需要套h1文章標題 --&gt;
+&lt;h1 class="title"&gt;文章標題&lt;/h1&gt;
+&lt;!-- cp control panel --&gt;
+&lt;div class="function_panel"&gt;
+    &lt;div class="publish_time"&gt;
+        &lt;span&gt;發布日期：&lt;/span&gt;&lt;time&gt;2019-01-01&lt;/time&gt;
+    &lt;/div&gt;
+    &lt;!-- 文字大小 --&gt;
+    &lt;div class="font_size"&gt;
+        &lt;span&gt;字型大小：&lt;/span&gt;
+        &lt;!-- 英文用&lt;span&gt;font-size：&lt;/span&gt; --&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#" class="small"&gt;小&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#" class="medium"&gt;中&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#" class="large"&gt;大&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- function功能區塊 --&gt;
+    &lt;div class="function"&gt;
+        &lt;ul&gt;
+            &lt;li class="back"&gt;&lt;a href="javascript:history.back()"&gt;回上一頁&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="print"&gt;&lt;a href="#"&gt;友善列印&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="forward"&gt;&lt;a href="#"&gt;轉寄友人&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- 社群分享 --&gt;
+    &lt;div class="share"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_facebook.png" alt="facebook"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_twitter.png" alt="twitter"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_line.png" alt="line"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_youtube.png" alt="youtube"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_googleplus.png" alt="google plus"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_instagram.png" alt="instagram"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_linkedin.png" alt="LinkedIn"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_rss.png" alt="RSS"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- 社群分享 --&gt;
+&lt;div class="share"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_facebook.png" alt="facebook"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_twitter.png" alt="twitter"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_line.png" alt="line"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_youtube.png" alt="youtube"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_googleplus.png" alt="google plus"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_instagram.png" alt="instagram"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_linkedin.png" alt="LinkedIn"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/basic/icon_rss.png" alt="RSS"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- function功能區塊 --&gt;
+&lt;div class="function"&gt;
+    &lt;ul&gt;
+        &lt;li class="back"&gt;&lt;a href="#"&gt;回上一頁&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="print"&gt;&lt;a href="#"&gt;友善列印&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="forward"&gt;&lt;a href="#"&gt;轉寄友人&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- tag 文章標籤 --&gt;
+&lt;div class="tag"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;文章標籤1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;文章標籤2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;文章標籤3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;文章標籤4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;文章標籤5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- CP Start --&gt;
+&lt;section class="cp"&gt;
+    &lt;!-- SyncSlider --&gt;
+    &lt;div class="Syncing_slider"&gt;
+        &lt;h3&gt;相片集錦&lt;/h3&gt;
+        &lt;!--大圖slider-for--&gt;
+        &lt;div class="Slider-for"&gt;
+            &lt;div&gt;
+                &lt;div class="img-container"&gt;
+                    &lt;img src="https://assets.imgix.net/examples/kingfisher.jpg?w=500&amp;h=480&amp;fit=crop&amp;auto=formausm=20"&gt;
+                &lt;/div&gt;
+                &lt;p&gt;第一張圖說&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;div class="img-container"&gt;
+                    &lt;img src="https://assets.imgix.net/examples/puffins.jpg?w=800&amp;h=480&amp;fit=crop&amp;auto=format%2Cenhagt;&gt;
+                &lt;/div&gt;
+                &lt;p&gt;第二張圖說&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;div class="img-container"&gt;
+                    &lt;img src="https://assets.imgix.net/examples/womanlandscape.jpg?w=800&amp;h=480&amp;fit=crop&amp;auto=formausm=20"&gt;
+                &lt;/div&gt;
+                &lt;p&gt;第三張圖說&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;div class="img-container"&gt;
+                    &lt;img src="https://assets.imgix.net/unsplash/paperlamp.jpg?w=800&amp;h=480&amp;fit=crop&amp;auto=formausm=20"&gt;
+                &lt;/div&gt;
+                &lt;p&gt;第四張圖說&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- slider-for end--&gt;
+        &lt;div class="controls"&gt;&lt;/div&gt;
+        &lt;!--小圖slider-nav--&gt;
+        &lt;div class="Slider-nav"&gt;
+            &lt;div&gt;
+                &lt;div class="img-container"&gt;
+                    &lt;img src="https://assets.imgix.net/examples/kingfisher.jpg?w=800&amp;h=480&amp;fit=crop&amp;auto=formausm=20"&gt;
+                &lt;/div&gt;
+                &lt;p&gt;第一張圖說&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;div class="img-container"&gt;
+                    &lt;img src="https://assets.imgix.net/examples/puffins.jpg?w=800&amp;h=480&amp;fit=crop&amp;auto=format%2Cenhagt;
+                &lt;/div&gt;
+                &lt;p&gt;第二張圖說&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;div class="img-container"&gt;
+                    &lt;img src="https://assets.imgix.net/examples/womanlandscape.jpg?w=800&amp;h=480&amp;fit=crop&amp;auto=formausm=20"&gt;
+                &lt;/div&gt;
+                &lt;p&gt;第三張圖說&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;div class="img-container"&gt;
+                    &lt;img src="https://assets.imgix.net/unsplash/paperlamp.jpg?w=800&amp;h=480&amp;fit=crop&amp;auto=formausm=20"&gt;
+                &lt;/div&gt;
+                &lt;p&gt;第四張圖說&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- slider-nav end--&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- CP End --&gt;
+&lt;!-- weblink 外部連結 --&gt;
+&lt;div class="web_link"&gt;
+    &lt;h3&gt;外部連結&lt;/h3&gt;
+    &lt;ol&gt;
+        &lt;li&gt;&lt;a href="javscript:;"&gt;外部連結1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javscript:;"&gt;外部連結2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javscript:;"&gt;外部連結3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javscript:;"&gt;外部連結4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javscript:;"&gt;外部連結5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;
+&lt;!-- file download 檔案下載 --&gt;
+&lt;div class="file_download"&gt;
+    &lt;h3&gt;檔案下載&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href="xxxx.doc"&gt;word檔名&lt;span class="kb"&gt;(100.kb)&lt;/span&gt;&lt;/a&gt;
+            &lt;span class="update"&gt;更新日期：2014/5/30&lt;/span&gt;
+            &lt;span class="file_view"&gt;下載次數：5&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="xxxx.odf"&gt;odf檔名&lt;span class="kb"&gt;(100.kb)&lt;/span&gt;&lt;/a&gt;
+            &lt;span class="update"&gt;更新日期：2014/5/30&lt;/span&gt;
+            &lt;span class="file_view"&gt;下載次數：5&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="xxxx.pdf"&gt;pdf檔名&lt;span class="kb"&gt;(100.kb)&lt;/span&gt;&lt;/a&gt;
+            &lt;span class="update"&gt;更新日期：2014/5/30&lt;/span&gt;
+            &lt;span class="file_view"&gt;下載次數：5&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="xxxx.xls"&gt;xls檔名&lt;span class="kb"&gt;(100.kb)&lt;/span&gt;&lt;/a&gt;
+            &lt;span class="update"&gt;更新日期：2014/5/30&lt;/span&gt;
+            &lt;span class="file_view"&gt;下載次數：5&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="xxxx.ppt"&gt;ppt檔名&lt;span class="kb"&gt;(100.kb)&lt;/span&gt;&lt;/a&gt;
+            &lt;span class="update"&gt;更新日期：2014/5/30&lt;/span&gt;
+            &lt;span class="file_view"&gt;下載次數：5&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="xxxx.jpg"&gt;jpg檔名&lt;span class="kb"&gt;(100.kb)&lt;/span&gt;&lt;/a&gt;
+            &lt;span class="update"&gt;更新日期：2014/5/30&lt;/span&gt;
+            &lt;span class="file_view"&gt;下載次數：5&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="xxxx.mp3"&gt;mp3檔名&lt;span class="kb"&gt;(100.kb)&lt;/span&gt;&lt;/a&gt;
+            &lt;span class="update"&gt;更新日期：2014/5/30&lt;/span&gt;
+            &lt;span class="file_view"&gt;下載次數：5&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="xxxx.mov"&gt;mov檔名&lt;span class="kb"&gt;(100.kb)&lt;/span&gt;&lt;/a&gt;
+            &lt;span class="update"&gt;更新日期：2014/5/30&lt;/span&gt;
+            &lt;span class="file_view"&gt;下載次數：5&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="xxxx.txt"&gt;txt檔名&lt;span class="kb"&gt;(100.kb)&lt;/span&gt;&lt;/a&gt;
+            &lt;span class="update"&gt;更新日期：2014/5/30&lt;/span&gt;
+            &lt;span class="file_view"&gt;下載次數：5&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="xxxx.xxx"&gt;其他格式檔名&lt;span class="kb"&gt;(100.kb)&lt;/span&gt;&lt;/a&gt;
+            &lt;span class="update"&gt;更新日期：2014/5/30&lt;/span&gt;
+            &lt;span class="file_view"&gt;下載次數：5&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="xxxx.zip"&gt;全部資料壓縮檔&lt;span class="kb"&gt;(100.kb)&lt;/span&gt;&lt;/a&gt;
+            &lt;span class="update"&gt;更新日期：2014/5/30&lt;/span&gt;
+            &lt;span class="file_view"&gt;下載次數：5&lt;/span&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<!-- slick -->
+<script src="vendor/slick/slick.min.js"></script>
+<script src="vendor/slick/slick-lightbox.js"></script>
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>
+<script src="js/customize.js"></script>
+<script>
+$(function() {
+    //燈箱slick+lightBox組合
+    $('.cp_slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 1500,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        focusOnSelect: true,
+        accessibility: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: true
+            }
+        }, {
+            breakpoint: 545,
+            settings: {
+                arrows: true,
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
+            }
+        }]
+    });
+    $('.cp_slider').slickLightbox({
+        caption: 'caption',
+        useHistoryApi: 'true',
+        lazy: true
+    });
+    /*------------------------------------*/
+    //////////分享按鈕 share dropdwon////////
+    /*------------------------------------*/
+    $('.share').children('ul').children('ul').hide();
+    $('.share>ul>li').has('ul').addClass('shareButton');
+    var _shareButton = $('.share').find('.shareButton');
+    _shareButton.find('a').off().click(function(e) {
+        $(this).siblings('ul').stop(true, true).slideToggle();
+        e.preventDefault();
+    });
+    _shareButton.find('a').keyup(function(event) {
+        $(this).siblings('ul').stop(true, true).slideDown();
+    });
+    _shareButton.find('li:last>a').focusout(function(event) {
+        $(this).parent().parent('ul').hide();
+    });
+    // 點外面關閉share
+    $(document).mouseup(function(e) {
+        var container = $(".share");
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            $('.share ul ul').hide();
+        }
+    });
+    /*------------------------------------*/
+    /////////////字型大小 font-size//////////
+    /*------------------------------------*/
+    $('.font_size').find('.medium').addClass('active');
+    $('.font_size').find('.small').click(function(e) {
+        $(this).parent('li').siblings('li').find('a').removeClass('active');
+        $('.cp').removeClass('large_size').addClass('small_size');
+        $(this).addClass('active');
+        e.preventDefault();
+    });
+    $('.font_size').find('.medium').click(function(e) {
+        $(this).parent('li').siblings('li').find('a').removeClass('active');
+        $('.cp').removeClass('large_size small_size');
+        $(this).addClass('active');
+        e.preventDefault();
+    });
+    $('.font_size').find('.large').click(function(e) {
+        $(this).parent('li').siblings('li').find('a').removeClass('active');
+        $('.cp').removeClass('small_size').addClass('large_size');
+        $(this).addClass('active');
+        e.preventDefault();
+    });
+    
+});
+</script>

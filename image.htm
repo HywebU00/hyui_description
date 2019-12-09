@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png" />
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <div class="guide_quicklink">
+            <ul>
+                <li><a href="#01">圖片形狀</a></li>
+                <li><a href="#02">圖片外框比例</a></li>
+                <li><a href="#03">圖片object-fit屬性</a></li>
+                <li><a href="#04">Lazyload延遲載入</a></li>
+                <li><a href="#05">Picturefill + Lazyload</a></li>
+            </ul>
+        </div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>網頁元素</li>
+                    <li>Images / 圖片及多媒體設定</li>
+                </ul>
+            </div>
+            <h1>Images / 圖片及多媒體設定</h1>
+            <div class="path">檔案名稱：<span>sass/_image.scss</span></div>
+            <p>圖片在網頁上需要設定的細節非常多，HyUI提供以下快速設定：</p>
+
+            <!-- demo Start -->
+            <div class="divider">圖片形狀</div>
+            <h2><span style="font-size:2em;margin-right:.2em;color:#21BAFF;" id="01">01.</span>圖片形狀</h2>
+            <p>直接在<span class="hy">img</span>加上所需要的<span class="hy">class</span>立即產生效果</p>
+            <div class="demo pic_list">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="img-container">
+                        <img data-src="images/demo/11.jpg" alt="" class="lazy">
+                    </div>
+                    <h3>無class</h3>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="img-container">
+                        <img data-src="images/demo/11.jpg" alt="" class="lazy img_circle">
+                    </div>
+                    <h3>class="img_circle"</h3>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="img-container">
+                        <img data-src="images/demo/11.jpg" alt="" class="lazy img_rounded">
+                    </div>
+                    <h3>class="img_rounded"</h3>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                        <code class="language-html">
+&lt;img src=&quot;...&quot; &gt;
+&lt;img src=&quot;...&quot; class=&quot;img_circle&quot;&gt;
+&lt;img src=&quot;...&quot; class=&quot;img_rounded&quot;&gt;          //可用變數控制導角數值</code></pre>
+            </div>
+            <div class="divider">圖片比例</div>
+            <h2><span style="font-size:2em;margin-right:.2em;color:#21BAFF;" id="02">02.</span>設定圖片外框比例</h2>
+            <p>在單圖的部分也可在SASS設定比例，<span class="hy">任何比例</span>都可以，<span class="hy">1:1</span>、<span class="hy">4:3</span>、<span class="hy">16:9</span> 為常見比例，設定方法請在<span class="hy">img</span>父層標籤設定<span class="hy">@include aspect-ratio(寬度值,高度值)</span>即可，如以下範例：</p>
+            <!-- demo Start -->
+            <div class="demo single_setting">
+                <div class="thumbnail">
+                    <div class="img-container"><img data-src="images/doraemon.png" alt="" class="lazy">
+                    </div>
+                    <h3>1:1</h3>
+                </div>
+                <div class="thumbnail">
+                    <div class="img-container"><img data-src="images/doraemon.png" alt="" class="lazy">
+                    </div>
+                    <h3>4:3</h3>
+                </div>
+                <div class="thumbnail">
+                    <div class="img-container"><img data-src="images/doraemon.png" alt="" class="lazy">
+                    </div>
+                    <h3>16:9</h3>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+<code class="language-html">
+&lt;div class="img-container1"&gt;&lt;img src="..." alt="..."&gt;&lt;/div&gt;
+&lt;div class="img-container2"&gt;&lt;img src="..." alt="..."&gt;&lt;/div&gt;
+&lt;div class="img-container3"&gt;&lt;img src="..." alt="..."&gt;&lt;/div&gt;
+</code></pre>
+            </div>
+            <h3>SCSS設定</h3>
+            <div class="sourcecode">
+                <pre class="language-scss">
+                                <code class="language-scss">
+.container1{
+    @include aspect-ratio(1,1);      //設定比例 1:1
+}
+.container2{
+    @include aspect-ratio(4,3);      //設定比例 4:3
+}
+.container3{
+    @include aspect-ratio(16,9);     //設定比例 16:9
+}</code></pre>
+            </div>
+            <!-- demo End -->
+            <div class="divider">加入object-fit</div>
+            <h2><span style="font-size:2em;margin-right:.2em;color:#21BAFF;" id="03">03.</span>設定圖片object-fit屬性，IE9+也適用</h2>
+            <p>因外框已設定比例，但內含之圖片往往不盡然與外框比例相符，針對不同圖片呈現需求可於<span class="hy">img</span>標籤中設定不同的classname給予不同之圖片效果，包括<span class="hy">none</span>、<span class="hy">contain</span>、<span class="hy">fill</span>、<span class="hy">cover</span>，屬性與<span class="hy">object-fit</span>之css設定相同。</p>
+            <!-- demo Start -->
+            <div class="demo single_setting">
+                <div class="thumbnail">
+                    <div class="img-container"><img data-src="images/doraemon.png" class="lazy cover" alt="">
+                    </div>
+                    <h3>1:1 (object-fit:cover)</h3>
+                </div>
+                <div class="thumbnail">
+                    <div class="img-container"><img data-src="images/doraemon.png" class="lazy cover" alt="">
+                    </div>
+                    <h3>4:3 (object-fit:cover)</h3>
+                </div>
+                <div class="thumbnail">
+                    <div class="img-container"><img data-src="images/doraemon.png" class="lazy cover" alt="">
+                    </div>
+                    <h3>16:9 (object-fit:cover)</h3>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+<code class="language-html">
+&lt;div class="img-container1"&gt;&lt;img src="..." alt="..." class="cover"&gt;&lt;/div&gt;
+&lt;div class="img-container2"&gt;&lt;img src="..." alt="..." class="cover"&gt;&lt;/div&gt;
+&lt;div class="img-container3"&gt;&lt;img src="..." alt="..." class="cover"&gt;&lt;/div&gt;
+</code></pre>
+            </div>
+            <!-- demo End -->
+            <div class="divider">youtube</div>
+            <h3>嵌入iframe的結構完全如上述圖片設定</h3>
+            <div class="demo single_setting">
+                <div class="thumbnail">
+                    <div class="img-container">
+                        <iframe src="https://www.youtube.com/embed/FxyrmBOiSqg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3>1:1</h3>
+                </div>
+                <div class="thumbnail">
+                    <div class="img-container">
+                        <iframe src="https://www.youtube.com/embed/FxyrmBOiSqg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3>4:3</h3>
+                </div>
+                <div class="thumbnail">
+                    <div class="img-container">
+                        <iframe src="https://www.youtube.com/embed/FxyrmBOiSqg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3>16:9</h3>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+<code class="language-html">
+&lt;div class="img-container1"&gt;&lt;iframe src="..."&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;div class="img-container2"&gt;&lt;iframe src="..."&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;div class="img-container3"&gt;&lt;iframe src="..."&gt;&lt;/iframe&gt;&lt;/div&gt;
+</code></pre>
+            </div>
+            <h3>不同object-fit效果</h3>
+            <div class="demo">
+                <div class="pic_list2">
+                    <!-- none -->
+                    <div class="image">
+                        <div class="img-container">
+                            <img data-src="images/doraemon1.png" alt="" class="lazy none">
+                        </div>
+                        <h3>none</h3>
+                    </div>
+                    <!-- contain -->
+                    <div class="image">
+                        <div class="img-container">
+                            <img data-src="images/doraemon1.png" alt="" class="lazy contain">
+                        </div>
+                        <h3>contain</h3>
+                    </div>
+                    <!-- fill -->
+                    <div class="image">
+                        <div class="img-container">
+                            <img data-src="images/doraemon1.png" alt="" class="lazy fill">
+                        </div>
+                        <h3>fill</h3>
+                    </div>
+                    <!-- cover -->
+                    <div class="image">
+                        <div class="img-container">
+                            <img data-src="images/doraemon1.png" alt="" class="lazy cover">
+                        </div>
+                        <h3>cover</h3>
+                    </div>
+                </div>
+            </div>
+            <h3>圖片比例，以object-fit css做設定(IE9+)</h3>
+            <div class="sourcecode">
+                <pre class="language-html">
+<code class="language-html">
+&lt;div class="img-container"&gt;&lt;img src="..." class="none" &gt;&lt;/div&gt;
+&lt;div class="img-container"&gt;&lt;img src="..." class="contain" &gt;&lt;/div&gt;
+&lt;div class="img-container"&gt;&lt;img src="..." class="fill" &gt;&lt;/div&gt;
+&lt;div class="img-container"&gt;&lt;img src="..." class="cover" &gt;&lt;/div&gt;
+</code></pre>
+            </div>
+            <h2>JQuery設定<img src="images/icon_check.png" alt=""></h2>
+            <p>此javascript會判斷user agent如果是IE，會將<span class="hy">img</span>設為透明，將圖檔路徑放置上層<span class="hy">img-container</span>的<span class="hy">style="backgroundImage:url('src')"</span>，並在css已經設定<span class="hy">background-size</span>的個別屬性，可以迅速切換<span class="hy">none</span>、<span class="hy">contain</span>、<span class="hy">fill</span>、<span class="hy">cover</span>以呈現圖檔樣式；至於其他Safari、Firefox、Chrome都可以支援<span class="hy">obect-fit</span>。</p>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+                            <code class="language-javascript">
+/*--------------------------------------------------------*/
+/////設定img 在IE9+ SAFARI FIREFOX CHROME 可以object-fit/////
+/*--------------------------------------------------------*/
+var userAgent, ieReg, ie;
+userAgent = window.navigator.userAgent;
+ieReg = /msie|Trident.*rv[ :]*11\./gi;
+ie = ieReg.test(userAgent);
+if (ie) {
+    $(".img-container").each(function() {
+        var imgUrl = $(this).find('img').attr('data-src');
+        var $container = $(this);
+        $container.has('.none').addClass('ie-object-none');
+        $container.has('.none').css('backgroundImage', 'url(' + imgUrl + ')');
+        $container.has('.cover').addClass('ie-object-cover');
+        $container.has('.cover').css('backgroundImage', 'url(' + imgUrl + ')');
+        $container.has('.fill').addClass('ie-object-fill');
+        $container.has('.fill').css('backgroundImage', 'url(' + imgUrl + ')');
+        $container.has('.contain').addClass('ie-object-contain');
+        $container.has('.contain').css('backgroundImage', 'url(' + imgUrl + ')');
+    });
+}</code></pre>
+            </div>
+            <div class="divider">jq直接計算</div>
+            <h2><span style="font-size:2em;margin-right:.2em;color:#21BAFF;" id="04">04.</span>使用Lazyload延遲載入</h2>
+            <div class="demo pic_list">
+                <ul>
+                    <li>
+                        <div class="img-container">
+                            <img data-src="images/demo/01.jpg" alt="" class="lazy">
+                            <noscript><img src="images/demo/01.jpg"></noscript>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img data-src="images/demo/02.jpg" alt="" class="lazy">
+                            <noscript><img src="images/demo/02.jpg"></noscript>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img data-src="images/demo/03.jpg" alt="" class="lazy">
+                            <noscript><img src="images/demo/03.jpg"></noscript>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img data-src="images/demo/04.jpg" alt="" class="lazy">
+                            <noscript><img src="images/demo/04.jpg"></noscript>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img data-src="images/demo/05.jpg" alt="" class="lazy">
+                            <noscript><img src="images/demo/05.jpg"></noscript>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img data-src="images/demo/06.jpg" alt="" class="lazy">
+                            <noscript><img src="images/demo/06.jpg"></noscript>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img data-src="images/demo/07.jpg" alt="" class="lazy">
+                            <noscript><img src="images/demo/07.jpg"></noscript>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img data-src="images/demo/08.jpg" alt="" class="lazy">
+                            <noscript><img src="images/demo/08.jpg"></noscript>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img data-src="images/demo/09.jpg" alt="" class="lazy">
+                            <noscript><img src="images/demo/09.jpg"></noscript>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img data-src="images/demo/10.jpg" alt="" class="lazy">
+                            <noscript><img src="images/demo/10.jpg"></noscript>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img data-src="images/demo/11.jpg" alt="" class="lazy">
+                            <noscript><img src="images/demo/11.jpg"></noscript>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img data-src="images/demo/12.jpg" alt="" class="lazy">
+                            <noscript><img src="images/demo/12.jpg"></noscript>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                        <code class="language-html">
+&lt;div class="img-container"&gt;
+    &lt;img data-src="..." alt="圖片說明" class="lazy"&gt;
+    &lt;noscript&gt;&lt;img src="..."&gt;&lt;/noscript&gt; &lt;!-- 關閉js無障礙用--&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <!-- demo End -->
+            <div class="notice_warning"> 請注意！slick套件本身有lazyload設定，請參考<a href="slider.htm#01">slider.htm</a>。</div>
+            <!-- JS設定 -->
+            <h3>JQuery設定<img src="images/icon_check.png" alt=""></h3>
+            <p>頁面如有<span class="hy">img</span>class有設定<span class="hy">lazy</span>皆會套用lazyload的效果。</p>
+            <div class="sourcecode">
+                <pre class="language-javascript"><code class="language-javascript">
+/*-----------------------------------*/
+////////////// lazy load //////////////
+/*-----------------------------------*/
+if ($("img.lazy").length > 0) {
+    $("img.lazy").show().lazyload({
+        placeholder: 'images/basic/placeholder.gif',
+        effect: "fadeIn",
+        fadeTime: 600
+    });
+}</code></pre>
+            </div>
+            <!-- demo End -->
+            <h2><span style="font-size:2em;margin-right:.2em;color:#21BAFF;" id="05">05.</span>Picturefill 搭配 Lazyload</h2>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="picturefill">
+                    <div class="img-container">
+                        <!-- 此範例為4:3比例 -->
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/1600x1200.png?text=Large">
+                            <source media="(min-width: 992px)" srcset="https://via.placeholder.com/1200x900.png?text=Medium">
+                            <source media="(min-width: 576px)" srcset="https://via.placeholder.com/800x600.png?text=Small">
+                            <source media="(max-width: 575px)" srcset="https://via.placeholder.com/600x450.png?text=XSmall">
+                            <img data-src="https://via.placeholder.com/1400x900.png?text=Large" class="lazy">
+                            <noscript><img src="https://via.placeholder.com/1400x900.png?text=Large"></noscript>
+                        </picture>
+                    </div>
+                    <div class="img-container">
+                        <!-- 此範例為4:3比例 -->
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="images/demo/01.jpg">
+                            <source media="(min-width: 992px)" srcset="images/demo/02.jpg">
+                            <source media="(min-width: 576px)" srcset="images/demo/03.jpg">
+                            <source media="(max-width: 575px)" srcset="images/demo/04.jpg">
+                            <img data-src="images/demo/01.jpg" class="lazy">
+                            <noscript><img src="images/demo/01.jpg"></noscript>
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <h3>建議縮圖標準</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>media尺寸</th>
+                        <th>圖片建議寬度尺寸</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>source media="(min-width: 1200px)</td>
+                        <td><span style="color:red">1960</span></td>
+                    </tr>
+                    <tr>
+                        <td>source media="(min-width: 992px)</td>
+                        <td><span style="color:red">1200</span></td>
+                    </tr>
+                    <tr>
+                        <td>source media="(min-width: 576px)</td>
+                        <td><span style="color:red">900</span></td>
+                    </tr>
+                    <tr>
+                        <td>source media="(max-width: 575px)</td>
+                        <td><span style="color:red">600</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <!-- demo End -->
+            <div class="sourcecode">
+                <pre class="language-html">
+                        <code class="language-html">
+&lt;picture&gt;
+    &lt;source media="(min-width: 1200px)" srcset="images/demo/01.jpg"&gt;
+    &lt;source media="(min-width: 992px)" srcset="images/demo/02.jpg"&gt;
+    &lt;source media="(min-width: 576px)" srcset="images/demo/03.jpg"&gt;
+    &lt;source media="(max-width: 575px)" srcset="images/demo/04.jpg"&gt;
+    &lt;img data-src="images/demo/01.jpg" class="lazy"&gt;
+    &lt;noscript&gt;&lt;img src="images/demo/01.jpg"&gt;&lt;/noscript&gt;
+    &lt;!-- img都以最大圖為標準 --&gt;
+&lt;/picture&gt;
+</code></pre>
+            </div>
+            <div class="notice_warning"> 請注意！noscript為必要加上的設定，因為<code>data-src</code>和<code>data-oringinal</code>並沒有把<code>src</code>路徑顯示，圖會出不來。</div>
+            <div class="notice_warning"> 請注意！請先跟工程師確認能否產生縮圖以及確定斷點。</div>
+            <p><span class="hy">sourece media</span>的部分可調整斷點數值，目前是使用hyUI預設的<a href="mediaquery.htm">斷點</a>，<span class="hy">srcset</span>在製作時可用<a href="https://placeholder.com/" target="_blank">https://placeholder.com/</a>產生最佳的圖像大小。 特別注意的是：在不支援<span class="hy">picture</span>或是關閉無障礙時，<span class="hy">img</span>的<span class="hy">data-src</span>以及<span class="hy">noscript</span>的<span class="hy">src</span>都帶入最大尺寸的圖像尤佳。</p>
+            <h4>範例：</h4>
+            <div class="sourcecode">
+                <pre class="language-html">
+                        <code class="language-html">
+&lt;picture&gt;
+    &lt;source media="(min-width: 1200px)" srcset="大尺寸"&gt;
+    &lt;source media="(min-width: 992px)" srcset="中尺寸"&gt;
+    &lt;source media="(min-width: 576px)" srcset="小尺寸"&gt;
+    &lt;source media="(max-width: 575px)" srcset="超小尺寸"&gt;
+    &lt;img data-src="大尺寸" class="lazy"&gt;
+    &lt;noscript&gt;&lt;img src="大尺寸"&gt;&lt;/noscript&gt;
+&lt;/picture&gt;
+</code></pre>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>
+<script>
+/*-----------------------------------*/
+////////img objectfix cover////////////
+/*-----------------------------------*/
+$(function() {
+    /*--------------------------------------------------------*/
+    /////設定img 在IE9+ SAFARI FIREFOX CHROME 可以object-fit/////
+    /*--------------------------------------------------------*/
+    var userAgent, ieReg, ie;
+    userAgent = window.navigator.userAgent;
+    ieReg = /msie|Trident.*rv[ :]*11\./gi;
+    ie = ieReg.test(userAgent);
+    if (ie) {
+        $(".img-container").each(function() {
+            var imgUrl = $(this).find('img').attr('data-src');
+            var $container = $(this);
+            $container.has('.none').addClass('ie-object-none');
+            $container.has('.none').css('backgroundImage', 'url(' + imgUrl + ')');
+            $container.has('.cover').addClass('ie-object-cover');
+            $container.has('.cover').css('backgroundImage', 'url(' + imgUrl + ')');
+            $container.has('.fill').addClass('ie-object-fill');
+            $container.has('.fill').css('backgroundImage', 'url(' + imgUrl + ')');
+            $container.has('.contain').addClass('ie-object-contain');
+            $container.has('.contain').css('backgroundImage', 'url(' + imgUrl + ')');
+        });
+    }
+});
+</script>

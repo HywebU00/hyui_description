@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>Modal</li>
+                </ul>
+            </div>
+            <h1>Modal 彈出對話框</h1>
+            <div class="path">檔案名稱：<span>sass/_modal.scss</span></div>
+            <p>此燈箱模組為示範範例。頁面需要觸發的連結按鈕，以及燈箱區塊設定，使用以下的程式碼範例，可自行修改所需樣式，可於<span class="hy">scss</span>修改<span class="hy">顏色</span>、<span class="hy">大小</span>、<span class="hy">動畫效果</span>...等。</p>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="btn_grp">
+                    <button type="button" id="openModal" class="btn">開啟視窗</button>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;!--按鈕--&gt;
+&lt;button type="button" id="openModal" class="btn"&gt;開啟視窗&lt;/button&gt;
+&lt;!--視窗--&gt;
+&lt;div id="modal1" class="modal"&gt;
+    // div內的內容可以自行設定
+    &lt;h2&gt;標題&lt;/h2&gt;
+    &lt;p&gt;內文&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <h2>JQuery設定</h2>
+            <p>此模組設定為選用，以下JQuery為示範寫法，可自行根據需求修改。</p>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+                <code class="language-javascript">
+/*-----------------------------------*/
+/////////////modal設定/////////////
+/*-----------------------------------*/
+$(function() {
+    $('#modal1').hide();                                                                //先隱藏視窗
+    $('.modal').after('&lt;div class="modal_overlay"&gt;&lt;/div&gt;');                             //新增透明底
+    $('.modal').prepend('&lt;button type="button" class="close"&gt;關閉&lt;/button&gt;');           //新增關閉按鈕
+    $('.modal_overlay').hide();                                                         //隱藏透明底
+    //按鈕動作
+    $('#openModal').click(function(e) {
+        $('.modal_overlay').fadeIn(100);
+        $('body').addClass('noscroll');
+        $('body').addClass('noscroll');
+        e.preventDefault();
+    });
+    //關閉function
+    function closeModal(){
+        $('#modal1').hide();
+        $('.modal_overlay').hide();
+        $('body').removeClass('noscroll');
+    }
+    //點選關閉按鈕及透明底都可關閉
+    $('.modal_overlay').click(closeModal);
+    $('.modal .close').click(closeModal);
+
+});</code></pre>
+            </div>
+            <!-- demo End -->
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+<div id="modal1" class="modal">
+    <h2>標題</h2>
+    <p>內文</p>
+</div>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>
+<script>
+$(function() {
+    $('#modal1').hide();
+    $('.modal').after('<div class="modal_overlay"></div>');
+    $('.modal').prepend('<button type="button" class="close">關閉</button>')
+    $('.modal_overlay').hide();
+    $('#openModal').click(function(e) {
+        $('#modal1').show();
+        $('.modal_overlay').fadeIn(100);
+        $('body').addClass('noscroll');
+        e.preventDefault();
+    });
+
+    function closeModal() {
+        $('#modal1').hide();
+        $('.modal_overlay').hide();
+        $('body').removeClass('noscroll');
+    }
+    $('.modal_overlay').click(closeModal);
+    $('.modal .close').click(closeModal);
+});
+</script>

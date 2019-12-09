@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+</head>
+
+<body>
+    <header class="header"></header>
+    <!-- load header.htm-->
+    <div class="main">
+        <div class="left_nav"></div>
+        <!-- load menu.htm-->
+        <div class="content">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li>模組</li>
+                    <li>font-size</li>
+                </ul>
+            </div>
+            <h1>Font-Size / 控制文章字體大小</h1>
+            <p> 請注意，font-size模組需搭配頁面上有<span class="hy">.cp</span>的文章內容作切換呈現，目前只針對文章內容，如需要網站全域字級控制，可自行到<span class="hy">hyui.js</span>將選擇器改為<span class="hy">body</span>即可。 </p>
+            <div class="path">檔案名稱：<span>sass/_fontsize.scss</span></div>
+            <!-- demo Start -->
+            <div class="demo">
+                <!-- 文字大小 -->
+                <div class="font_size">
+                    <span>字型大小：</span>
+                    <!-- 英文用<span>font-size：</span> -->
+                    <ul>
+                        <li><a href="#" class="small">小</a></li>
+                        <li><a href="#" class="medium">中</a></li>
+                        <li><a href="#" class="large">大</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                <code class="language-html">
+&lt;!-- 文字大小 --&gt;
+&lt;div class="font_size"&gt;
+    &lt;span&gt;字型大小：&lt;/span&gt;
+    &lt;!-- 英文用&lt;span&gt;font-size：&lt;/span&gt; --&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#" class="small"&gt;小&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="medium"&gt;中&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="large"&gt;大&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <h2>SCSS預設的文字大中小設定</h2>
+            <p>可於<span class="hy">_cp.scss</span>設定文字的大小，預設為<span class="hy">medium</span>適中字型<span class="hy">1em</span>大小，為<span class="hy">.cp</span>的基本設定，因此只需要設定<span class="hy">小</span>、<span class="hy">大</span>的字級即可，如有特殊需求，可自行修改預設值。</p>
+            <ul>
+                <li>小型字體大小：0.938em(15px)</li>
+                <li>中型字體大小：1em(16px)</li>
+                <li>大型字體大小：1.125em(18px)</li>
+            </ul>
+            <div class="sourcecode">
+                <pre class="language-scss">
+                <code class="language-scss">
+.cp {
+    &.small_size {
+        font-size: .938em;
+    }
+    &.large_size {
+        font-size: 1.125em;
+    }
+}</code></pre>
+            </div>
+            <h2>JQuery設定<img src="images/icon_check.png" alt=""></h2>
+            <div class="sourcecode">
+                <pre class="language-javascript">
+                <code class="language-javascript">
+/*------------------------------------*/
+/////////////字型大小 font-size//////////
+/*------------------------------------*/
+$('.font_size').find('.medium').addClass('active');
+$('.font_size').find('.small').click(function(e) {
+    $(this).parent('li').siblings('li').find('a').removeClass('active');
+    $('.cp').removeClass('large_size').addClass('small_size');
+    $(this).addClass('active');
+    e.preventDefault();
+});
+$('.font_size').find('.medium').click(function(e) {
+    $(this).parent('li').siblings('li').find('a').removeClass('active');
+    $('.cp').removeClass('large_size small_size');
+    $(this).addClass('active');
+    e.preventDefault();
+});
+$('.font_size').find('.large').click(function(e) {
+    $(this).parent('li').siblings('li').find('a').removeClass('active');
+    $('.cp').removeClass('small_size').addClass('large_size');
+    $(this).addClass('active');
+    e.preventDefault();
+});</code></pre>
+            </div>
+            <!-- demo End -->
+            <h2>範例：</h2>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="font_size">
+                    <span>字型大小：</span>
+                    <!-- 英文用<span>font-size：</span> -->
+                    <ul>
+                        <li><a href="#" class="small">小</a></li>
+                        <li><a href="#" class="medium">中</a></li>
+                        <li><a href="#" class="large">大</a></li>
+                    </ul>
+                </div>
+                <div class="cp">
+                    <h2>標題二</h2>
+                    <p>可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。落然幾檢，牛即弟告者出行飯在教快政有我調個萬，對拿回色無為還成師營各手年天為完種風全，容人友成子選包母何有響好。著是情以裡來不子不覺野行？媽生頭濟那基女的此的下，社麗後難，無升美的力設們就很紙事而不題智香是水學，總切市沒不質熱雜，是視當為青阿少認消大究法成我，都不的友構，的陽式拿八檢腳種合飯市車那張甚活些全萬別他設給步後出領。不機業臉下天研兩南況有上體遊名，我我機叫少種的。</p>
+                    <p>兒師三對經府她們該聲。表己求克當地法羅成……由陸玩中不場個排步景正才頭近車學市子、相標須心汽因有經有母育險熱當年；個童速沒節一嗎，富家程生片死之自來示山上住收下的。不一持？</p>
+                    <h2>標題二</h2>
+                    <p>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。<a href="#">連結文字樣式</a>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。</p>
+                    <p>夫動活是，種親學從期完那照角金直麼應式少說認國、每面因現輕，勢王講陸從舞在製，而了向興得處三裡，熱海學地哥日便收裡麼們我路文。文利今是些，發容亞線金容灣。</p>
+                </div>
+            </div>
+            <!-- demo End -->
+            <h2>Function Panel模組</h2>
+            <!-- demo Start -->
+            <div class="demo">
+                <!-- cp control panel -->
+                <div class="function_panel">
+                    <div class="publish_time">
+                        <span>發布日期：</span><time>2019-01-01</time>
+                    </div>
+                    <!-- 文字大小 -->
+                    <div class="font_size">
+                        <span>字型大小：</span>
+                        <!-- 英文用<span>font-size：</span> -->
+                        <ul>
+                            <li><a href="#" class="small">小</a></li>
+                            <li><a href="#" class="medium">中</a></li>
+                            <li><a href="#" class="large">大</a></li>
+                        </ul>
+                    </div>
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                            <li class="print"><a href="#">友善列印</a></li>
+                            <li class="forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div>
+                    <!-- 社群分享 -->
+                    <div class="share">
+                        <ul>
+                            <li><a href="#"><img src="images/basic/icon_facebook.png" alt="facebook"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_line.png" alt="line"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_youtube.png" alt="youtube"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_googleplus.png" alt="google plus"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_instagram.png" alt="instagram"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_linkedin.png" alt="LinkedIn"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_rss.png" alt="RSS"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- demo End -->
+            <h3>提供已組合好的內容頁文章控制及顯示模組</h3>
+            <p>可自由組合<a href="fontsize.htm">文字大小</a>、<a href="function.htm">回上一頁</a>、<a href="function.htm">友善列印</a>、<a href="function.htm">轉寄友人</a> 、<a href="share.htm">社群分享</a>...等目前以提供之模組，在父層包覆1個<span class="hy">function_panel</span>的div，即可呈現以上樣式。模組無需更改結構只需要放進<span class="hy">function_panel</span>的div即可。</p>
+            <p>可參考：<a href="cppanel.htm">Function-Panel</a>模組</p>
+        </div>
+    </div>
+    <footer> Hyweb Co.,Ltd.&copy; 2019 All Rights Reserved </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="demo_js/prism_dark.js"></script>
+<script src="demo_js/demo.js"></script>
