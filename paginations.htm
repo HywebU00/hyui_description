@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/prism_dark.css">
     <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
     <link rel="stylesheet" href="css/guide.css">
-    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png"/>
+    <link rel="shortcut icon" type="images/hyui_fav.png" href="images/hyui_fav.png" />
 </head>
 
 <body>
@@ -34,6 +34,7 @@
             </div>
             <h1>Paginations / 分頁導覽</h1>
             <div class="path">檔案名稱：<span>sass/_paginations.scss</span></div>
+            <h2><span style="font-size:2em;margin-right:.2em;color:#21BAFF;" id="01">01.</span>分頁範例</h2>
             <!-- demo Start -->
             <div class="demo">
                 <div class="pagination">
@@ -102,6 +103,45 @@
         &lt;li&gt;&lt;a href="#"&gt;10&lt;/a&gt;&lt;/li&gt;
         &lt;li class="next"&gt;&lt;a href="#" title="下一頁"&gt;下一頁 &lt;/a&gt;&lt;/li&gt;
         &lt;li class="last"&gt;&lt;a href="#" title="最後一頁"&gt;最後一頁 &lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <!-- demo End -->
+            <h2><span style="font-size:2em;margin-right:.2em;color:#21BAFF;" id="01">02.</span>分頁範例</h2>
+            <!-- demo Start -->
+            <div class="demo">
+                <div class="pagination">
+                    <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，</div>
+                    <div class="items">每頁顯示 <a href="#">20</a> <a href="#">40</a> <a href="#">60</a> 筆 </div>
+                    <ul class="page">
+                        <li class="first"><a href="#" title="第一頁">第一頁</a></li>
+                        <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li class="xs_hidden"><a href="#">2</a></li>
+                        <li class="xs_hidden"><a href="#">3</a></li>
+                        <li class="xs_hidden"><a href="#">4</a></li>
+                        <li class="xs_hidden"><a href="#">5</a></li>
+                        <li class="next"><a href="#" title="下一頁">下一頁</a></li>
+                        <li class="last"><a href="#" title="最後一頁">最後一頁</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sourcecode">
+                <pre class="language-html">
+                    <code class="language-html">
+&lt;div class="pagination"&gt;
+    &lt;div class="total"&gt; 共&lt;span&gt;308&lt;/span&gt;筆資料，第&lt;span&gt;1/18&lt;/span&gt;頁，&lt;/div&gt;
+    &lt;div class="items"&gt;每頁顯示 &lt;a href="#"&gt;20&lt;/a&gt; &lt;a href="#"&gt;40&lt;/a&gt; &lt;a href="#"&gt;60&lt;/a&gt; 筆 &lt;/div&gt;
+    &lt;ul class="page"&gt;
+        &lt;li class="first"&gt;&lt;a href="#" title="第一頁"&gt;第一頁&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="prev"&gt;&lt;a href="#" title="回上一頁"&gt;回上一頁 &lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="xs_hidden"&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="xs_hidden"&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="xs_hidden"&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="xs_hidden"&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="next"&gt;&lt;a href="#" title="下一頁"&gt;下一頁&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="last"&gt;&lt;a href="#" title="最後一頁"&gt;最後一頁&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
             </div>

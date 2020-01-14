@@ -132,147 +132,128 @@ jQuery(document).ready(function($) {
     /*-----------------------------------*/
     //////////////相簿縮圖+燈箱//////////////
     /*-----------------------------------*/
-    //縮圖，same as thumbnail模組
-    $(window).bind('resize load', function(e) {
-        $('.imgOuter').each(function(index, el) {
-            var _imgContainer = $(this),
-                cWidth = _imgContainer.width(),
-                cHeight = _imgContainer.height(),
-                ratioC = cWidth / cHeight,
-                _img = _imgContainer.find('img');
-            var iWidth = $(this).find('img').width(),
-                iHeight = $(this).find('img').height(),
-                ratioImg = iWidth / iHeight,
-                scaleRatio;
-            if (ratioC > ratioImg) {
-                scaleRatio = cWidth / iWidth;
-                _img.width(cWidth).height(iHeight * scaleRatio).css('top', -.5 * (iHeight * scaleRatio - cHeight));
-            } else {
-                scaleRatio = cHeight / iHeight;
-                _img.height(cHeight).width(iWidth * scaleRatio).css('left', -.5 * (iWidth * scaleRatio - cWidth));
-            }
-            $(this).find('img').removeClass('img-responsive');
-        });
-    });
-    /*-----------------------------------*/
-    //////////////相簿縮圖+燈箱//////////////
-    /*-----------------------------------*/
-    //縮圖，same as thumbnail模組
-    $(window).bind('resize load', function(e) {
-        $('.imgOuter').each(function(index, el) {
-            var _imgContainer = $(this),
-                cWidth = _imgContainer.width(),
-                cHeight = _imgContainer.height(),
-                ratioC = cWidth / cHeight,
-                _img = _imgContainer.find('img');
-            var iWidth = $(this).find('img').width(),
-                iHeight = $(this).find('img').height(),
-                ratioImg = iWidth / iHeight,
-                scaleRatio;
-            if (ratioC > ratioImg) {
-                scaleRatio = cWidth / iWidth;
-                _img.width(cWidth).height(iHeight * scaleRatio).css('top', -.5 * (iHeight * scaleRatio - cHeight));
-            } else {
-                scaleRatio = cHeight / iHeight;
-                _img.height(cHeight).width(iWidth * scaleRatio).css('left', -.5 * (iWidth * scaleRatio - cWidth));
-            }
-            $(this).find('img').removeClass('img-responsive');
-        });
-    });
+    // //縮圖，same as thumbnail模組
+    // $(window).bind('resize load', function(e) {
+    //     $('.imgOuter').each(function(index, el) {
+    //         var _imgContainer = $(this),
+    //             cWidth = _imgContainer.width(),
+    //             cHeight = _imgContainer.height(),
+    //             ratioC = cWidth / cHeight,
+    //             _img = _imgContainer.find('img');
+    //         var iWidth = $(this).find('img').width(),
+    //             iHeight = $(this).find('img').height(),
+    //             ratioImg = iWidth / iHeight,
+    //             scaleRatio;
+    //         if (ratioC > ratioImg) {
+    //             scaleRatio = cWidth / iWidth;
+    //             _img.width(cWidth).height(iHeight * scaleRatio).css('top', -.5 * (iHeight * scaleRatio - cHeight));
+    //         } else {
+    //             scaleRatio = cHeight / iHeight;
+    //             _img.height(cHeight).width(iWidth * scaleRatio).css('left', -.5 * (iWidth * scaleRatio - cWidth));
+    //         }
+    //         $(this).find('img').removeClass('img-responsive');
+    //     });
+    // });
     //相簿JQ設定
-    var lightbox_Status = false;
-    $('.gallery').append('<div class="lightbox"><a href="#" class="light_close">關閉</a><a href="#" class="light_prev">上一張</a><a href="#" class="light_next">下一張</a><img src="" alt=""><div class="galler_overlay"></div></div>')
-    $('.gallery .lightbox').hide(); // lightbox先隱藏
-    $('.light_close').click(function(event) {
-        $('.gallery .lightbox').hide(); // 如果點到close，lightbox隱藏
-        $('body').removeClass('noscroll');
-        $('.gallery .lightbox .caption').html('');
-        lightbox_Status = false;
-    });
-    $('.gallery .lightbox .galler_overlay').click(function(event) {
-        $('.gallery .lightbox').hide(); // 如果點到overlay，lightbox隱藏
-        $('body').removeClass('noscroll');
-        $('.gallery .lightbox .caption').html('');
-        lightbox_Status = false;
-    });
-    var PIC_SRC = $('.gallery .lightbox img').attr('src');
-    // var THUMB_PIC = $(this).attr('src');
-    var PIC_INDEX = 0;
-    $('.gallery a').click(function(e) {
-        e.preventDefault();
-        lightbox_Status = true;
-    });
-    $('.gallery .thumbnail img').each(function(index) {
-        $(this).click(function(e) {
-            var THUMB_H3 = $(this).attr('alt');
-            $('body').addClass('noscroll');
-            $('.gallery .lightbox').append('<div class="caption">' + THUMB_H3 + '<div>');
-            THUMB_PIC = $(this).attr('src');
-            $('.gallery .lightbox img').attr('src', THUMB_PIC);
-            $('.gallery .lightbox').fadeIn();
-            $('.gallery .lightbox .galler_overlay').fadeIn();
-            PIC_INDEX = index;
+    if ($('.has_lightbox').length > 0) {
+        var lightbox_Status = false;
+        $('.album').append('<div class="lightbox"><a href="#" class="light_close">關閉</a><a href="#" class="light_prev">上一張</a><a href="#" class="light_next">下一張</a><img src="" alt=""><div class="galler_overlay"></div></div>')
+        $('.album .lightbox').hide(); // lightbox先隱藏
+        $('.light_close').click(function(event) {
+            $('.album .lightbox').hide(); // 如果點到close，lightbox隱藏
+            $('body').removeClass('noscroll');
+            $('.album .lightbox .caption').html('');
+            lightbox_Status = false;
+        });
+        $('.album .lightbox .galler_overlay').click(function(event) {
+            $('.album .lightbox').hide(); // 如果點到overlay，lightbox隱藏
+            $('body').removeClass('noscroll');
+            $('.album .lightbox .caption').html('');
+            lightbox_Status = false;
+        });
+        var PIC_SRC = $('.album .lightbox img').attr('src');
+        // var THUMB_PIC = $(this).attr('src');
+        var PIC_INDEX = 0;
+        $('.album a').click(function(e) {
+            e.preventDefault();
+            lightbox_Status = true;
+        });
+        $('.album .thumbnail a').each(function(index) {
+            $(this).click(function(e) {
+                var THUMB_H3 = $(this).find('.img-container img').attr('alt');
+                $('body').addClass('noscroll');
+                $('.album .lightbox').append('<div class="caption">' + THUMB_H3 + '<div>');
+                THUMB_PIC = $(this).find('.img-container img').attr('data-src');
+                $('.album .lightbox img').attr('src', THUMB_PIC);
+                $('.album .lightbox').fadeIn();
+                $('.album .lightbox .galler_overlay').fadeIn();
+                PIC_INDEX = index;
+                e.preventDefault();
+            });
+        });
+        //計算當頁縮圖數量
+        var PIC_NUM = $('.album .thumbnail').length;
+        // 下一張 function
+        function NEXT_MOV() {
+            //pic_index+1 如果小於 圖片數量
+            if ((PIC_INDEX + 1) < PIC_NUM) {
+                //PIC_INDEX = (PIC_INDEX + 1) % PIC_NUM;//取餘數
+                PIC_INDEX++; //pic_index ++
+                //if(PIC_INDEX >= PIC_NUM){PIC_INDEX=0;}
+            } else {
+                PIC_INDEX = 0 //如果等於或大於圖片數量 pic_index =0 ，跳到第一張
+            }
+            THUMB_PIC = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container picture source:first').attr('data-srcset');
+            // 沒寫picture
+            // THUMB_PIC = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container img').attr('src');
+            THUMB_H3 = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container img').attr('alt');
+            $('.album .lightbox .caption').html(THUMB_H3);
+            $('.album .lightbox img').hide();
+            $('.album .lightbox img').fadeIn();
+            $('.album .lightbox img').attr('src', THUMB_PIC);
+            //放入燈箱 img src
+        }
+        $('.album .light_next').click(function(e) {
+            NEXT_MOV();
             e.preventDefault();
         });
-    });
-    //計算當頁縮圖數量
-    var PIC_NUM = $('.gallery .thumbnail').length;
-    // 下一張 function
-    function NEXT_MOV() {
-        //pic_index+1 如果小於 圖片數量
-        if ((PIC_INDEX + 1) < PIC_NUM) {
-            //PIC_INDEX = (PIC_INDEX + 1) % PIC_NUM;//取餘數
-            PIC_INDEX++; //pic_index ++
-            //if(PIC_INDEX >= PIC_NUM){PIC_INDEX=0;}
-        } else {
-            PIC_INDEX = 0 //如果等於或大於圖片數量 pic_index =0 ，跳到第一張
-        }
-        THUMB_PIC = $('.gallery .thumbnail img').eq(PIC_INDEX).attr('src');
-        THUMB_H3 = $('.gallery .thumbnail img').eq(PIC_INDEX).attr('alt');
-        $('.gallery .lightbox .caption').html(THUMB_H3);
-        $('.gallery .lightbox img').hide();
-        $('.gallery .lightbox img').fadeIn();
-        $('.gallery .lightbox img').attr('src', THUMB_PIC);
-        //放入燈箱 img src
-    }
-    $('.gallery .light_next').click(function(e) {
-        NEXT_MOV();
-        e.preventDefault();
-    });
-    // 上一張 function
-    function PREV_MOV() {
-        if ((PIC_INDEX + 1) > 1) { //pic_index+1  如果大於 1
-            //PIC_INDEX = (PIC_INDEX + 1) % PIC_NUM;//取餘數
-            PIC_INDEX--; //pic_index --
-            //if(PIC_INDEX >= PIC_NUM){PIC_INDEX=0;}
-        } else {
-            PIC_INDEX = PIC_NUM - 1; //如果等於或小於圖片數量 pic_index =圖片數量-1 ，跳到最後一張
-        }
-        //取縮圖 img src
-        THUMB_PIC = $('.gallery .thumbnail img').eq(PIC_INDEX).attr('src');
-        THUMB_H3 = $('.gallery .thumbnail img').eq(PIC_INDEX).attr('alt');
-        $('.gallery .lightbox .caption').html(THUMB_H3);
-        $('.gallery .lightbox img').hide();
-        $('.gallery .lightbox img').fadeIn();
-        $('.gallery .lightbox img').attr('src', THUMB_PIC);
-        //放入燈箱 img src
-    }
-    $('.gallery .light_prev').click(function(e) {
-        PREV_MOV();
-        e.preventDefault();
-    });
-    //左右按鍵移動
-    if (lightbox_Status = true) {
-        $('body').keydown(function(e) {
-            if (e.keyCode == 37) {
-                PREV_MOV();
-            } else if (e.keyCode == 39) {
-                NEXT_MOV();
-            } else if (e.keyCode == 27) {
-                $('.gallery .lightbox').hide();
-                $('body').removeClass('noscroll');
+        // 上一張 function
+        function PREV_MOV() {
+            if ((PIC_INDEX + 1) > 1) { //pic_index+1  如果大於 1
+                //PIC_INDEX = (PIC_INDEX + 1) % PIC_NUM;//取餘數
+                PIC_INDEX--; //pic_index --
+                //if(PIC_INDEX >= PIC_NUM){PIC_INDEX=0;}
+            } else {
+                PIC_INDEX = PIC_NUM - 1; //如果等於或小於圖片數量 pic_index =圖片數量-1 ，跳到最後一張
             }
+            //取縮圖 img src
+            THUMB_PIC = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container picture source:first').attr('data-srcset');
+            // 沒寫picture
+            // THUMB_PIC = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container img').attr('src');  
+            THUMB_H3 = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container img').attr('alt');
+            $('.album .lightbox .caption').html(THUMB_H3);
+            $('.album .lightbox img').hide();
+            $('.album .lightbox img').fadeIn();
+            $('.album .lightbox img').attr('src', THUMB_PIC);
+            //放入燈箱 img src
+        }
+        $('.album .light_prev').click(function(e) {
+            PREV_MOV();
+            e.preventDefault();
         });
+        //左右按鍵移動
+        if (lightbox_Status = true) {
+            $('body').keydown(function(e) {
+                if (e.keyCode == 37) {
+                    PREV_MOV();
+                } else if (e.keyCode == 39) {
+                    NEXT_MOV();
+                } else if (e.keyCode == 27) {
+                    $('.album .lightbox').hide();
+                    $('body').removeClass('noscroll');
+                }
+            });
+        }
     }
     /*-----------------------------------*/
     ////////////////多組Tab////////////////
@@ -555,14 +536,13 @@ jQuery(document).ready(function($) {
     //         effectspeed: 600,
     //     });
     // }
-     var lazyLoadInstance = new LazyLoad({
+    var lazyLoadInstance = new LazyLoad({
         elements_selector: "img.lazy",
         placeholder: '/images/basic/placeholder.gif',
         effect: "fadeIn",
         fadeTime: 200,
         threshold: 0
     });
-
     //無障礙切換slick箭頭語系
     if ($('html')[0].hasAttribute("labg")) {
         var weblang = $('html').attr('lang');
@@ -573,5 +553,21 @@ jQuery(document).ready(function($) {
             $('.slick-prev').attr('title', 'previous');
             $('.slick-next').attr('title', 'next');
         }
+    }
+    // 跑馬燈
+    if ($('.marquee').length > 0) {
+        $('.marquee ul').slick({
+            dots: false,
+            infinite: true,
+            vertical: true,
+            verticalSwiping: true,
+            speed: 300,
+            autoplaySpeed: 5000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            pauseOnHover: true, //滑鼠移過後暫停自動撥放
+            focusOnSelect: true,
+        });
     }
 });
